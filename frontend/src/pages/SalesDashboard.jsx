@@ -1,22 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Search, 
-  Plus, 
   HelpCircle, 
   Settings, 
   Bell, 
   Mail, 
-  Phone, 
   ExternalLink,
-  Edit,
-  ChevronDown,
   X,
   User,
-  Building2,
-  Calendar,
-  MessageSquare,
-  TrendingUp,
-  Grid3X3
 } from 'lucide-react';
 import BehaviorScoreDonut from '../components/BehaviorScoreDonut';
 import ScoreDonut from '../components/BehaviorScoreDonut';
@@ -216,7 +207,7 @@ const SalesEngagement = () => {
             />
         </div>
         {/* Grouped Section: Sales Engagement, Work Queue, User Pill */}
-        <div className="absolute flex items-center gap-8 bg-[#F7F6FB] border border-[#ECEAF6]" style={{ width: 955.5, height: 70, top: 112, left: 29, opacity: 1, borderTopLeftRadius: 30, borderTopRightRadius: 30 }}>
+        <div className="absolute flex items-center gap-8 bg-[#F7F6FB] border border-[#ECEAF6]" style={{ width: 955.5, height: 70, top: 112, left: 70, opacity: 1, borderTopLeftRadius: 30, borderTopRightRadius: 30 }}>
           {/* Menu Icon */}
           <span className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D5D1E8] ml-4">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -251,7 +242,7 @@ const SalesEngagement = () => {
             return (
               <div className="relative ml-8" ref={pillRef}>
                 <div
-                  className="flex items-center bg-white rounded-full px-8 py-3 border border-[#E6E8F6] shadow-sm cursor-pointer select-none"
+                  className="flex items-center rounded-full px-8 py-3 border border-[#E6E8F6] shadow-sm cursor-pointer select-none"
                   onClick={() => setDropdownOpen((open) => !open)}
                 >
                   <User className="w-5 h-5 text-[#22008C] mr-2" />
@@ -287,10 +278,21 @@ const SalesEngagement = () => {
       </header>
 
       {/* Work Queue and Pipeline Progress Bar Row */}
-      <div className="flex items-start gap-8 px-6 pt-8  bg-[#F2F0FA]">
+      <div className="flex items-start gap-8 px-6 pt-8 bg-[#F2F0FA]">
         {/* Work Queue Header and Tabs/Dropdown */}
-        <div className="flex flex-col" style={{ width: 487 }}>
-            <h2 className="font-bold text-[#1C0A6B] text-lg mb-6">Work Queue</h2>
+        <div className="flex flex-col" style={{ width: 418 }}>
+          {/* Header row with icons */}
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="font-bold text-[#1C0A6B] text-lg">Work Queue</h2>
+            <div className="flex items-center gap-1">
+              <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+                <Search className="w-6 h-6" />
+              </button>
+              <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+                <Mail className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
           {/* Tabs and Dropdown */}
           <div className="flex flex-col gap-4" style={{ width: 414, height: 126, opacity: 1 }}>
             <div className="flex gap-2">
@@ -320,8 +322,8 @@ const SalesEngagement = () => {
         {/* Pipeline Progress Bar */}
         <div className="flex-1" style={{ minWidth: 0 }}>
           <PipelineProgressBar currentStep={1} />
-        </div>
-      </div>
+            </div>
+          </div>
 
       {/* Main Content: Sidebar below, then Lead Information & Campaign History */}
       <div className="flex px-6 bg-[#F2F0FA]">
@@ -638,7 +640,7 @@ const SalesEngagement = () => {
             </div>
             {/* Einstein Scoring */}
             <div className="bg-white rounded-[40px] p-4 border border-gray-200 " style={{ width: 1441, height: 485, opacity: 1, marginTop: 2, position: 'relative' }}>
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
                   <div className="w-[54px] h-[54px] bg-blue-900 rounded-full flex items-center justify-center">
                   <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
