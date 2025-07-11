@@ -5,16 +5,16 @@ import googlemeetlogo from '../assets/gmeet.png'
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-6 bg-[#ffffff]" >
+    <nav className="w-full flex items-center justify-between px-6 bg-[#F4F6F8]" >
       {/* Left: Logo */}
       <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full flex pb-2 xs:pb-3 sm:pb-4 md:pt-4 items-center justify-center">
         <span>
           <svg width="100%" height="100%" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z" fill="url(#paint0_linear_172_867)"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z" fill="url(#paint0_linear_450_1646)"/>
             <defs>
-              <linearGradient id="paint0_linear_172_867" x1="6.3617" y1="7.34043" x2="39.3936" y2="38.9043" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#CB122D"/>
-                <stop offset="1" stopColor="#FF8300"/>
+              <linearGradient id="paint0_linear_450_1646" x1="6.3617" y1="7.34043" x2="39.3936" y2="38.9043" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#1C0A6B"/>
+                <stop offset="1" stopColor="#3117A3"/>
               </linearGradient>
             </defs>
           </svg>
@@ -22,9 +22,9 @@ const Navbar = () => {
       </div>
 
       {/* Center: Pills */}
-      <div className="relative flex-1 flex items-center justify-center" style={{ minWidth: 0 }}>
-        {/* Black pill */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center bg-[#000000] rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
+      <div className="relative flex-1 flex items-center justify-center" >
+        {/* Blue pill */}
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center bg-blue-800 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
           <span className="text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Your Schedule</span>
           {/* Calendar Icon Section */}
           <span className="flex items-center justify-center pb-6 ml-2">
@@ -41,9 +41,9 @@ const Navbar = () => {
           </button>
         </div>
         {/* Orange pill */}
-        <div className="absolute left-1/2 -translate-x-1/3 flex items-center bg-[#ff8300] rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
+        <div className="absolute left-1/2 -translate-x-1/3 flex items-center bg-blue-400 rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
           {/* Main Inner Pill (wider, but less than orange) */}
-          <div className="flex items-center bg-[#eb932e] shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
+          <div className="flex items-center bg-blue-700 shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
             {/* Avatars */}
             <div className="flex items-center -space-x-1 sm:-space-x-2">
               <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white" />
@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* 36mm */}
             <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm font-manrope">36mm</span>
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-blue-700">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
             {/* Time */}

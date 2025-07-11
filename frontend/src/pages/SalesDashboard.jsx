@@ -64,7 +64,7 @@ const SalesEngagement = () => {
   const ContactCard = ({ contact, isActive }) => (
     <div 
       className="rounded-[24px] mb-4 cursor-pointer transition-all flex flex-col justify-between"
-      style={{ width: 412, height: 174, opacity: 1, background: isActive ? '#1C0A6B' : '#FFFFFF', color: isActive ? '#FFFFFF' : '#1C0A6B', position: 'relative', boxShadow: isActive ? '0px 4px 24px 0px #1C0A6B1A' : 'none' }}
+      style={{ width: 320, height: 174, opacity: 1, background: isActive ? '#1C0A6B' : '#FFFFFF', color: isActive ? '#FFFFFF' : '#1C0A6B', position: 'relative', boxShadow: isActive ? '0px 4px 24px 0px #1C0A6B1A' : 'none' }}
       onClick={() => setSelectedContact(contact.name)}
     >
       <div className="flex items-center justify-between px-6 pt-6">
@@ -169,48 +169,61 @@ const SalesEngagement = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50" style={{ fontFamily: '"Wix Madefor Text", sans-serif', width: '1920px', height: '1366px' }}>
+    <div className="min-h-screen w-full bg-gray-50" style={{ fontFamily: '"Wix Madefor Text", sans-serif' }}>
       {/* Header */}
-      <header className="bg-white opacity-100 border-b border-gray-200 relative" style={{ width: '1920px', height: '182px', margin: '0 auto', padding: 0 }}>
-        {/* Logo */}
-        <span className="absolute" style={{ width: 46, height: 46, top: 36, left: 53, borderRadius: 1, opacity: 1 }}>
-              <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fillRule="evenodd" clipRule="evenodd" d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z" fill="url(#paint0_linear_450_2716)"/>
+      <header className="bg-white opacity-100 border-b border-gray-200 w-full px-2 sm:px-4 md:px-8 py-2 sm:py-3 flex flex-col gap-2">
+        <div className="flex items-center justify-between w-full gap-2">
+          {/* Logo */}
+          <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[46px] lg:h-[46px]">
+            <svg width="100%" height="100%" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" clipRule="evenodd" d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z" fill="url(#paint0_linear_450_2716)"/>
                 <defs>
-              <linearGradient id="paint0_linear_450_2716" x1="6.3617" y1="7.34043" x2="39.3936" y2="38.9043" gradientUnits="userSpaceOnUse">
+                <linearGradient id="paint0_linear_450_2716" x1="6.3617" y1="7.34043" x2="39.3936" y2="38.9043" gradientUnits="userSpaceOnUse">
                     <stop stopColor="#1C0A6B"/>
                     <stop offset="1" stopColor="#3117A3"/>
                   </linearGradient>
                 </defs>
               </svg>
             </span>
+          {/* Search Bar */}
+          <div className="flex-1 flex items-center justify-center min-w-0">
+            <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#1C0A6B] w-4 h-4 sm:w-5 sm:h-5" />
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-full h-10 sm:h-12 pl-10 pr-3 border-[#D3DAE2] border rounded-full focus:ring-2 focus:ring-[#1C0A6B] focus:border-transparent text-[#1C0A6B] placeholder:text-[#1C0A6B]/60 text-sm sm:text-base font-medium bg-white shadow-none"
+              />
+            </div>
+          </div>
           {/* Right Side Icons */}
-        <div className="absolute flex items-center" style={{ width: 280, height: 54, top: 28, left: 1607, gap: 3, opacity: 1 }}>
-          <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 5v14M5 12h14" stroke="#22008C" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 lg:gap-4">
+            <button className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5v14M5 12h14" stroke="#22008C" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
             </button>
-          <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
-              <HelpCircle className="w-6 h-6" />
+            <button className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+              <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </button>
-          <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
-              <Settings className="w-6 h-6" />
+            <button className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+              <Settings className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </button>
-          <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
-              <Bell className="w-6 h-6" />
+            <button className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
+              <Bell className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" />
             </button>
             <img
               src="https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop"
               alt="Profile"
-            className="w-[54px] h-[54px] rounded-full object-cover border border-[#D3DAE2]"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full object-cover border border-[#D3DAE2]"
             />
+          </div>
         </div>
         {/* Grouped Section: Sales Engagement, Work Queue, User Pill */}
-        <div className="absolute flex items-center gap-8 bg-[#F7F6FB] border border-[#ECEAF6]" style={{ width: 955.5, height: 70, top: 112, left: 70, opacity: 1, borderTopLeftRadius: 30, borderTopRightRadius: 30 }}>
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 bg-[#F7F6FB] border border-[#ECEAF6] rounded-t-2xl px-2 sm:px-3 md:px-4 py-2 mt-2 w-full">
           {/* Menu Icon */}
-          <span className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D5D1E8] ml-4">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D5D1E8] flex-shrink-0">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="12" cy="12" r="11" stroke="#D5D1E8"/>
               <circle cx="8.5" cy="8.5" r="1.5" fill="#22008C"/>
               <circle cx="8.5" cy="15.5" r="1.5" fill="#22008C"/>
@@ -219,9 +232,14 @@ const SalesEngagement = () => {
             </svg>
           </span>
           {/* Title */}
-          <span className="text-[24px] font-bold text-[#22008C]">Sales Engagement</span>
+          <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[24px] font-bold text-[#22008C] flex-shrink-0">
+            <span className="hidden sm:inline">Sales Engagement</span>
+            <span className="sm:hidden">Sales</span>
+          </span>
           {/* Work Queue Link */}
-          <span className="text-[18px] font-bold text-[#22008C] ml-8">Work Queue</span>
+          <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-[18px] font-bold text-[#22008C] flex-shrink-0 hidden md:inline">
+            Work Queue
+          </span>
           {/* User Pill with Dropdown */}
           {(() => {
             const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -242,14 +260,14 @@ const SalesEngagement = () => {
             return (
               <div className="relative ml-8" ref={pillRef}>
                 <div
-                  className="flex items-center rounded-full px-8 py-3 border border-[#E6E8F6] shadow-sm cursor-pointer select-none"
+                  className="flex items-center rounded-full px-8 py-3 cursor-pointer select-none"
                   onClick={() => setDropdownOpen((open) => !open)}
                 >
                   <User className="w-5 h-5 text-[#22008C] mr-2" />
-                  <span className="text-base font-semibold text-[#22008C]">Miguel Braswell</span>
-                  <span className={`mx-2 transition-transform ${dropdownOpen ? 'rotate-180 inline-block' : 'inline-block'}`} style={{ width: 24, height: 24 }}>
-                    
+                  <span className="bg-white border border-[#22008C] text-[#22008C] font-semibold text-base rounded-full px-4 py-1 shadow-sm transition-all duration-200">
+                    Miguel Braswell
                   </span>
+                  <span className={`mx-2 transition-transform ${dropdownOpen ? 'rotate-180 inline-block' : 'inline-block'}`} style={{ width: 24, height: 24 }}></span>
                   <X className="w-4 h-4 text-[#B0B3C7] cursor-pointer" />
                 </div>
                 {dropdownOpen && (
@@ -263,24 +281,12 @@ const SalesEngagement = () => {
             );
           })()}
         </div>
-        {/* Center: Search Bar */}
-        <div className="absolute flex items-center" style={{ width: 434, height: 54, top: 28, left: 748, opacity: 1 }}>
-          <div className="relative w-full h-full">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1C0A6B] w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full h-full pl-12 pr-4  border-[#D3DAE2] border-[1px] rounded-full focus:ring-2 focus:ring-[#1C0A6B] focus:border-transparent text-[#1C0A6B] placeholder:text-[#1C0A6B]/60 text-base font-medium bg-white shadow-none"
-              style={{ height: 54, borderWidth: 1 }}
-            />
-          </div>
-        </div>
       </header>
 
       {/* Work Queue and Pipeline Progress Bar Row */}
       <div className="flex items-start gap-8 px-6 pt-8 bg-[#F2F0FA]">
         {/* Work Queue Header and Tabs/Dropdown */}
-        <div className="flex flex-col" style={{ width: 418 }}>
+        <div className="flex flex-col" style={{ width: 350, top:60 }}>
           {/* Header row with icons */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-bold text-[#1C0A6B] text-lg">Work Queue</h2>
@@ -294,7 +300,7 @@ const SalesEngagement = () => {
             </div>
           </div>
           {/* Tabs and Dropdown */}
-          <div className="flex flex-col gap-4" style={{ width: 414, height: 126, opacity: 1 }}>
+          <div className="flex flex-col gap-4" style={{ width: 350, height: 100, opacity: 1 }}>
             <div className="flex gap-2">
               {['Cadences', 'My Feed', 'My List'].map((tab, idx) => (
                 <button
@@ -312,7 +318,7 @@ const SalesEngagement = () => {
               ))}
             </div>
             <div>
-              <button className="flex items-center justify-between w-[414px] h-[56px] rounded-full bg-transparent border-2 border-[#FFFFFF] text-[#1C0A6B] font-semibold text-lg px-6 focus:outline-none">
+              <button className="flex items-center justify-between w-[350px] h-[54px] rounded-full bg-transparent border-2 border-[#FFFFFF] text-[#1C0A6B] font-semibold text-lg px-6 focus:outline-none">
                 <span>Event Cadence (10)</span>
                 <svg className="ml-2 w-5 h-5 text-[#1C0A6B]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
               </button>
@@ -326,11 +332,11 @@ const SalesEngagement = () => {
           </div>
 
       {/* Main Content: Sidebar below, then Lead Information & Campaign History */}
-      <div className="flex px-6 bg-[#F2F0FA]">
+      <div className="flex flex-col md:flex-row px-2 sm:px-4 md:px-6 bg-[#F2F0FA] gap-4 md:gap-0">
         {/* Sidebar (Contact List) */}
-        <div className="bg-[#F2F0FA]" style={{ width: 487 }}>
+        <div className="bg-[#F2F0FA] w-full md:w-[250px] lg:w-[350px] flex-shrink-0">
           {/* Contact List */}
-          <div className="p-4">
+          <div className="p-2 sm:p-4">
             {contacts.map((contact) => (
               <ContactCard 
                 key={contact.id} 
@@ -341,11 +347,11 @@ const SalesEngagement = () => {
           </div>
         </div>
         {/* Lead Information & Campaign History */}
-        <div className="flex-1 pl-2">
+        <div className="flex-1 pl-0 md:pl-2">
                   <div>
             <div className="flex flex-row gap-1 mb-2">
               {/* Lead Information */}
-              <div className="bg-white rounded-[32px] border border-[#ECEAF6] flex flex-col p-4" style={{ width: 410, height: 408, top:438, left:449 }}>
+              <div className="bg-white rounded-[32px] border border-[#ECEAF6] flex flex-col p-4" style={{ width: 390, height: 408, top:438, left:449 }}>
                 <div className="flex items-center justify-between ">
                   <div className="flex items-center gap-4">
                     <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center">
@@ -480,7 +486,7 @@ const SalesEngagement = () => {
               </div>
             </div>
             {/* Campaign History */}
-              <div className="col-span-1" style={{ width: 1023, height: 440, top:438, left:866 }}>
+              <div className="col-span-1" style={{ width: 720, height: 440, top:438, left:866 }}>
                 <div className="bg-[#f9f9fa] rounded-[40px] p-4 flex flex-col justify-between">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-4">
@@ -513,7 +519,7 @@ const SalesEngagement = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-8">
                   {/* Google Adwords Card */}
-                    <div className="bg-[#F2F0FA] rounded-[40px] p-8 flex flex-col justify-between" style={{ width: 485, height: 296, top: 536, left: 885, opacity: 1 }}>
+                    <div className="bg-[#F2F0FA] rounded-[40px] p-8 flex flex-col justify-between" style={{ width: 340, height: 296, top: 536, left: 885, opacity: 1 }}>
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-[20px] flex items-center justify-center" style={{background: '#E6F4D7'}}>
@@ -530,7 +536,7 @@ const SalesEngagement = () => {
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 fontWeight: 400,
                                 fontStyle: 'normal',
-                                fontSize: '26px',
+                                fontSize: '20px',
                                 lineHeight: '100%',
                                 letterSpacing: 0,
                                 color: '#1C0A6B',
@@ -575,7 +581,7 @@ const SalesEngagement = () => {
                     <button className="w-full bg-[#1C0A6B] text-white py-4 rounded-[20px] text-xl font-bold">Send email</button>
                   </div>
                   {/* X-twitter Card */}
-                    <div className="bg-[#F6F4FB] rounded-[40px] p-8 flex flex-col justify-between" style={{ width: 485, height: 296, top: 536, left: 885, opacity: 1 }}>
+                    <div className="bg-[#F6F4FB] rounded-[40px] p-8 flex flex-col justify-between" style={{ width: 340, height: 296, top: 536, left: 885, opacity: 1 }}>
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 rounded-[20px] flex items-center justify-center" style={{background: '#1C0A6B'}}>
@@ -588,9 +594,9 @@ const SalesEngagement = () => {
                             <h4
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
-                                fontWeight: 400,
+                                fontWeight: 300,
                                 fontStyle: 'normal',
-                                fontSize: '26px',
+                                fontSize: '20px',
                                 lineHeight: '100%',
                                 letterSpacing: 0,
                                 color: '#1C0A6B',
@@ -639,7 +645,7 @@ const SalesEngagement = () => {
               </div>
             </div>
             {/* Einstein Scoring */}
-            <div className="bg-white rounded-[40px] p-4 border border-gray-200 " style={{ width: 1441, height: 485, opacity: 1, marginTop: 2, position: 'relative' }}>
+            <div className="bg-white rounded-[40px] p-4 border border-gray-200 " style={{ width: 1120, height: 485, opacity: 1, marginTop: 2, position: 'relative' }}>
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center space-x-2">
                   <div className="w-[54px] h-[54px] bg-blue-900 rounded-full flex items-center justify-center">
@@ -672,7 +678,7 @@ const SalesEngagement = () => {
 
               <div className="grid grid-cols-2 gap-8">
                 {/* Left Score */}
-                <div className="flex items-center justify-between" style={{ width: 688, height: 377, background: '#F2F0FA', borderRadius: 32, opacity: 1, padding: 0 }}>
+                <div className="flex items-center justify-between" style={{ width: 540, height: 377, background: '#F2F0FA', borderRadius: 32, opacity: 1, padding: 0 }}>
                   {/* Donut Chart */}
                   <div className="flex-1 flex flex-col items-center justify-center" style={{ minWidth: 0 }}>
                     <ScoreDonut
@@ -683,8 +689,8 @@ const SalesEngagement = () => {
                       tickColor="#B6D6F6"
                       circleRatio={0.75}
                       background="#F2F0FA"
-                      width={280}
-                      height={280}
+                      width={240}
+                      height={240}
                     />
                   </div>
                   {/* Top Positives */}
@@ -726,7 +732,7 @@ const SalesEngagement = () => {
                 </div>
 
                 {/* Right Score */}
-                <div className="flex items-center justify-between" style={{ width: 688, height: 377, background: '#F2F0FA', borderRadius: 32, opacity: 1, padding: 0 }}>
+                <div className="flex items-center justify-between" style={{ width: 540, height: 377, background: '#F2F0FA', borderRadius: 32, opacity: 1, padding: 0 }}>
                   {/* Donut Chart */}
                   <div className="flex-1 flex flex-col items-center justify-center relative" style={{ minWidth: 0, width: 302, height: 299 }}>
                     <ScoreDonut
@@ -737,8 +743,8 @@ const SalesEngagement = () => {
                       tickColor="#BCB3DF"
                       circleRatio={0.75}
                       background="#F6F4FB"
-                      width={280}
-                      height={280}
+                      width={240}
+                      height={240}
                     />
                   </div>
                   {/* Top Positives */}

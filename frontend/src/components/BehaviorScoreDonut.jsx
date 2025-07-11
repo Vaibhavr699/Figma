@@ -3,7 +3,7 @@ import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-pro
 import 'react-circular-progressbar/dist/styles.css';
 
 // Helper to render 40 ticks
-function Ticks({ count = 40, radius = 48, tickLength = 18, color = '#BCB3DF', tickWidth = 3.5, tickRadius = 2 }) {
+function Ticks({ count = 40, radius = 48, tickLength = 18, color = '#BCB3DF', tickWidth = 1.5, tickRadius = 1 }) {
   // tickLength: how long the rectangle is (from outer to inner)
   // tickWidth: how thick the rectangle is (perpendicular to radius)
   // tickRadius: border radius for rounded ends
@@ -45,8 +45,8 @@ const ScoreDonut = ({
   tickColor = '#BCB3DF',
   circleRatio = 0.75,
   background = '#F6F4FB',
-  width = 280,
-  height = 280,
+  width = 240,
+  height = 240,
 }) => {
   return (
     <div style={{ width, height, position: 'relative', background, borderRadius: '50%' }}>

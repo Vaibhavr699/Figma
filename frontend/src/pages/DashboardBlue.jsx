@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../components/Navbar.jsx";
+import Navbar from "../components/NavbarBlue.jsx";
 import { Plus, User, Users, CheckCircle, Bell, ArrowRight, Search, Filter, ChevronDown, Calendar, Circle, ArrowLeft, MessageCircle } from "lucide-react";
 import logo from '../components/../assets/logo.png';
-import WorkspaceHeader from '../components/WorkspaceHeader';
-import ProfileCard from '../components/ProfileCard';
-import YourDaysTasks from '../components/YourDaysTasks';
+import WorkspaceHeader from '../components/WshBlue.jsx';
+import ProfileCard from '../components/PfBlue.jsx';
+import YourDaysTasks from '../components/YtdBlue.jsx';
 
 const sidebarIcons = [
   <User key="user" />, <Users key="users" />, <CheckCircle key="check" />
@@ -88,7 +88,7 @@ const tasks = [
 
 const interestColors = ["bg-gray-300", "bg-green-300", "bg-yellow-300", "bg-orange-400", "bg-red-500"];
 
-const Dashboard = () => {
+const DashboardBlue = () => {
   return (
     <div className=" w-full bg-gradient-to-b from-gray-100 to-white">
       <Navbar />
@@ -130,8 +130,8 @@ const Dashboard = () => {
           {/* New Leads Section */}
           <section className="mb-2 sm:mb-8">
             <div className="flex flex-wrap items-center gap-1 sm:gap-2 md:gap-4 mb-2 sm:mb-4 mt-1">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-manrope mr-2 sm:mr-4">New Leads</h2>
-              <span className="text-base sm:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end"><span className="text-black">7 Leads</span></span>
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-manrope mr-2 sm:mr-4 text-blue-800">New Leads</h2>
+              <span className="text-base sm:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end"><span className="text-blue-800">7 Leads</span></span>
               {/* Pills and icons */}
               <div className="w-full md:w-auto flex flex-col md:flex-row gap-2 md:gap-3 ml-0 sm:ml-2 md:ml-4 py-2 md:py-0">
                 {/* First row: Search, Filter, All, Hot Client */}
@@ -171,4 +171,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardBlue;

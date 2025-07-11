@@ -21,7 +21,7 @@ const ProfileCard = ({
     <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[220px] sm:h-[270px] md:h-[280px] p-3 sm:p-5 bg-transparent shadow-md overflow-hidden rounded-3xl">
       {/* Card SVG background */}
       <svg width="343" height="283" viewBox="0 0 343 283" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <path d="M0 40C0 17.9086 17.9086 0 40 0H234C253.364 0 269.158 15.2888 269.967 34.4538L270 34.5C270 48.4089 279.661 71.0591 303.397 72H307C326.882 72 343 88.1177 343 108V243C343 265.091 325.091 283 303 283H40C17.9086 283 0 265.091 0 243V40Z" fill="white"/>
+        <path d="M0 40C0 17.9086 17.9086 0 40 0H234C253.364 0 269.158 15.2888 269.967 34.4538L270 34.5C270 48.4089 279.661 71.0591 303.397 72H307C326.882 72 343 88.1177 343 108V243C343 265.091 325.091 283 303 283H40C17.9086 283 0 265.091 0 243V40Z" fill="#847CAB"/>
       </svg>
 
       {/* Top-right icon */}
@@ -43,7 +43,7 @@ const ProfileCard = ({
       {/* Main Content */}
       <div className="flex flex-col justify-end h-full pl-1 sm:pl-2 pt-16 sm:pt-20 pr-1 sm:pr-2 pb-1 sm:pb-2 z-10 relative">
         <h2
-          className="text-black mb-1 text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          className="text-white mb-1 text-lg sm:text-xl md:text-2xl lg:text-3xl"
           style={{
             fontFamily: 'Wix Madefor Text',
             fontWeight: 500,
@@ -55,11 +55,11 @@ const ProfileCard = ({
         >
           {name}
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-[#7B8FA1] mb-2 sm:mb-4">{title}</p>
+        <p className="text-xs sm:text-sm md:text-base text-[#ffffff] mb-2 sm:mb-4">{title}</p>
         <div className="flex items-end justify-between w-full gap-2 sm:gap-4">
           {/* Source section */}
           <div>
-            <p className="text-xs text-[#7B8FA1] mb-1">Source</p>
+            <p className="text-xs text-[#ffffff] mb-1">Source</p>
             <div className="flex gap-1 sm:gap-2">
               {sources.includes("LinkedIn") && (
                 <button className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-[#F3F4F6] rounded-full text-[#7B8FA1] font-medium">

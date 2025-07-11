@@ -64,7 +64,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
       <div style={{
         position: 'relative',
         width: '100%',
-        maxWidth: 1200,
+        maxWidth: 1000,
         marginLeft: 50,
         display: 'flex',
         flexDirection: 'column',

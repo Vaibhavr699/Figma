@@ -5,7 +5,7 @@ import googlemeetlogo from '../assets/gmeet.png'
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-6 bg-[#ffffff]" >
+    <nav className="w-full flex items-center justify-between px-6 bg-[#100C25]" >
       {/* Left: Logo */}
       <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full flex pb-2 xs:pb-3 sm:pb-4 md:pt-4 items-center justify-center">
         <span>
@@ -24,8 +24,8 @@ const Navbar = () => {
       {/* Center: Pills */}
       <div className="relative flex-1 flex items-center justify-center" style={{ minWidth: 0 }}>
         {/* Black pill */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center bg-[#000000] rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
-          <span className="text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Your Schedule</span>
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center bg-[#ffffff] rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
+          <span className="text-black text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Your Schedule</span>
           {/* Calendar Icon Section */}
           <span className="flex items-center justify-center pb-6 ml-2">
             <svg width="64" height="24" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 sm:w-8 sm:h-8 md:w-14 md:h-14">
@@ -37,13 +37,13 @@ const Navbar = () => {
         </span>
           {/* Right Arrow Button at end of black pill */}
           <button className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-9 sm:h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-gray-700 bg-transparent z-20">
-            <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
+            <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-blue-600" />
           </button>
         </div>
         {/* Orange pill */}
-        <div className="absolute left-1/2 -translate-x-1/3 flex items-center bg-[#ff8300] rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
+        <div className="absolute left-1/2 -translate-x-1/3 flex items-center bg-blue-400 rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
           {/* Main Inner Pill (wider, but less than orange) */}
-          <div className="flex items-center bg-[#eb932e] shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
+          <div className="flex items-center bg-blue-500 shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
             {/* Avatars */}
             <div className="flex items-center -space-x-1 sm:-space-x-2">
               <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white" />
@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* 36mm */}
             <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm font-manrope">36mm</span>
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-blue-600">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
             {/* Time */}
