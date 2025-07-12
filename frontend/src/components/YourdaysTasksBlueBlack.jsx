@@ -81,17 +81,17 @@ const YourDaysTasks = () => (
         return (
           <div
             key={i}
-            className={`w-[472px] max-w-full rounded-3xl shadow p-0 flex flex-col relative overflow-hidden ${isHighlight ? "text-white" : "bg-white text-gray-900"}`}
+            className={`w-[472px] max-w-full rounded-3xl shadow p-0 flex flex-col relative overflow-hidden ${isHighlight ? "text-white" : "bg-##29263B text-gray-900"}`}
             style={{ minHeight: 260 }}
           >
             {/* SVG background for highlight */}
             {isHighlight ? (
               <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
-                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="#FF8300"/>
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="white"/>
               </svg>
             ) : (
               <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
-                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="white"/>
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="#29263B"/>
               </svg>
             )}
             {/* Top Row: Avatar, Name/Title, Bell, Arrow */}
@@ -99,7 +99,7 @@ const YourDaysTasks = () => (
               <div className="flex items-center gap-3">
                 <img src={task.avatar} alt={task.person} className="w-12 h-14 rounded-full border-4 sm:mt-4 border-white shadow object-cover" />
                 <div className="flex flex-col">
-                  <span className={`text-lg font-semibold leading-tight ${isHighlight ? "text-white" : "text-gray-900"}`}
+                  <span className={`text-lg font-semibold leading-tight ${isHighlight ? "text-black" : "text-white"}`}
                     style={{
                       fontFamily: 'Wix Madefor Text',
                       fontWeight: 500,
@@ -109,7 +109,7 @@ const YourDaysTasks = () => (
                       letterSpacing: 0,
                     }}
                   >{task.person}</span>
-                  <span className={`text-sm ${isHighlight ? "text-orange-100" : "text-[#7B8FA1]"}`}>{task.title}</span>
+                  <span className={`text-sm ${isHighlight ? "text-blue-900" : "text-[#ffffff]"}`}>{task.title}</span>
                 </div>
               </div>
               <div className="flex gap-1">
@@ -119,23 +119,23 @@ const YourDaysTasks = () => (
             </div>
             {/* Main Content: Icon, Task Name, Date/Amount */}
             <div className="flex items-center gap-4 px-6 pt-6 pb-2 relative z-10">
-              <div className={`w-14 h-14 flex items-center justify-center rounded-full border ${isHighlight ? "border-orange-200 bg-orange-100/30" : "border-gray-200 bg-white"}`}>
+              <div className={`w-14 h-14 flex items-center justify-center rounded-full border ${isHighlight ? "border-white bg-orange-100/30" : "border-gray-200 bg-white"}`}>
                 {task.name === "Google Meet Call" ? (
-                  <img src="/src/assets/gmeet.png" alt="Google Meet" className="w-7 h-7" />
+                  <img src="/src/assets/gmeet.png" alt="Google Meet" className="w-7 h-7 md:4 md:4 sm:3 sm:3" />
                 ) : (
                   <FileText className={`w-7 h-7 ${isHighlight ? "text-white" : "text-gray-400"}`} />
                 )}
               </div>
               <div className="flex flex-col">
-                <h3 className={`text-2xl font-bold mb-1 ${isHighlight ? "text-white" : "text-gray-900"}`}>{task.name}</h3>
+                <h3 className={`text-2xl font-bold mb-1 ${isHighlight ? "text-black" : "text-white"}`}>{task.name}</h3>
                 {task.date && task.time && (
                   <div className="flex items-center gap-2 text-base font-medium">
                     <span className="flex items-center gap-1">
-                      <Calendar className={`w-5 h-5 ${isHighlight ? "text-white" : "text-[#FF8300]"}`} />
+                      <Calendar className={`w-5 h-5 ${isHighlight ? "text-blue-800" : "text-[#FF8300]"}`} />
                       <span>{task.date}</span>
                     </span>
                     <span className="flex items-center gap-1">
-                      <Circle className={`w-2 h-2 ${isHighlight ? "text-white" : "text-[#FF8300]"}`} fill={isHighlight ? "white" : "#FF8300"} />
+                      <Circle className={`w-2 h-2 ${isHighlight ? "text-white" : "text-[#FF8300]"}`} fill={isHighlight ? "black" : "#ffffff"} />
                       <span>{task.time}</span>
                     </span>
                   </div>
@@ -143,7 +143,7 @@ const YourDaysTasks = () => (
                 {task.amount && (
                   <div className="flex items-center gap-2">
                     <span className={`text-base ${isHighlight ? "text-orange-100" : "text-[#B0B7C3]"}`}>Amount</span>
-                    <span className={`text-lg font-semibold ${isHighlight ? "text-white" : "text-gray-900"}`}>{task.amount}</span>
+                    <span className={`text-lg font-semibold ${isHighlight ? "text-black" : "text-white"}`}>{task.amount}</span>
                   </div>
                 )}
               </div>

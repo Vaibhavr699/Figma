@@ -41,15 +41,15 @@ const WorkspaceHeader = () => {
       <div className="hidden md:flex flex-col md:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 md:gap-8 lg:gap-16 ml-auto px-1 sm:px-2 md:px-4 pb-2 sm:pb-4 md:pb-6 lg:pb-8 min-w-0">
         <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
           <span className="px-3 py-1 rounded-full text-xs font-semibold bg-lime-200 text-lime-700 mb-2">↑3</span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">34<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">Deals</span></span>
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-white leading-none truncate">34<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">Deals</span></span>
         </div>
         <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
           <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-200 text-red-700 mb-2">↓2</span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">20<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">Won</span></span>
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-white leading-none truncate">20<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">Won</span></span>
         </div>
         <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
           <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-200 text-red-700 mb-2">↓1</span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">3<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold text-sm mt-2">Lost</span></span>
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-white leading-none truncate">3<span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold text-sm mt-2">Lost</span></span>
         </div>
       </div>
       {/* Stats row for small screens, below workspace title */}

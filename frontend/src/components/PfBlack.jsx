@@ -20,13 +20,13 @@ const ProfileCard = ({
   return (
     <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[220px] sm:h-[270px] md:h-[280px] p-3 sm:p-5 bg-transparent shadow-md overflow-hidden rounded-3xl">
       {/* Card SVG background */}
-      <svg width="343" height="283" viewBox="0 0 343 283" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+      <svg width="343" height="283" viewBox="0 0 343 283" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
         <path d="M0 40C0 17.9086 17.9086 0 40 0H234C253.364 0 269.158 15.2888 269.967 34.4538L270 34.5C270 48.4089 279.661 71.0591 303.397 72H307C326.882 72 343 88.1177 343 108V243C343 265.091 325.091 283 303 283H40C17.9086 283 0 265.091 0 243V40Z" fill="#2E4C73"/>
       </svg>
 
       {/* Top-right icon */}
       <div className="absolute top-3 right-1 z-10">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-black shadow-sm">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full border border-gray-600 bg-black shadow-sm">
           <ArrowUpRight size={20} className="text-[#2E4C73]" />
         </div>
       </div>

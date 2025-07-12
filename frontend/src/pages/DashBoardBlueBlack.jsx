@@ -89,7 +89,7 @@ const interestColors = ["bg-gradient-to-br from-[#23243A] to-[#1C0A6B]", "bg-gre
 
 const DashboardBlueBlack = () => {
   return (
-    <div className="min-h-screen bg-[#100C25]">
+    <div className="min-h-screen bg-[#151233]">
       <Navbar />
       <div className="flex px-2 items-start gap-x-8 mt-12">
         {/* Vertical Menu */}
