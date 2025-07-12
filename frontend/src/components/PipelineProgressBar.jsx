@@ -19,7 +19,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
   const fillPercent = (currentStep / (steps.length - 1)) * 100;
 
   return (
-    <div style={{
+    <div className="hidden sm:block" style={{
       width: '100%',
       padding: '32px 0',
       background: '#F2F0FA',
@@ -165,6 +165,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
           width: '100%',
           height: '32px',
           marginTop: '0',
+          marginRight: '4',
           zIndex: 4,
         }}>
           {steps.map((step, index) => {

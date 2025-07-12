@@ -20,6 +20,7 @@ function App() {
           <Route path="/projects" element={<ProjectDashboard />} />
           <Route path="/final" element={<FinalDesktop />} />
         </Routes>
+        
       </Router>
     )
 }

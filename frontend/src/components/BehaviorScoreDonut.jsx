@@ -49,7 +49,7 @@ const ScoreDonut = ({
   height = 240,
 }) => {
   return (
-    <div style={{ width, height, position: 'relative', background, borderRadius: '50%' }}>
+    <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 2xl:w-60 2xl:h-60" style={{ position: 'relative', background, borderRadius: '50%' }}>
       {/* Ticks background */}
       <Ticks color={tickColor} />
       {/* Donut chart */}
@@ -85,8 +85,8 @@ const ScoreDonut = ({
             color: '#1C0A6B',
             zIndex: 2,
           }}>
-            <div style={{ fontWeight: 500, fontSize: 40, lineHeight: '100%' }}>{value}</div>
-            <div style={{ fontWeight: 500, fontSize: 20, lineHeight: '100%' }}>{label}</div>
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{value}</div>
+            <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{label}</div>
           </div>
         </CircularProgressbarWithChildren>
       </div>
