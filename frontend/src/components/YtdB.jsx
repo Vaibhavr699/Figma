@@ -70,7 +70,7 @@ const YourDaysTasks = () => (
         </svg>
       </button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full bg-white border border-gray-200 text-[#2E4C73] font-semibold shadow-sm text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">All</button>
-      <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border text-[#2E4C73] font-semibold flex items-center gap-1 sm:gap-2 bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto"><span role='img' aria-label='fire' className="text-lg sm:text-xl md:text-2xl">🔥</span>Hot</button>
+      <button className="flex-shrink-0 px-3 py-1.4 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border text-[#2E4C73] font-semibold flex items-center gap-1 sm:gap-2 bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto"><span role='img' aria-label='fire' className="text-lg sm:text-xl md:text-lg">🔥</span>Hot</button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Due Today</button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Over due</button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Completed</button>
@@ -85,9 +85,13 @@ const YourDaysTasks = () => (
             style={{ minHeight: 260 }}
           >
             {/* SVG background for highlight */}
-            {isHighlight && (
-              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            {isHighlight ? (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
                 <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="#FF8300"/>
+              </svg>
+            ) : (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="white"/>
               </svg>
             )}
             {/* Top Row: Avatar, Name/Title, Bell, Arrow */}

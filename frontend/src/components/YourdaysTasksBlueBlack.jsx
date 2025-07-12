@@ -85,15 +85,19 @@ const YourDaysTasks = () => (
             style={{ minHeight: 260 }}
           >
             {/* SVG background for highlight */}
-            {isHighlight && (
-              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="grey"/>
+            {isHighlight ? (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="#FF8300"/>
+              </svg>
+            ) : (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="white"/>
               </svg>
             )}
             {/* Top Row: Avatar, Name/Title, Bell, Arrow */}
             <div className="flex items-start justify-between px-2 pt-2 relative z-10">
               <div className="flex items-center gap-3">
-                <img src={task.avatar} alt={task.person} className="w-12 h-14 rounded-full border-4 border-white shadow object-cover" />
+                <img src={task.avatar} alt={task.person} className="w-12 h-14 rounded-full border-4 sm:mt-4 border-white shadow object-cover" />
                 <div className="flex flex-col">
                   <span className={`text-lg font-semibold leading-tight ${isHighlight ? "text-white" : "text-gray-900"}`}
                     style={{

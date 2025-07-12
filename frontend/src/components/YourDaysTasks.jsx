@@ -81,13 +81,17 @@ const YourDaysTasks = () => (
         return (
           <div
             key={i}
-            className={`w-[472px] max-w-full rounded-3xl shadow p-0 flex flex-col relative overflow-hidden ${isHighlight ? "text-white" : "bg-white text-gray-900"}`}
+            className={`w-[472px] max-w-full rounded-3xl shadow p-0 flex flex-col relative overflow-hidden ${isHighlight ? "text-white" : "bg-gray-100 text-gray-900"}`}
             style={{ minHeight: 260 }}
           >
             {/* SVG background for highlight */}
-            {isHighlight && (
-              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+            {isHighlight ? (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
                 <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="#FF8300"/>
+              </svg>
+            ) : (
+              <svg width="462" height="354" viewBox="0 0 462 354" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full z-0 pointer-events-none" preserveAspectRatio="none">
+                <path d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z" fill="white"/>
               </svg>
             )}
             {/* Top Row: Avatar, Name/Title, Bell, Arrow */}
@@ -108,7 +112,7 @@ const YourDaysTasks = () => (
                   <span className={`text-sm ${isHighlight ? "text-orange-100" : "text-[#7B8FA1]"}`}>{task.title}</span>
                 </div>
               </div>
-              <div className="flex gap-1">
+              <div className="flex ">
                 <button className={`w-11 h-11 flex items-center justify-center rounded-full border ${isHighlight ? "border-[#D3DAE2] bg-white text-[#2E4C73]" : "border-gray-200 bg-white text-gray-500"} shadow-sm`}><Bell className="w-5 h-5" /></button>
                 <button className={`w-11 h-11 flex items-center justify-center rounded-full border ${isHighlight ? "border-[#D3DAE2] bg-white text-[#2E4C73]" : "border-gray-200 bg-white text-gray-500"} shadow-sm`}><ArrowUpRight className="w-5 h-5" /></button>
               </div>

@@ -24,7 +24,7 @@ const Navbar = () => {
       {/* Center: Pills */}
       <div className="relative flex-1 flex items-center justify-center" style={{ minWidth: 0 }}>
         {/* Black pill */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center bg-[#ffffff] rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center mt-1 bg-[#ffffff] rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-3 min-w-[220px] sm:min-w-[300px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10" style={{ height: '48px', top: 0 }}>
           <span className="text-black text-xs sm:text-sm md:text-base lg:text-lg font-semibold">Your Schedule</span>
           {/* Calendar Icon Section */}
           <span className="flex items-center justify-center pb-6 ml-2">
@@ -41,7 +41,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Orange pill */}
-        <div className="absolute left-1/2 -translate-x-1/3 flex items-center bg-blue-400 rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
+        <div className="absolute left-1/2 -translate-x-1/3 flex items-center mt-1 bg-blue-400 rounded-full min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto" style={{ top: 0 }}>
           {/* Main Inner Pill (wider, but less than orange) */}
           <div className="flex items-center bg-blue-500 shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
             {/* Avatars */}

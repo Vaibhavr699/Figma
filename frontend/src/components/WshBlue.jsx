@@ -30,8 +30,8 @@ const WorkspaceHeader = () => {
             </svg>
           </span>
         </h1>
-        <button className="flex items-center gap-4 bg-black text-white p-1 px-4 sm:px-8 md:px-12 py-0.5 sm:py-1 md:py-2 rounded-full text-xs xs:text-sm sm:text-base md:text-lg font-semibold ml-1 sm:ml-2 md:ml-4 lg:ml-6 shadow font-manrope whitespace-nowrap">
-          <span className="w-12 h-12 rounded-full bg-[#232323] flex items-center justify-center">
+        <button className="flex items-center gap-4 bg-blue-800 text-white p-1 px-4 sm:px-8 md:px-12 py-0.5 sm:py-1 md:py-2 rounded-full text-xs xs:text-sm sm:text-base md:text-lg font-semibold ml-1 sm:ml-2 md:ml-4 lg:ml-6 shadow font-manrope whitespace-nowrap">
+          <span className="w-12 h-12 rounded-full bg-[#3e3b3b] flex items-center justify-center">
             <span className="text-2xl text-gray-300 font-bold">+</span>
           </span>
           <span className="ml-2 text-white font-semibold text-lg">New Task</span>
