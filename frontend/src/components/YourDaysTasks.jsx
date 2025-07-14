@@ -44,7 +44,7 @@ const tasks = [
 
 const YourDaysTasks = () => (
   <section className="font-madefor">
-    {/* <div className="mb-4 sm:mb-8 mt-2 grid grid-cols-3 grid-rows-2 gap-2 sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:gap-4 sm:overflow-x-auto">
+    <div className="mb-4  mt-2 flex flex-wrap">
       <h2
         className="col-span-2 row-span-1 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
         style={{
@@ -74,7 +74,7 @@ const YourDaysTasks = () => (
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-white text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Due Today</button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-white text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Over due</button>
       <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-white text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Completed</button>
-    </div> */}
+    </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mb-4 place-items-center">
       {tasks.map((task, i) => {
         const isHighlight = i === 0 || task.highlight;
