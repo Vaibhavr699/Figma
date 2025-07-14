@@ -44,37 +44,66 @@ const tasks = [
 
 const YourDaysTasks = () => (
   <section className="font-madefor">
-    <div className="mb-4 sm:mb-8 mt-2 grid grid-cols-3 grid-rows-2 gap-2 sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:gap-4 sm:overflow-x-auto">
-      <h2
-        className="col-span-2 text-white row-span-1 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
-        style={{
-          fontFamily: 'Wix Madefor Text',
-          fontWeight: 500,
-          fontStyle: 'normal',
-          lineHeight: '100%',
-          letterSpacing: '0',
-        }}
-      >
-        Your Days Tasks
-      </h2>
-      <span
-        className="col-span-1 row-span-1 text-xs xs:text-sm sm:text-base md:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end justify-center items-center w-auto h-auto whitespace-nowrap sm:col-auto sm:row-auto"
-        style={{ opacity: 1 }}
-      >
-        <span className="text-white">16 Tasks</span>
-      </span>
-      <button className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-gray-200 bg-black text-gray-500 hover:bg-gray-100 col-span-1 row-span-1 sm:col-auto sm:row-auto"><Search className="w-5 h-5" /></button>
-      <button className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-gray-200 bg-black text-gray-500 hover:bg-gray-100 col-span-1 row-span-1 sm:col-auto sm:row-auto">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2.05128 19.2308C2.05128 19.6556 2.39568 20 2.82051 20C3.24534 20 3.58974 19.6556 3.58974 19.2308L2.05128 19.2308ZM9.23077 19.2308C9.23077 19.6556 9.57518 20 10 20C10.4248 20 10.7692 19.6556 10.7692 19.2308L9.23077 19.2308ZM10.7692 10C10.7692 9.57518 10.4248 9.23077 10 9.23077C9.57518 9.23077 9.23077 9.57518 9.23077 10L10.7692 10ZM10.7692 0.769229C10.7692 0.344409 10.4248 -2.36303e-06 10 -2.34446e-06C9.57518 -2.32589e-06 9.23077 0.34441 9.23077 0.769229L10.7692 0.769229ZM3.58974 0.76923C3.58974 0.34441 3.24534 -2.04921e-06 2.82051 -2.03064e-06C2.39568 -2.01207e-06 2.05128 0.34441 2.05128 0.76923L3.58974 0.76923ZM16.4103 10C16.4103 10.4248 16.7547 10.7692 17.1795 10.7692C17.6043 10.7692 17.9487 10.4248 17.9487 10L16.4103 10ZM17.9487 0.769229C17.9487 0.344409 17.6043 -2.67686e-06 17.1795 -2.65829e-06C16.7547 -2.63972e-06 16.4103 0.344409 16.4103 0.769229L17.9487 0.769229ZM16.4103 19.2308C16.4103 19.6556 16.7547 20 17.1795 20C17.6043 20 17.9487 19.6556 17.9487 19.2308L16.4103 19.2308ZM3.58974 19.2308L3.58974 12.0513L2.05128 12.0513L2.05128 19.2308L3.58974 19.2308ZM10.7692 19.2308L10.7692 10L9.23077 10L9.23077 19.2308L10.7692 19.2308ZM10.7692 2.82051L10.7692 0.769229L9.23077 0.769229L9.23077 2.82051L10.7692 2.82051ZM3.58974 7.94872L3.58974 0.76923L2.05128 0.76923L2.05128 7.94872L3.58974 7.94872ZM17.9487 10L17.9487 0.769229L16.4103 0.769229L16.4103 10L17.9487 10ZM17.9487 19.2308L17.9487 17.1795L16.4103 17.1795L16.4103 19.2308L17.9487 19.2308ZM17.1795 13.8462C17.8876 13.8462 18.4615 14.4201 18.4615 15.1282L20 15.1282C20 13.5705 18.7372 12.3077 17.1795 12.3077L17.1795 13.8462ZM18.4615 15.1282C18.4615 15.8363 17.8876 16.4103 17.1795 16.4103L17.1795 17.9487C18.7372 17.9487 20 16.6859 20 15.1282L18.4615 15.1282ZM17.1795 16.4103C16.4714 16.4103 15.8974 15.8363 15.8974 15.1282L14.359 15.1282C14.359 16.6859 15.6217 17.9487 17.1795 17.9487L17.1795 16.4103ZM15.8974 15.1282C15.8974 14.4201 16.4714 13.8462 17.1795 13.8462L17.1795 12.3077C15.6217 12.3077 14.359 13.5705 14.359 15.1282L15.8974 15.1282ZM10 3.58974C10.7081 3.58974 11.2821 4.16369 11.2821 4.87179L12.8205 4.87179C12.8205 3.31405 11.5577 2.05128 10 2.05128L10 3.58974ZM11.2821 4.87179C11.2821 5.5799 10.7081 6.15385 10 6.15385L10 7.69231C11.5577 7.69231 12.8205 6.42954 12.8205 4.87179L11.2821 4.87179ZM10 6.15385C9.2919 6.15385 8.71795 5.5799 8.71795 4.87179L7.17949 4.87179C7.17949 6.42954 8.44226 7.69231 10 7.69231L10 6.15385ZM8.71795 4.87179C8.71795 4.16369 9.2919 3.58974 10 3.58974L10 2.05128C8.44226 2.05128 7.17949 3.31405 7.17949 4.87179L8.71795 4.87179ZM2.82051 8.71795C3.52857 8.71795 4.10256 9.2919 4.10256 10L5.64103 10C5.64103 8.44226 4.37824 7.17949 2.82051 7.17949L2.82051 8.71795ZM4.10256 10C4.10256 10.7081 3.52857 11.2821 2.82051 11.2821L2.82051 12.8205C4.37824 12.8205 5.64103 11.5577 5.64103 10L4.10256 10ZM2.82051 11.2821C2.11245 11.2821 1.53846 10.7081 1.53846 10L-4.37114e-07 10C-3.69023e-07 11.5577 1.26279 12.8205 2.82051 12.8205L2.82051 11.2821ZM1.53846 10C1.53846 9.2919 2.11245 8.71795 2.82051 8.71795L2.82051 7.17949C1.26279 7.17949 -5.05205e-07 8.44226 -4.37114e-07 10L1.53846 10Z" fill="#2E4C73"/>
-        </svg>
-      </button>
-      <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full bg-white border border-gray-200 text-[#2E4C73] font-semibold shadow-sm text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">All</button>
-      <button className="flex-shrink-0 px-3 py-1.4 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border text-[#2E4C73] font-semibold flex items-center gap-1 sm:gap-2 bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto"><span role='img' aria-label='fire' className="text-lg sm:text-xl md:text-lg">🔥</span>Hot</button>
-      <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Due Today</button>
-      <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Over due</button>
-      <button className="flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-6 md:py-3 md:min-w-[110px] rounded-full border border-gray-200 text-gray-500 font-semibold bg-black text-xs sm:text-sm md:text-base col-span-1 row-span-1 sm:col-auto sm:row-auto">Completed</button>
-    </div>
+    <div className="grid grid-cols-3 grid-rows-3 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3 md:gap-4 sm:mb-6 mb-4 mt-2 sm:mt-4 overflow-x-auto sm:overflow-visible">
+  {/* Title */}
+  <h2
+    className="col-span-2 row-span-1 text-white text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold font-madefor whitespace-nowrap sm:mr-4 sm:col-auto sm:row-auto"
+    style={{
+      fontFamily: 'Wix Madefor Text',
+      fontWeight: 500,
+      fontStyle: 'normal',
+      lineHeight: '100%',
+      letterSpacing: '0',
+    }}
+  >
+    Your Days Tasks
+  </h2>
+
+  {/* Task Count */}
+  <span className="col-span-1 row-span-1 text-xs xs:text-sm sm:text-base md:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-white text-white text-center sm:text-left sm:col-auto sm:row-auto">
+    16 Tasks
+  </span>
+
+  {/* Search Button */}
+  <button className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 bg-black text-gray-500 hover:bg-gray-100 col-span-1 row-span-1 sm:col-auto sm:row-auto">
+    <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+  </button>
+
+  {/* Filter Icon */}
+  <button className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 bg-black text-gray-500 hover:bg-gray-100 col-span-1 row-span-1 sm:col-auto sm:row-auto">
+    {/* Your filter SVG icon */}
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* ...icon path here... */}
+    </svg>
+  </button>
+
+  {/* Filter Buttons */}
+  {[
+    { label: 'All', filled: false },
+    { label: '🔥Hot', filled: true },
+    { label: 'Due Today', filled: false },
+    { label: 'Over due', filled: false },
+    { label: 'Completed', filled: false },
+  ].map((btn, i) => (
+    <button
+      key={i}
+      className={`flex-shrink-0 px-3 py-1.5 min-w-[80px] sm:px-4 sm:py-2 sm:min-w-[100px] md:px-5 md:py-2.5 md:min-w-[110px] rounded-full text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-1 ${
+        btn.filled
+          ? 'bg-black text-white border border-gray-400'
+          : 'bg-black text-gray-300 border border-gray-400'
+      }`}
+    >
+      {btn.label}
+    </button>
+  ))}
+</div>
+
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mb-4">
       {tasks.map((task, i) => {
         const isHighlight = i === 0 || task.highlight;

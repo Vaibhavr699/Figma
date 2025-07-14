@@ -73,77 +73,52 @@ const WorkspaceHeader = () => {
         </button>
       </div>
       {/* Right: Stats (hidden on small screens) */}
-      <div className="hidden md:flex flex-col md:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 md:gap-8 lg:gap-16 ml-auto px-1 sm:px-2 md:px-4 pb-2 sm:pb-4 md:pb-6 lg:pb-8 min-w-0">
-        <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
-          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-lime-200 text-lime-700 mb-2">
-            ↑3
-          </span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">
-            34
-            <span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">
-              Deals
-            </span>
-          </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
-          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-200 text-red-700 mb-2">
-            ↓2
-          </span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">
-            20
-            <span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">
-              Won
-            </span>
-          </span>
-        </div>
-        <div className="flex flex-col items-center justify-center relative min-w-[40px] sm:min-w-[60px] md:min-w-[90px] w-full md:w-auto">
-          <span className="px-3 py-1 rounded-full text-xs font-semibold bg-red-200 text-red-700 mb-2">
-            ↓1
-          </span>
-          <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl font-semibold text-black leading-none truncate">
-            3
-            <span className="text-xs sm:text-sm md:text-base lg:text-xl text-gray-400 font-semibold mt-2">
-              Lost
-            </span>
-          </span>
-        </div>
-      </div>
-      {/* Stats row for small screens, below workspace title */}
-      <div className="flex w-full md:hidden justify-center items-center gap-2 mt-2 order-last">
-        <div className="flex flex-col items-center justify-center min-w-[32px]">
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-lime-200 text-lime-700 mb-1">
-            ↑3
-          </span>
-          <span className="text-xs font-semibold text-black leading-none">
-            34
-            <span className="text-[10px] text-white font-semibold ml-1">
-              Deals
-            </span>
-          </span>
-        </div>
-        <div className="flex flex-col items-center justify-center min-w-[32px]">
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-red-200 text-red-700 mb-1">
-            ↓2
-          </span>
-          <span className="text-xs font-semibold text-balck leading-none">
-            20
-            <span className="text-[10px] text-gray-400 font-semibold ml-1">
-              Won
-            </span>
-          </span>
-        </div>
-        <div className="flex flex-col items-center justify-center min-w-[32px]">
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-red-200 text-red-700 mb-1">
-            ↓1
-          </span>
-          <span className="text-xs font-semibold text-black leading-none">
-            3
-            <span className="text-[10px] text-gray-400 font-semibold ml-1">
-              Lost
-            </span>
-          </span>
-        </div>
-      </div>
+      <div className="hidden md:flex flex-wrap justify-center items-center gap-3 lg:gap-6 xl:gap-8 ml-auto px-2 pb-4 min-w-0">
+  {[ 
+    { count: 34, label: "Deals", change: "↑3", bg: "bg-lime-200", text: "text-lime-700" },
+    { count: 20, label: "Won", change: "↓2", bg: "bg-red-200", text: "text-red-700" },
+    { count: 3, label: "Lost", change: "↓1", bg: "bg-red-200", text: "text-red-700" }
+  ].map((stat, i) => (
+    <div
+      key={i}
+      className="flex flex-col items-center justify-center min-w-[70px] sm:min-w-[80px] md:min-w-[100px] max-w-[120px] w-full md:w-auto"
+    >
+      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${stat.bg} ${stat.text} mb-2`}>
+        {stat.change}
+      </span>
+      <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-black leading-none truncate">
+        {stat.count}
+        <span className="block text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 font-semibold mt-1">
+          {stat.label}
+        </span>
+      </span>
+    </div>
+  ))}
+</div>
+
+{/* Stats Row for Small Screens */}
+<div className="flex md:hidden flex-wrap justify-center items-center gap-2 mt-2 w-full">
+  {[ 
+    { count: 34, label: "Deals", change: "↑3", bg: "bg-lime-200", text: "text-lime-700" },
+    { count: 20, label: "Won", change: "↓2", bg: "bg-red-200", text: "text-red-700" },
+    { count: 3, label: "Lost", change: "↓1", bg: "bg-red-200", text: "text-red-700" }
+  ].map((stat, i) => (
+    <div
+      key={i}
+      className="flex flex-col items-center justify-center min-w-[60px] max-w-[80px] flex-shrink"
+    >
+      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${stat.bg} ${stat.text} mb-1`}>
+        {stat.change}
+      </span>
+      <span className="text-xs font-semibold text-black leading-tight text-center">
+        {stat.count}
+        <span className="block text-[10px] text-gray-400 font-semibold mt-0.5">
+          {stat.label}
+        </span>
+      </span>
+    </div>
+  ))}
+</div>
     </section>
   );
 };
