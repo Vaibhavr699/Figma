@@ -32,30 +32,30 @@ const ProfileCard = ({
       </div>
 
       {/* Avatar */}
-      <div className="absolute left-4 sm:left-6 top-4 sm:top-6 z-10 md:top-14">
+      <div className="absolute left-4 sm:left-6 top-4 sm:top-6 z-10 md:top-10 lg:top-6">
         <img
           src={avatar}
           alt={name}
-          className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-white shadow"
+          className="w-10 h-10 sm:w-13 sm:h-13 md:w-15 md:h-15 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-white shadow"
         />
       </div>
 
       {/* Main Content */}
       <div className="flex flex-col justify-end h-full pl-1 sm:pl-2 pt-16 sm:pt-20 pr-1 sm:pr-2 pb-1 sm:pb-2 z-10 relative">
         <h2
-          className="text-black mb-1 text-lg sm:text-xl md:text-2xl lg:text-3xl"
+          className="text-black mb-1 text-lg sm:text-xl md:text-2xl lg:text-2xl"
           style={{
             fontFamily: 'Wix Madefor Text',
             fontWeight: 500,
             fontStyle: 'normal',
-            fontSize: '26px',
+            fontSize: '22px',
             lineHeight: '100%',
             letterSpacing: 0,
           }}
         >
           {name}
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-[#7B8FA1] mb-2 sm:mb-4">{title}</p>
+        <p className="text-xs sm:text-sm md:text-base text-[#7B8FA1] mb-2 sm:mb-4 truncate">{title}</p>
         <div className="flex items-end justify-between w-full gap-2 sm:gap-4">
           {/* Source section */}
           <div>
@@ -71,28 +71,38 @@ const ProfileCard = ({
                 <button className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-[#F3F4F6] rounded-full text-[#7B8FA1] font-medium">Facebook</button>
               )}
               {sources.includes("Typeform") && (
-                <button className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-[#F3F4F6] rounded-full text-[#7B8FA1] font-medium">Typeform</button>
+                <button className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs sm:text-sm lg:text-sm bg-[#F3F4F6] rounded-full text-[#7B8FA1] font-medium">Typeform</button>
               )}
             </div>
           </div>
           {/* Interest section */}
           <div className="flex flex-col items-end gap-1">
-            <div className="flex items-center text-xs sm:text-sm text-[#FF7A00] font-semibold mb-1">
-              {hotLevel === 4 && <><span className="mr-1">🔥</span>Hot Client</>}
-              {hotLevel === 3 && <>High interest</>}
-              {hotLevel === 2 && <>Medium interest</>}
-            </div>
-            <div className="flex gap-0.5 sm:gap-1">
-              {[1,2,3,4,5].map((i) => (
-                <div
-                  key={i}
-                  className={`w-4 h-4 rounded-full border border-[#E0E0E0] ${
-                    i === hotLevel ? 'bg-[#23243A]' : i < hotLevel ? 'bg-[#FFB800]' : 'bg-[#E0E0E0]'
-                  }`}
-                ></div>
-              ))}
-            </div>
-          </div>
+  <div className="flex items-center text-xs sm:text-sm text-[#FF7A00] font-semibold mb-1 lg:text-sm">
+    {hotLevel === 4 && (
+      <>
+        <span className="mr-1 lg:mr-1">🔥</span>Hot Client
+      </>
+    )}
+    {hotLevel === 3 && <>High interest</>}
+    {hotLevel === 2 && <>Medium interest</>}
+  </div>
+
+  <div className="flex gap-0.5 sm:gap-1">
+    {[1, 2, 3, 4, 5].map((i) => (
+      <div
+        key={i}
+        className={`w-4 h-4 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-2.5 lg:h-2.5 xl:w-3.5 xl:h-3.5 rounded-full border border-[#E0E0E0] ${
+          i === hotLevel
+            ? 'bg-[#23243A]'
+            : i < hotLevel
+            ? 'bg-[#FFB800]'
+            : 'bg-[#E0E0E0]'
+        }`}
+      ></div>
+    ))}
+  </div>
+</div>
+
         </div>
       </div>
     </div>

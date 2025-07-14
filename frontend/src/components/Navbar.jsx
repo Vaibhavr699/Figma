@@ -5,9 +5,9 @@ import googlemeetlogo from "../assets/gmeet.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-6 bg-[#ffffff]">
+    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#ffffff]">
       {/* Left: Logo */}
-      <div className="w-8 h-8 sm:px-1 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 rounded-full flex items-center justify-start md:justify-center pb-2 xs:pb-3 sm:pb-4 md:pt-4">
+      <div className="w-6 h-6 md:w-10 md:h-10 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
         <span>
           <svg
             width="100%"
@@ -40,25 +40,22 @@ const Navbar = () => {
       </div>
 
       {/* Center: Pills */}
-      <div
-        className="relative flex-1 flex items-center justify-center"
-        style={{ minWidth: 0 }}
-      >
+      <div className="relative flex-1 flex items-center justify-center">
         {/* Black pill */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 flex items-center mt-1 bg-[#000000] rounded-full px-2 sm:px-1 md:px-6 py-2 sm:py-3 min-w-[160px] sm:min-w-[220px] md:min-w-[600px] md:min-h-[70px] sm:min-h-[70px] lg:min-w-[1000px] lg:min-h-[70px] max-w-[95%] z-10"
-          style={{ height: "48px", top: 0 }}
+          className="absolute left-1/2 md:-translate-x-1/2 -translate-x-1/2 flex items-center md:mt-1 bg-[#000000] rounded-full px-2  md:px-6 md:py-1 py-2 h-11 min-w-36  md:min-w-[40px] md:min-h-10  lg:min-w-[800px] lg:min-h-[72px] max-w-[95%] z-10"
+          // style={{ height: "38px", top: 0 }}
         >
-          <span className="text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold">
+          <span className="text-white text-xs sm:text-xs md:text-base lg:text-md font-semibold">
             Your Schedule
           </span>
           {/* Calendar Icon Section */}
           <div
-            className="hidden sm:flex flex items-center rounded-full border border-[#2D3238] bg-transparent
+            className="hidden sm:flex  items-center rounded-full border border-[#2D3238] bg-transparent
                       px-3 py-1.5 gap-2
                       sm:px-4 sm:py-2 sm:gap-3
                       md:px-1 
-                      lg:px-6 lg:py-3 lg:gap-5
+                      lg:px-1 lg:py-3 lg:gap-1
                       w-fit"
           >
             {/* Icon Container */}
@@ -98,19 +95,19 @@ const Navbar = () => {
           </div>
 
           {/* Right Arrow Button at end of black pill */}
-          <button className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-gray-700 bg-transparent z-20">
+          <button className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 md:w-12 md:h-12 hidden lg:flex items-center justify-center rounded-full border-2 border-gray-700 bg-transparent z-20">
             <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
           </button>
         </div>
         {/* Orange pill */}
         <div
-          className="absolute left-1/2 -translate-x-1/3 hidden md:flex items-center mt-1 bg-[#ff8300] rounded-full min-w-[120px] sm:min-w-[120px] sm:min-h-[78px] md:min-w-[500px] md:min-h-[70px] lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto"
-          style={{ top: 0 }}
+          className="absolute left-1/2 -translate-x-1/3 hidden lg:flex items-center  lg:mt-0 bg-[#ff8300] rounded-full min-w-[120px] sm:min-w-7 sm:min-h-5 md:min-w-[500px] md:min-h-[70px] lg:min-w-[500px] lg:min-h-[70px] max-w-[80%] h-[42px] sm:h-[48px] z-20 mx-auto"
+          style={{ top: -1 }}
         >
           {/* content here */}
 
           {/* Main Inner Pill (wider, but less than orange) */}
-          <div className="hidden md:flex items-center bg-[#eb932e] shadow py-1 sm:py-2 gap-2 sm:gap-4 h-[28px] sm:h-[40px] md:h-[48px] rounded-full min-w-[160px] sm:min-w-[80px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4">
+          <div className="hidden md:flex items-center bg-[#eb932e] shadow py-[0.25rem] sm:py-[0.5rem] gap-[0.5rem] sm:gap-[1rem] h-[1.75rem] sm:h-[2.5rem] md:h-[3rem] lg:min-w-[1rem] rounded-full min-w-[1rem] sm:min-w-[5rem] md:min-w-[4.5rem] max-w-[70%] z-30 ml-[0.5rem] sm:ml-[1rem]">
             {/* Avatars */}
             <div className="flex items-center -space-x-1 sm:-space-x-2">
               <img
@@ -131,7 +128,7 @@ const Navbar = () => {
             </span>
 
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
 
@@ -145,13 +142,13 @@ const Navbar = () => {
               <img
                 src={googlemeetlogo}
                 alt="Google Meet"
-                className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-[#F1700C] shadow"
+                className="w-3 h-3 sm:w-5 sm:h-5 md:w-8 md:h-8 rounded-full border-2 border-white bg-[#F1700C] shadow"
               />
             </div>
           </div>
 
           {/* Timeline Avatars and Calendar (right of white pill) */}
-          <div className="hidden md:flex items-center gap-2 md:ml-8position-right">
+          <div className="hidden md:flex items-center gap-2 md:ml-1 position-right">
             <span className="text-white font-semibold text-xs font-manrope">
               2:15 pm
             </span>
@@ -174,8 +171,8 @@ const Navbar = () => {
       </div>
 
       {/* Right: Notification and user */}
-      <div className="hidden sm:flex flex items-center gap-3 xs:gap-4 sm:gap-6 ml-2 xs:ml-4 sm:ml-10 z-30 pb-2 xs:pb-3 sm:pb-4 md:pt-4">
-        <button className="relative w-7 h-7 xs:w-3 xs:h-3 sm:w-6 sm:h-6 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
+      <div className="flex gap-1 items-center ml-2 xs:ml-4  z-30 pb-2  md:pt-4">
+        <button className="relative w-7 h-7 xs:w-3 xs:h-3 sm:w-6 sm:h-6 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
           <span>
             <svg
               width="100%"
@@ -197,11 +194,11 @@ const Navbar = () => {
             </svg>
           </span>
         </button>
-        <div className="w-7 h-7 xs:w-9 xs:h-9 sm:w-11 sm:h-11 rounded-full bg-yellow-200 flex items-center justify-center">
+        <div className="w-7 h-7 md:h-10 md:w-10 rounded-full bg-yellow-200 flex items-center justify-center">
           <img
             src="https://randomuser.me/api/portraits/men/35.jpg"
             alt="user"
-            className="w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 rounded-full object-cover"
+            className="w-5 h-5 xs:w-8 xs:h-8  rounded-full object-cover"
           />
         </div>
       </div>

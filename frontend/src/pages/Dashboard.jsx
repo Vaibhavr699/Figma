@@ -128,12 +128,12 @@ const Dashboard = () => {
           {/* WORKSPACE Section */}
           <WorkspaceHeader />
           {/* New Leads Section */}
-          <section className="mb-2 sm:mb-8">
-            <div className="flex flex-wrap items-center gap-1 sm:gap-2 md:gap-4 mb-2 sm:mb-4 mt-1">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold font-manrope mr-2 sm:mr-4">New Leads</h2>
+          <section className="mb-2 sm:mb-8 md:mb-4">
+            <div className="flex flex-wrap items-center gap-1 sm:gap-2 md:gap-2 mb-2 sm:mb-4 mt-1">
+              <h2 className="sm:text-xl md:text-3xl font-bold font-manrope mr-2 sm:mr-4">New Leads</h2>
               <span className="text-base sm:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end"><span className="text-black">7 Leads</span></span>
               {/* Pills and icons */}
-              <div className="w-full md:w-auto flex flex-col md:flex-row gap-2 md:gap-3 ml-0 sm:ml-2 md:ml-4 py-2 md:py-0">
+              <div className="w-full md:w-auto flex flex-col md:flex-row gap-2 md:gap-2 ml-0 sm:ml-2 md:ml-2 py-2 md:py-0">
                 {/* First row: Search, Filter, All, Hot Client */}
                 <div className="flex flex-row flex-wrap gap-1 sm:gap-2 md:gap-3">
                   <button className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 min-w-[40px] sm:min-w-[48px] md:min-w-[56px] flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 hover:bg-gray-100"><Search className="w-4 h-4 sm:w-5 sm:h-5" /></button>
@@ -150,7 +150,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-4 sm:mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mt-4 sm:mt-8 place-items-center">
               {leads.map((lead, i) => (
                 <ProfileCard
                   key={i}
