@@ -378,21 +378,19 @@ const SalesEngagement = () => {
             </div>
           </div>
           {/* Tabs and Dropdown */}
-          <div
-            className="flex flex-col gap-4"
-            style={{ height: 100, opacity: 1 }}
-          >
-            <div className="flex flex-wrap gap-2">
+          <div className="flex flex-col gap-1 h-[6.25rem] opacity-100">
+
+            <div className="flex flex-row gap-2 justify-between w-full">
               {["Cadences", "My Feed", "My List"].map((tab, idx) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`h-[56px] w-full sm:w-[134px] rounded-full font-semibold text-lg border-2 transition-colors focus:outline-none ${
+                  className={`h-[36px] min-w-[90px] px-4 rounded-full font-semibold text-sm border-2 transition-colors focus:outline-none ${
                     activeTab === tab
                       ? "bg-[#1C0A6B] text-white border-[#FFFFFF] shadow-sm"
                       : "bg-transparent text-[#1C0A6B] border-[#FFFFFF]"
                   }`}
-                  style={{ marginRight: idx < 2 ? "6px" : 0 }}
+                  style={{ marginRight: idx < 2 ? "4px" : 0 }}
                 >
                   {tab}
                 </button>
@@ -426,7 +424,7 @@ const SalesEngagement = () => {
       {/* Main Content: Sidebar below, then Lead Information & Campaign History */}
       <div className="flex flex-col lg:flex-row px-2 sm:px-4 md:px-6 bg-[#F2F0FA] gap-4 lg:gap-0">
         {/* Sidebar (Contact List) */}
-        <div className="bg-[#F2F0FA] w-full lg:w-[250px] xl:w-[300px] 2xl:w-[350px] flex-shrink-0">
+        <div className="bg-[#F2F0FA] w-full lg:w-[240px] xl:w-[300px] 2xl:w-[350px] flex-shrink-0 mt-[-24px]">
           {/* Contact List */}
           <div className="p-2 sm:p-4">
             {contacts.map((contact) => (
@@ -794,8 +792,9 @@ const SalesEngagement = () => {
                 <div className="bg-[#f9f9fa] rounded-[40px] p-4 flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <svg
-                        className="w-10 h-10 sm:w-[44px] sm:h-[44px] md:w-[48px] md:h-[48px] lg:w-[54px] lg:h-[54px]"
+                    <svg
+                        width="54"
+                        height="54"
                         viewBox="0 0 54 54"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -807,14 +806,13 @@ const SalesEngagement = () => {
                           fill="#1C0A6B"
                         />
                         <path
-                          d="M26.3242 16.8242C21.085 16.8242 16.8242 21.085 16.8242 26.3242C16.8242 31.5634 21.085 35.8242 26.3242 35.8242C31.5634 35.8242 35.8242 31.5634 35.8242 26.3242C35.8242 21.085 31.5634 16.8242 26.3242 16.8242ZM26.3242 18.0909C30.8789 18.0909 34.5625 21.7696 34.5625 26.3242C34.5625 30.8789 30.8789 34.5625 26.3242 34.5625C21.7696 34.5625 18.0909 30.8789 18.0909 26.3242C18.0909 21.7696 21.7696 18.0909 26.3242 18.0909Z
-      ..."
+                          d="M26.3242 16.8242C21.085 16.8242 16.8242 21.085 16.8242 26.3242C16.8242 31.5634 21.085 35.8242 26.3242 35.8242C31.5634 35.8242 35.8242 31.5634 35.8242 26.3242C35.8242 21.085 31.5634 16.8242 26.3242 16.8242ZM26.3242 18.0909C30.8789 18.0909 34.5625 21.7696 34.5625 26.3242C34.5625 30.8789 30.8789 34.5625 26.3242 34.5625C21.7696 34.5625 18.0909 30.8789 18.0909 26.3242C18.0909 21.7696 21.7696 18.0909 26.3242 18.0909ZM26.3156 21.2613C26.1482 21.2642 25.9889 21.3333 25.8723 21.4533C25.7557 21.5734 25.6914 21.7347 25.6934 21.902V22.4352C24.6707 22.627 23.7958 23.2855 23.7958 24.4267C23.7958 25.2184 24.1527 25.8587 24.632 26.2314C25.1113 26.6042 25.6525 26.7695 26.1275 26.9279C26.6025 27.0862 27.0126 27.2376 27.2458 27.4189C27.479 27.6003 27.5909 27.7529 27.5909 28.2279C27.5909 29.2835 25.0625 29.2835 25.0625 28.2279C25.0644 28.1436 25.0494 28.0597 25.0184 27.9812C24.9874 27.9027 24.941 27.8313 24.8821 27.7709C24.8231 27.7106 24.7526 27.6627 24.6748 27.63C24.5971 27.5972 24.5135 27.5804 24.4292 27.5804C24.3448 27.5804 24.2613 27.5972 24.1835 27.63C24.1057 27.6627 24.0353 27.7106 23.9763 27.7709C23.9173 27.8313 23.8709 27.9027 23.8399 27.9812C23.809 28.0597 23.794 28.1436 23.7958 28.2279C23.7958 29.3682 24.6715 30.028 25.6934 30.2207V30.7514C25.6915 30.8357 25.7065 30.9196 25.7375 30.9981C25.7685 31.0766 25.8148 31.148 25.8738 31.2084C25.9328 31.2687 26.0033 31.3166 26.081 31.3493C26.1588 31.3821 26.2423 31.3989 26.3267 31.3989C26.4111 31.3989 26.4946 31.3821 26.5724 31.3493C26.6501 31.3166 26.7206 31.2687 26.7796 31.2084C26.8386 31.148 26.8849 31.0766 26.9159 30.9981C26.9469 30.9196 26.9619 30.8357 26.96 30.7514V30.2207C27.982 30.0281 28.8588 29.3684 28.8588 28.2279C28.8588 27.4363 28.5007 26.796 28.0214 26.4232C27.542 26.0504 27.0008 25.8839 26.5258 25.7255C26.0508 25.5672 25.6408 25.417 25.4076 25.2357C25.1744 25.0543 25.0625 24.9017 25.0625 24.4267C25.0625 23.3711 27.5909 23.3711 27.5909 24.4267C27.5909 24.5948 27.6577 24.7561 27.7766 24.875C27.8955 24.9939 28.0567 25.0606 28.2248 25.0606C28.393 25.0606 28.5542 24.9939 28.6731 24.875C28.792 24.7561 28.8588 24.5948 28.8588 24.4267C28.8588 23.2872 27.9817 22.6294 26.96 22.4364V21.902C26.961 21.8173 26.945 21.7332 26.9129 21.6548C26.8808 21.5763 26.8334 21.5051 26.7733 21.4454C26.7132 21.3856 26.6417 21.3386 26.5631 21.3069C26.4845 21.2753 26.4003 21.2598 26.3156 21.2613Z"
                           fill="white"
                         />
                       </svg>
 
                       <h3
-                        className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-[#1C0A6B]"
+                        className="text-base md:text-lg lg:text-2xl font-medium text-[#1C0A6B]"
                         style={{
                           fontFamily: '"Wix Madefor Text", sans-serif',
                           lineHeight: "100%",
@@ -879,7 +877,7 @@ const SalesEngagement = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
                     {/* Google Adwords Card */}
                     <div
-                      className="bg-[#F2F0FA] rounded-[40px] p-8 flex flex-col justify-between w-full"
+                      className="bg-[#F2F0FA] rounded-[40px] p-2 flex flex-col justify-between w-full"
                       style={{ height: 296, top: 536, left: 885, opacity: 1 }}
                     >
                       <div className="flex items-center justify-between mb-6">
@@ -911,7 +909,7 @@ const SalesEngagement = () => {
                           </div>
                           <div>
                             <h4
-                              className="text-lg sm:text-sm md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
+                              className="text-lg md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -921,7 +919,7 @@ const SalesEngagement = () => {
                               Google Adwords
                             </h4>
                             <p
-                              className="text-xs sm:text-sm md:text-lg lg:text-base font-normal text-[#8B8B99]"
+                              className="text-xs sm:text-sm lg:text-base font-normal text-[#8B8B99]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -929,11 +927,11 @@ const SalesEngagement = () => {
                               }}
                             >
                               Status:{" "}
-                              <span className="text-[#1C0A6B]">Connected</span>
+                              <span className="text-[#1C0A6B] text-sm">Connected</span>
                             </p>
                           </div>
                         </div>
-                        <button className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
+                        <button className="w-10 h-10 lg:w-14 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
                           <svg
                             className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                             fill="none"
@@ -959,11 +957,11 @@ const SalesEngagement = () => {
                             </svg>
                           </div>
                           <div>
-                            <p className="text-sm sm:text-base lg:text-lg text-[#8B8B99]">
+                            <p className="text-base lg:text-sm text-[#8B8B99]">
                               Type
                             </p>
                             <p
-                              className="text-sm sm:text-sm md:text-md lg:text-lg font-normal text-[#1C0A6B]"
+                              className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -976,8 +974,8 @@ const SalesEngagement = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
-                            <svg
-                              className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
+                          <svg
+                              className="w-3 h-3 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                               fill="none"
                               stroke="currentColor"
                               strokeWidth="2"
@@ -987,13 +985,13 @@ const SalesEngagement = () => {
                               <path d="M16 2v4M8 2v4M3 10h18" />
                             </svg>
                           </div>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          <div className="">
                             <div>
-                              <p className="text-[10px] sm:text-sm md:text-md lg:text-lg text-[#8B8B99]">
+                              <p className="text-base md:text-sm lg:text-md text-[#8B8B99]">
                                 Start Date
                               </p>
                               <p
-                                className="text-sm sm:text-sm md:text-md lg:text-lg font-normal text-[#1C0A6B]"
+                                className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
                                 style={{
                                   fontFamily: '"Wix Madefor Text", sans-serif',
                                   lineHeight: "100%",
@@ -1012,7 +1010,7 @@ const SalesEngagement = () => {
                     </div>
                     {/* X-twitter Card */}
                     <div
-                      className="hidden md:flex bg-[#F6F4FB] rounded-[40px] p-8 flex-col justify-between w-full"
+                      className="hidden md:flex bg-[#F6F4FB] rounded-[40px] p-2 flex-col justify-between w-full"
                       style={{ height: 296, top: 536, left: 885, opacity: 1 }}
                     >
                       <div className="flex items-center justify-between mb-6">
@@ -1035,8 +1033,8 @@ const SalesEngagement = () => {
                             </svg>
                           </div>
                           <div>
-                            <h4
-                              className="text-lg sm:text-sm md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
+                          <h4
+                              className="text-lg md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1054,13 +1052,13 @@ const SalesEngagement = () => {
                               }}
                             >
                               Status:{" "}
-                              <span className="text-[#1C0A6B]">Engaged</span>
+                              <span className="text-[#1C0A6B] text-sm">Engaged</span>
                             </p>
                           </div>
                         </div>
-                        <button className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
+                        <button className="w-10 h-10 lg:w-14 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
                           <svg
-                            className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
+                            className="w-4 h-4 lg:w-6 lg:h-6 text-[#1C0A6B]"
                             fill="none"
                             stroke="currentColor"
                             strokeWidth="2"
@@ -1072,7 +1070,7 @@ const SalesEngagement = () => {
                       </div>
                       <div className="flex items-center gap-8 mb-8">
                         <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
                             <svg
                               className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                               fill="none"
@@ -1084,18 +1082,18 @@ const SalesEngagement = () => {
                             </svg>
                           </div>
                           <div>
-                            <p className="text-sm sm:text-base lg:text-lg text-[#8B8B99]">
+                            <p className="text-base lg:text-sm text-[#8B8B99]">
                               Type
                             </p>
                             <p
-                              className="text-base sm:text-lg lg:text-xl font-normal text-[#1C0A6B]"
+                              className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
                                 letterSpacing: 0,
                               }}
                             >
-                              Social Media
+                              Web Marketing
                             </p>
                           </div>
                         </div>
@@ -1113,19 +1111,19 @@ const SalesEngagement = () => {
                             </svg>
                           </div>
                           <div>
-                            <p className="text-sm sm:text-sm lg:text-lg text-[#8B8B99]">
+                            <p className="text-sm  lg:text-md text-[#8B8B99]">
                               Start Date
                             </p>
                             <p
-                              className="text-base sm:text-sm lg:text-lg font-normal text-[#1C0A6B]"
-                              style={{
-                                fontFamily: '"Wix Madefor Text", sans-serif',
-                                lineHeight: "100%",
-                                letterSpacing: 0,
-                              }}
-                            >
-                              06.03.2025
-                            </p>
+                                className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
+                                style={{
+                                  fontFamily: '"Wix Madefor Text", sans-serif',
+                                  lineHeight: "100%",
+                                  letterSpacing: 0,
+                                }}
+                              >
+                                18.02.2025
+                              </p>
                           </div>
                         </div>
                       </div>

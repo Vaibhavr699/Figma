@@ -92,9 +92,9 @@ const Dashboard = () => {
   return (
     <div className=" w-full bg-gradient-to-b from-gray-100 to-white">
       <Navbar />
-      <div className="flex px-2 items-start gap-x-8 mt-10">
+      <div className="flex px-2 items-start gap-x-8 mt-8">
         {/* Vertical Menu */}
-        <nav className="hidden md:flex flex-col items-center gap-4 pt-1 px-2 mt-56 py-2">
+        <nav className="hidden md:flex flex-col fixed items-center gap-4 pt-1 px-2 lg:mr-4 mt-56 py-2">
           <button className="w-14 h-14 flex items-center justify-center rounded-full bg-[#052659] text-white shadow-lg">
             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17.5121 8.95408H11.8958C11.4572 8.95408 11.0935 8.59036 11.0935 8.15175C11.0935 7.71315 11.4572 7.34943 11.8958 7.34943H17.5121C17.9507 7.34943 18.3144 7.71315 18.3144 8.15175C18.3144 8.59036 17.9614 8.95408 17.5121 8.95408Z" fill="white"/>
@@ -129,14 +129,14 @@ const Dashboard = () => {
           <WorkspaceHeader />
           {/* New Leads Section */}
           <section className="mb-2 sm:mb-8 md:mb-4">
-            <div className="flex flex-wrap items-center gap-1 sm:gap-2 md:gap-2 mb-2 sm:mb-4 mt-1">
-              <h2 className="sm:text-xl md:text-3xl font-bold font-manrope mr-2 sm:mr-4">New Leads</h2>
+            <div className="flex flex-wrap items-center gap-1 md:gap-1 lg: mb-2 sm:mb-4 mt-1">
+              <h2 className="md:ml-14 xl:ml-6 text-lg md:text-2xl font-bold font-Wix Madefor Text mr-2 sm:mr-4">New Leads</h2>
               <span className="text-base sm:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end"><span className="text-black">7 Leads</span></span>
               {/* Pills and icons */}
-              <div className="w-full md:w-auto flex flex-col md:flex-row gap-2 md:gap-2 ml-0 sm:ml-2 md:ml-2 py-2 md:py-0">
+              <div className="md:ml-14 xl:ml-6 w-full md:w-auto flex flex-col md:flex-row gap-2 md:gap-2 ml-0 sm:ml-2  py-2 md:py-0">
                 {/* First row: Search, Filter, All, Hot Client */}
                 <div className="flex flex-row flex-wrap gap-1 sm:gap-2 md:gap-3">
-                  <button className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 min-w-[40px] sm:min-w-[48px] md:min-w-[56px] flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 hover:bg-gray-100"><Search className="w-4 h-4 sm:w-5 sm:h-5" /></button>
+                  <button className="flex-shrink-0 w-8 h-8 md:w-12 md:h-12 min-w-[36px] md:min-w-[56px] flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 hover:bg-gray-100"><Search className="w-4 h-4 sm:w-5 sm:h-5" /></button>
                   <button className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 min-w-[40px] sm:min-w-[48px] md:min-w-[56px] flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-500 hover:bg-gray-100"><Filter className="w-4 h-4 sm:w-5 sm:h-5" /></button>
                   <button className="flex-shrink-0 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 min-w-[80px] sm:min-w-[100px] md:min-w-[120px] rounded-full bg-white border border-gray-200 text-[#2E4C73] font-semibold shadow-sm text-xs sm:text-sm md:text-base">All</button>
                   <button className="flex-shrink-0 px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 min-w-[110px] sm:min-w-[130px] md:min-w-[150px] rounded-full border border-gray-200 text-[#2E4C73] font-semibold flex items-center gap-1 sm:gap-2 text-xs sm:text-sm md:text-base"><span role='img' aria-label='fire'>🔥</span>Hot Client</button>
@@ -150,7 +150,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mt-4 sm:mt-8 place-items-center">
+            <div className="md:ml-14 xl:ml-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-4 md:gap-6 mt-4 sm:mt-8 place-items-center">
               {leads.map((lead, i) => (
                 <ProfileCard
                   key={i}

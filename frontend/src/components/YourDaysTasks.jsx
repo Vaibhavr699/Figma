@@ -43,13 +43,13 @@ const tasks = [
 ];
 
 const YourDaysTasks = () => (
-  <section className="font-madefor">
-    <div className="mb-4  mt-2 flex flex-wrap">
+  <section className="md:ml-14 xl:ml-6 ml-6 font-madefor">
+    <div className="mb-4  mt-2 flex flex-wrap items-center gap-2">
       <h2
-        className="col-span-2 row-span-1 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
+        className="col-span-2 row-span-1 text-lg md:text-xl lg:text-2xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
         style={{
           fontFamily: 'Wix Madefor Text',
-          fontWeight: 500,
+          fontWeight: 600,
           fontStyle: 'normal',
           lineHeight: '100%',
           letterSpacing: '0',
@@ -58,7 +58,7 @@ const YourDaysTasks = () => (
         Your Days Tasks
       </h2>
       <span
-        className="col-span-1 row-span-1 text-xs xs:text-sm sm:text-base md:text-lg font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end justify-center items-center w-auto h-auto whitespace-nowrap sm:col-auto sm:row-auto"
+        className="col-span-1 row-span-1 text-base md:text-base lg:text-base font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end justify-center items-center w-auto h-auto whitespace-nowrap sm:col-auto sm:row-auto"
         style={{ opacity: 1 }}
       >
         <span className="text-black">16 Tasks</span>

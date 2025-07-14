@@ -5,7 +5,7 @@ import googlemeetlogo from "../assets/gmeet.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#ffffff]">
+    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#F4F5F7]">
       {/* Left: Logo */}
       <div className="w-6 h-6 md:w-10 md:h-10 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
         <span>
@@ -46,7 +46,7 @@ const Navbar = () => {
           className="absolute left-1/2 md:-translate-x-1/2 -translate-x-1/2 flex items-center md:mt-1 bg-[#000000] rounded-full px-2  md:px-6 md:py-1 py-2 h-11 min-w-36  md:min-w-[40px] md:min-h-10  lg:min-w-[800px] lg:min-h-[72px] max-w-[95%] z-10"
           // style={{ height: "38px", top: 0 }}
         >
-          <span className="text-white text-xs sm:text-xs md:text-base lg:text-md font-semibold">
+          <span className="text-white text-xs md:text-base lg:text-md font-semibold">
             Your Schedule
           </span>
           {/* Calendar Icon Section */}
@@ -172,7 +172,7 @@ const Navbar = () => {
 
       {/* Right: Notification and user */}
       <div className="flex gap-1 items-center ml-2 xs:ml-4  z-30 pb-2  md:pt-4">
-        <button className="relative w-7 h-7 xs:w-3 xs:h-3 sm:w-6 sm:h-6 md:h-10 md:w-10 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
+        <button className="relative w-6 h-6  md:h-10 md:w-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
           <span>
             <svg
               width="100%"
