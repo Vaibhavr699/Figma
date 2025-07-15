@@ -55,13 +55,13 @@ const tasks = [
 ];
 
 const YourDaysTasks = () => (
-  <section className="md:ml-14 xl:ml-6 ml-6 font-madefor">
+  <section className="md:ml-14 xl:ml-6 ml-6 font-madefor mt-4">
     <div className="mb-4  mt-2 flex flex-wrap items-center gap-2">
       <h2
         className="col-span-2 row-span-1 text-lg md:text-xl lg:text-2xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
         style={{
           fontFamily: "Wix Madefor Text",
-          fontWeight: 600,
+          fontWeight: 500,
           fontStyle: "normal",
           lineHeight: "100%",
           letterSpacing: "0",
@@ -111,7 +111,7 @@ const YourDaysTasks = () => (
         Completed
       </button>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mb-4 place-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 mb-4 place-items-center mt-4">
       {tasks.map((task, i) => {
         const isHighlight = i === 0 || task.highlight;
         return (
@@ -160,7 +160,7 @@ const YourDaysTasks = () => (
                 <img
                   src={task.avatar}
                   alt={task.person}
-                  className="w-12 h-14 rounded-full border-4 border-white shadow object-cover"
+                  className="w-14 h-14 rounded-full border-4 border-white shadow object-cover"
                 />
                 <div className="flex flex-col">
                   <span

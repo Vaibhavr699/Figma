@@ -6,20 +6,14 @@ const ProfileCard = ({
   name = "Darlene Robertson",
   title = "Financial Manager at Ford",
   avatar = "https://randomuser.me/api/portraits/men/32.jpg",
-  sources = ["LinkedIn", "Facebook"],
+  index = 0, // passed from parent component
   hotLevel = 4, // from 1 to 5
 }) => {
-  const hotColors = [
-    "bg-red-400",
-    "bg-orange-400",
-    "bg-yellow-400",
-    "bg-lime-400",
-    "bg-black",
-  ];
+  // Determine source based on index
+  const sources = index < 2 ? ["LinkedIn", "Facebook"] : ["Typeform"];
 
   return (
     <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[220px] sm:h-[270px] md:h-[280px] p-3 sm:p-5 bg-transparent overflow-hidden rounded-3xl transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:cursor-pointer">
-
       {/* Card SVG background */}
       <svg
         width="343"
@@ -27,7 +21,7 @@ const ProfileCard = ({
         viewBox="0 0 343 283"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 w-full h-full z-0 pointer-events-none "
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         preserveAspectRatio="none"
       >
         <path
@@ -38,18 +32,17 @@ const ProfileCard = ({
 
       {/* Top-right icon */}
       <div className="absolute top-3 right-1 z-10">
-  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gray-100 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-300">
-    <ArrowUpRight size={28} className="text-[#2E4C73]" />
-  </div>
-</div>
-
+        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gray-100 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-300">
+          <ArrowUpRight size={28} className="text-[#2E4C73]" />
+        </div>
+      </div>
 
       {/* Avatar */}
       <div className="absolute left-4 sm:left-6 top-4 sm:top-6 z-10 md:top-10 lg:top-6">
         <img
           src={avatar}
           alt={name}
-          className="w-10 h-10 sm:w-13 sm:h-13 md:w-15 md:h-15 lg:w-16 lg:h-16 rounded-full object-cover border-2 border-gray shadow"
+          className="w-10 h-10 sm:w-13 sm:h-13 md:w-15 md:h-15 lg:w-14 lg:h-14 rounded-full object-cover border-2 border-gray shadow"
         />
       </div>
 
@@ -61,14 +54,13 @@ const ProfileCard = ({
             fontFamily: "Wix Madefor Text",
             fontWeight: 500,
             fontStyle: "normal",
-
             lineHeight: "100%",
             letterSpacing: 0,
           }}
         >
           {name}
         </h2>
-        <p className="text-xs sm:text-sm md:text-base text-[#7B8FA1] mb-2 sm:mb-4 truncate">
+        <p className="text-xs sm:text-sm md:text-base text-[#7B8FA1] mb-4 sm:mb-4 truncate">
           {title}
         </p>
         <div className="flex items-end justify-between w-full gap-2 sm:gap-4">
@@ -78,7 +70,6 @@ const ProfileCard = ({
             <div className="flex gap-1 sm:gap-2">
               {sources.includes("LinkedIn") && (
                 <button className="flex items-center gap-1 px-2 sm:px-3 py-1 text-xs sm:text-sm bg-[#F3F4F6] rounded-full text-[#7B8FA1] font-medium">
-                  <FaLinkedin className="text-[#0077B5] w-4 h-4" />
                   LinkedIn
                 </button>
               )}
@@ -94,12 +85,13 @@ const ProfileCard = ({
               )}
             </div>
           </div>
+
           {/* Interest section */}
           <div className="flex flex-col items-end gap-1">
-            <div className="flex items-center text-xs sm:text-sm text-[#FF7A00] font-semibold mb-1 lg:text-sm">
+            <div className="flex items-center text-xs sm:text-sm text-[#FF7A00] font-semibold mb-1 lg:text-xs">
               {hotLevel === 4 && (
                 <>
-                  <span className="mr-1 lg:mr-1">🔥</span>Hot Client
+                  <span className="mr-1">🔥</span>Hot Client
                 </>
               )}
               {hotLevel === 3 && <>High interest</>}
@@ -114,8 +106,8 @@ const ProfileCard = ({
                     i === hotLevel
                       ? "bg-[#23243A]"
                       : i < hotLevel
-                        ? "bg-[#FFB800]"
-                        : "bg-[#E0E0E0]"
+                      ? "bg-[#FFB800]"
+                      : "bg-[#E0E0E0]"
                   }`}
                 ></div>
               ))}

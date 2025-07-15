@@ -5,10 +5,10 @@ import googlemeetlogo from "../assets/gmeet.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-6 bg-[#F4F6F8]">
+    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#F4F5F7]">
       {/* Left: Logo */}
-      <div className="w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center ml-1 xs:ml-2 sm:ml-4 md:ml-6">
-        <span className="w-full h-full">
+      <div className="w-6 h-6 md:w-12 md:h-12 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
+        <span>
           <svg
             width="100%"
             height="100%"
@@ -20,19 +20,19 @@ const Navbar = () => {
               fillRule="evenodd"
               clipRule="evenodd"
               d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z"
-              fill="url(#paint0_linear_450_1646)"
+              fill="url(#paint0_linear_172_867)"
             />
             <defs>
               <linearGradient
-                id="paint0_linear_450_1646"
+                id="paint0_linear_172_867"
                 x1="6.3617"
                 y1="7.34043"
                 x2="39.3936"
                 y2="38.9043"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#1C0A6B" />
-                <stop offset="1" stopColor="#3117A3" />
+                <stop stopColor="#CB122D" />
+                <stop offset="1" stopColor="#FF8300" />
               </linearGradient>
             </defs>
           </svg>
@@ -41,34 +41,28 @@ const Navbar = () => {
 
       {/* Center: Pills */}
       <div className="relative flex-1 flex items-center justify-center">
-        {/* Blue pill */}
+        {/* Black pill */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 flex items-center bg-blue-800 rounded-full
-             px-2 py-1
-             min-w-[124px] min-h-[40px]
-             sm:px-4 sm:py-3 sm:min-w-[300px] sm:min-h-[70px]
-             md:px-6 md:min-w-[600px] md:min-h-[70px]
-             lg:min-w-[1000px] lg:min-h-[70px]
-             max-w-[95%] z-10"
-          style={{ height: "48px", top: 0 }}
+          className="absolute left-1/2 md:-translate-x-1/2 -translate-x-1/2 flex items-center md:mt-1 bg-[#000000] rounded-full px-2  md:px-6 md:py-1 py-2 h-11 min-w-36  md:min-w-[40px] md:min-h-10  lg:min-w-[800px] lg:min-h-[72px] max-w-[95%] z-10"
+          // style={{ height: "38px", top: 0 }}
         >
-          <span className="text-white text-xs sm:text-[10px] md:text-sm lg:text-lg font-semibold">
+          <span className="text-white text-xs md:text-base lg:text-md font-semibold">
             Your Schedule
           </span>
           {/* Calendar Icon Section */}
           <div
-            className="hidden sm:flex items-center rounded-full border border-[#2D3238] bg-transparent
+            className="hidden sm:flex  items-center rounded-full border border-[#2D3238] bg-transparent
                       px-3 py-1.5 gap-2
                       sm:px-4 sm:py-2 sm:gap-3
                       md:px-1 
-                      lg:px-6 lg:py-3 lg:gap-5
+                      lg:px-1 lg:py-3 lg:gap-1
                       w-fit"
           >
             {/* Icon Container */}
             <div
               className="flex items-center justify-center rounded-full bg-[#1C1D1F]
                          w-5 h-5
-                         sm:w-4 sm:h-4
+                         sm:w-6 sm:h-6
                          md:w-5 md:h-5"
             >
               <svg
@@ -99,24 +93,21 @@ const Navbar = () => {
               28 March
             </span>
           </div>
+
           {/* Right Arrow Button at end of black pill */}
-          <button className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-9 sm:h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-gray-700 bg-transparent z-20">
+          <button className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-8 sm:h-8 md:w-12 md:h-12 hidden lg:flex items-center justify-center rounded-full border-2 border-gray-700 bg-transparent z-20">
             <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
           </button>
         </div>
-        {/* Blue pill */}
+        {/* Orange pill */}
         <div
-          className="hidden sm:flex absolute left-1/2 -translate-x-1/3 items-center bg-blue-400 rounded-full
-             min-w-[180px] sm:min-w-[180px] sm:min-h-[70px] md:min-w-[500px] md:min-h-[70px] 
-             lg:min-w-[600px] lg:min-h-[70px] max-w-[80%] h-[40px] sm:h-[48px] z-20 mx-auto"
-          style={{ top: 0 }}
+          className="absolute left-1/2 -translate-x-1/3 hidden lg:flex items-center  lg:mt-0 bg-[#ff8300] rounded-full min-w-[120px] sm:min-w-7 sm:min-h-5 md:min-w-[500px] md:min-h-[70px] lg:min-w-[500px] lg:min-h-[70px] max-w-[80%] h-[42px] sm:h-[48px] z-20 mx-auto"
+          style={{ top: -1 }}
         >
+          {/* content here */}
+
           {/* Main Inner Pill (wider, but less than orange) */}
-          <div
-            className="hidden sm:flex items-center bg-blue-700 shadow py-1 sm:py-2 gap-2 sm:gap-4
-             h-[28px] sm:h-[40px] md:h-[48px] rounded-full
-             min-w-[160px] sm:min-w-[220px] md:min-w-[390px] max-w-[70%] z-30 ml-2 sm:ml-4"
-          >
+          <div className="hidden md:flex items-center bg-[#eb932e] shadow py-[0.25rem] sm:py-[0.5rem] gap-[0.5rem] sm:gap-[1rem] h-[1.75rem] sm:h-[2.5rem] md:h-[3rem] lg:min-w-[1rem] rounded-full min-w-[1rem] sm:min-w-[5rem] md:min-w-[4.5rem] max-w-[70%] z-30 ml-[0.5rem] sm:ml-[1rem]">
             {/* Avatars */}
             <div className="flex items-center -space-x-1 sm:-space-x-2">
               <img
@@ -130,29 +121,34 @@ const Navbar = () => {
                 className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white"
               />
             </div>
+
             {/* 36mm */}
             <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm font-manrope">
               36mm
             </span>
+
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 flex items-center justify-center rounded-full border border-gray-400 text-white bg-blue-700">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
+
             {/* Time */}
             <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm font-manrope">
               2:15 pm
             </span>
+
             {/* Google Meet Logo styled and right-aligned */}
             <div className="ml-auto flex items-center px-1 sm:px-2">
               <img
                 src={googlemeetlogo}
                 alt="Google Meet"
-                className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-[#F1700C] shadow"
+                className="w-3 h-3 sm:w-5 sm:h-5 md:w-8 md:h-8 rounded-full border-2 border-white bg-[#F1700C] shadow"
               />
             </div>
           </div>
+
           {/* Timeline Avatars and Calendar (right of white pill) */}
-          <div className="hidden md:flex items-center gap-2 md:ml-8position-right">
+          <div className="hidden md:flex items-center gap-2 md:ml-1 position-right">
             <span className="text-white font-semibold text-xs font-manrope">
               2:15 pm
             </span>
@@ -175,9 +171,8 @@ const Navbar = () => {
       </div>
 
       {/* Right: Notification and user */}
-      <div className="flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-6 ml-1 xs:ml-2 sm:ml-4 md:ml-10 z-30 pb-1 xs:pb-2 sm:pb-3 md:pt-4">
-        {/* Notification Button */}
-        <button className="hidden sm:flex relative w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
+      <div className="flex gap-1 items-center ml-2 xs:ml-4  z-30 pb-2  md:pt-4">
+        <button className="relative w-6 h-6  md:h-10 md:w-10 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
           <span>
             <svg
               width="100%"
@@ -199,17 +194,14 @@ const Navbar = () => {
             </svg>
           </span>
         </button>
-
-        {/* Avatar */}
-        <div className="w-6 h-6 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-yellow-200 flex items-center justify-center">
+        <div className="w-7 h-7 md:h-10 md:w-10 lg:w-14 lg:h-14 rounded-full bg-yellow-200 flex items-center justify-center">
           <img
             src="https://randomuser.me/api/portraits/men/35.jpg"
             alt="user"
-            className="w-5 h-5 xs:w-7 xs:h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full object-cover"
+            className="w-10 h-10 xs:w-8 xs:h-8  rounded-full object-cover"
           />
         </div>
       </div>
-
       {/* Sales Engagement Sub-header */}
     </nav>
   );

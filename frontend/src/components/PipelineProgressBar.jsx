@@ -58,7 +58,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
           <div>
             <div
               style={{
-                fontSize: 15,
+                fontSize: 14,
                 color: "#8B8B99",
                 fontWeight: 500,
                 marginBottom: 2,
@@ -66,7 +66,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
             >
               Contact
             </div>
-            <div style={{ fontSize: 20, color: "#1C0A6B", fontWeight: 600 }}>
+            <div style={{ fontSize: 16, color: "#1C0A6B", fontWeight: 600 }}>
               Miguel Braswell
             </div>
           </div>
@@ -74,8 +74,8 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
         {/* Company */}
         <div style={{ display: "flex", alignItems: "left", gap: 12 }}>
           <svg
-            width="54"
-            height="54"
+            width="50"
+            height="50"
             viewBox="0 0 54 54"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
           <div>
             <div
               style={{
-                fontSize: 15,
+                fontSize: 14,
                 color: "#8B8B99",
                 fontWeight: 500,
                 marginBottom: 2,
@@ -134,7 +134,7 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
             >
               Company
             </div>
-            <div style={{ fontSize: 20, color: "#1C0A6B", fontWeight: 600 }}>
+            <div style={{ fontSize: 16, color: "#1C0A6B", fontWeight: 600 }}>
               Ominex Canada Ltd
             </div>
           </div>

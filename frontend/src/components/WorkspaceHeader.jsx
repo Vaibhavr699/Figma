@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 
 const WorkspaceHeader = () => {
   return (
-    <section className="flex flex-wrap w-full mb-4 sm:mb-6 md:mb-8 lg:mb-4 justify-left px-1 sm:px-2 md:px-6 xl:px-12 min-h-[60px]">
+    <section className="flex flex-wrap w-full mb-4 sm:mb-6 md:mb-8 lg:mb-4 items-center justify-left px-1 sm:px-2 md:px-6 xl:px-12 min-h-[60px]">
       {/* Leftmost: Arrow Button */}
       <button className="hidden md:flex w-6 h-6 md:w-14 md:h-14 mt-6 lg:mt-8 items-center justify-center rounded-full border-2 border-gray-300 bg-transparent mr-0 p-0">
         <svg
@@ -155,7 +155,7 @@ const WorkspaceHeader = () => {
       </div>
 
       {/* Stats Row for Small Screens */}
-      <div className="flex md:hidden flex-wrap justify-center items-center gap-2 mt-2 w-full">
+      <div className="flex md:hidden flex-wrap justify-center items-center gap-2 w-full">
         {[
           {
             count: 34,

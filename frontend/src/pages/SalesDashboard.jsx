@@ -17,6 +17,7 @@ const SalesEngagement = () => {
   const [activeTab, setActiveTab] = useState("Cadences");
   const [selectedContact, setSelectedContact] = useState("Miguel Braswell");
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedSource, setSelectedSource] = useState(null);
 
   const contacts = [
     {
@@ -66,21 +67,25 @@ const SalesEngagement = () => {
     },
   ];
 
-  const ContactCard = ({ contact, isActive }) => (
+  const ContactCard = ({ contact, isActive, setSelectedContact }) => (
     <div
-      className="rounded-[24px] mb-4 cursor-pointer transition-all flex flex-col justify-between 
-           w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] xl:w-[360px]"
+      className={`
+      rounded-[24px] mb-4 cursor-pointer transition-all flex flex-col justify-between 
+      w-[280px] sm:w-[300px] md:w-[320px] lg:w-[340px] xl:w-[360px] 
+      ${!isActive ? "hover:scale-105 hover:shadow-2xl hover:bg-[#F6F5FB]" : ""}
+    `}
       style={{
         width: 320,
         height: 174,
-        opacity: 1,
         background: isActive ? "#1C0A6B" : "#FFFFFF",
         color: isActive ? "#FFFFFF" : "#1C0A6B",
         position: "relative",
         boxShadow: isActive ? "0px 4px 24px 0px #1C0A6B1A" : "none",
+        transition: "all 0.3s ease-in-out",
       }}
       onClick={() => setSelectedContact(contact.name)}
     >
+      {/* Top section */}
       <div className="flex items-center justify-between px-6 pt-6">
         <div className="flex items-center gap-4">
           <img
@@ -89,28 +94,20 @@ const SalesEngagement = () => {
             className="w-12 h-12 rounded-full object-cover border-2 border-white"
             style={{ boxShadow: "0 2px 8px #0001" }}
           />
-          <div>
+          <div className="py-2 space-y-1">
             <h3
+              className="text-[17px] font-medium leading-none"
               style={{
                 fontFamily: '"Wix Madefor Text", sans-serif',
-                fontWeight: 500,
-                fontStyle: "normal",
-                fontSize: "19px",
-                lineHeight: "100%",
-                letterSpacing: 0,
                 color: isActive ? "#FFFFFF" : "#1C0A6B",
               }}
             >
               {contact.name}
             </h3>
             <p
+              className="text-[12px] font-medium leading-none"
               style={{
                 fontFamily: '"Wix Madefor Text", sans-serif',
-                fontWeight: 500,
-                fontStyle: "normal",
-                fontSize: "14px",
-                lineHeight: "100%",
-                letterSpacing: 0,
                 color: isActive ? "#FFFFFF" : "#1C0A6B",
               }}
             >
@@ -118,6 +115,8 @@ const SalesEngagement = () => {
             </p>
           </div>
         </div>
+
+        {/* Mail Icon */}
         <svg
           width="42"
           height="42"
@@ -146,6 +145,8 @@ const SalesEngagement = () => {
           />
         </svg>
       </div>
+
+      {/* Bottom section */}
       <div className="flex items-center justify-between px-6 pb-6 mt-auto">
         <div className="flex items-center gap-2">
           <span
@@ -157,17 +158,18 @@ const SalesEngagement = () => {
           >
             12 Hours Overdue
           </span>
-
           <span
             className="text-sm font-bold rounded-full w-9 h-9 flex items-center justify-center"
             style={{
               background: isActive ? "#6CC6E0" : "#E84E34",
-              color: isActive ? "#ffffff" : "#ffffff",
+              color: "#ffffff",
             }}
           >
             69
           </span>
         </div>
+
+        {/* Arrow icon */}
         <svg
           width="44"
           height="44"
@@ -336,7 +338,7 @@ const SalesEngagement = () => {
           </span>
 
           {/* Title */}
-          <span className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[24px] font-bold text-[#22008C] flex-shrink-0">
+          <span className="text-sm sm:text-base md:text-lg lg:text-lg xl:text-[20px] font-bold text-[#22008C] flex-shrink-0">
             <span className="hidden sm:inline">Sales Engagement</span>
             <span className="sm:hidden">Sales</span>
           </span>
@@ -400,7 +402,7 @@ const SalesEngagement = () => {
         >
           {/* Header row with icons */}
           <div className="flex items-center justify-between mb-6 mt-6">
-            <h2 className="font-bold text-[#1C0A6B] text-lg">Work Queue</h2>
+            <h2 className="font-bold text-[#1C0A6B] text-md">Work Queue</h2>
             <div className="flex items-center gap-1">
               <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
                 <Search className="w-6 h-6" />
@@ -412,12 +414,12 @@ const SalesEngagement = () => {
           </div>
           {/* Tabs and Dropdown */}
           <div className="flex flex-col gap-1 h-[8rem] opacity-100">
-            <div className="flex flex-row gap-1 justify-between w-4 h-12">
+            <div className="flex flex-row gap-1 justify-between w-4 h-12 text-md">
               {["Cadences", "My Feed", "My List"].map((tab, idx) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`h-[48px] min-w-[110px] px-2 rounded-full font-semibold text-base border-2 transition-colors focus:outline-none ${
+                  className={`h-[48px] text-md min-w-[110px] px-2 rounded-full font-semibold text-base border-2 transition-colors focus:outline-none ${
                     activeTab === tab
                       ? "bg-[#1C0A6B] text-white border-[#FFFFFF] shadow-sm"
                       : "bg-transparent text-[#1C0A6B] border-[#FFFFFF]"
@@ -429,7 +431,7 @@ const SalesEngagement = () => {
               ))}
             </div>
             <div>
-              <button className="flex items-center justify-between w-full sm:w-[350px] h-[54px] rounded-full bg-transparent border-2 border-[#FFFFFF] text-[#1C0A6B] font-semibold text-lg px-6 focus:outline-none">
+              <button className="flex items-center justify-between w-full sm:w-[350px] h-[54px] rounded-full bg-transparent border-2 border-[#FFFFFF] text-[#1C0A6B] font-semibold text-md px-6 focus:outline-none">
                 <span>Event Cadence (10)</span>
                 <svg
                   className="ml-2 w-5 h-5 text-[#1C0A6B]"
@@ -458,12 +460,13 @@ const SalesEngagement = () => {
         {/* Sidebar (Contact List) */}
         <div className="bg-[#F2F0FA] w-full lg:w-[240px] xl:w-[300px] 2xl:w-[350px] flex-shrink-0 mt-[-8px]">
           {/* Contact List */}
-          <div className="p-2 sm:p-4">
+          <div className="p-2 sm:p-4 overflow-y-auto scrollbar-hide">
             {contacts.map((contact) => (
               <ContactCard
                 key={contact.id}
                 contact={contact}
                 isActive={contact.name === selectedContact}
+                setSelectedContact={setSelectedContact} // ✅ Pass this to enable click
               />
             ))}
           </div>
@@ -474,15 +477,15 @@ const SalesEngagement = () => {
             <div className="flex flex-col lg:flex-row gap-4 mb-2">
               {/* Lead Information */}
               <div
-                className="bg-white rounded-[32px] border border-[#ECEAF6] flex flex-col p-4 w-full lg:w-2/5"
+                className="bg-white rounded-[32px] border border-[#ECEAF6] flex flex-col p-4 w-full lg:w-2/6"
                 style={{ height: 408, top: 438, left: 449 }}
               >
                 <div className="flex items-center justify-between ">
                   <div className="flex items-center gap-4">
                     <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center">
                       <svg
-                        width="54"
-                        height="54"
+                        width="50"
+                        height="50"
                         viewBox="0 0 54 54"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -503,18 +506,15 @@ const SalesEngagement = () => {
                       style={{
                         fontFamily: '"Wix Madefor Text", sans-serif',
                         fontWeight: 500,
-                        fontStyle: "normal",
-                        fontSize: "21px",
-                        lineHeight: "100%",
-                        letterSpacing: 0,
                         color: "#1C0A6B",
                       }}
+                      className="lg:text-md"
                     >
                       Lead Information
                     </h3>
                   </div>
                   <div className="flex gap-1">
-                    <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
+                    <button className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
                       <svg
                         width="15"
                         height="15"
@@ -528,7 +528,7 @@ const SalesEngagement = () => {
                         />
                       </svg>
                     </button>
-                    <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
+                    <button className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
                       <svg
                         width="17"
                         height="17"
@@ -612,7 +612,7 @@ const SalesEngagement = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-[15px] text-[#8B8B99] font-medium leading-tight">
+                      <p className="text-[14px] text-[#8B8B99] font-medium leading-tight">
                         Job Title
                       </p>
                       <p
@@ -620,7 +620,7 @@ const SalesEngagement = () => {
                           fontFamily: '"Wix Madefor Text", sans-serif',
                           fontWeight: 500,
                           fontStyle: "normal",
-                          fontSize: "21px",
+                          fontSize: "17px",
                           lineHeight: "100%",
                           letterSpacing: 0,
                           color: "#1C0A6B",
@@ -632,7 +632,7 @@ const SalesEngagement = () => {
                   </div>
                   {/* Phone */}
                   <div className="flex items-center gap-4">
-                    <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
+                    <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
                       <svg
                         width="54"
                         height="54"
@@ -656,7 +656,7 @@ const SalesEngagement = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-[15px] text-[#8B8B99] font-medium leading-tight">
+                      <p className="text-[14px] text-[#8B8B99] font-medium leading-tight">
                         Phone
                       </p>
                       <p
@@ -664,7 +664,7 @@ const SalesEngagement = () => {
                           fontFamily: '"Wix Madefor Text", sans-serif',
                           fontWeight: 500,
                           fontStyle: "normal",
-                          fontSize: "21px",
+                          fontSize: "17px",
                           lineHeight: "100%",
                           letterSpacing: 0,
                           color: "#1C0A6B",
@@ -676,7 +676,7 @@ const SalesEngagement = () => {
                   </div>
                   {/* Email */}
                   <div className="flex items-center gap-4">
-                    <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
+                    <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
                       <svg
                         width="19"
                         height="18"
@@ -699,7 +699,7 @@ const SalesEngagement = () => {
                       </svg>
                     </div>
                     <div>
-                      <p className="text-[15px] text-[#8B8B99] font-medium leading-tight">
+                      <p className="text-[14px] text-[#8B8B99] font-medium leading-tight">
                         Email
                       </p>
                       <p
@@ -707,7 +707,7 @@ const SalesEngagement = () => {
                           fontFamily: '"Wix Madefor Text", sans-serif',
                           fontWeight: 500,
                           fontStyle: "normal",
-                          fontSize: "21px",
+                          fontSize: "17px",
                           lineHeight: "100%",
                           letterSpacing: 0,
                           color: "#1C0A6B",
@@ -719,7 +719,7 @@ const SalesEngagement = () => {
                   </div>
                   {/* Source */}
                   <div className="flex items-center gap-4">
-                    <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
+                    <div className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
                       <svg
                         width="54"
                         height="54"
@@ -761,14 +761,14 @@ const SalesEngagement = () => {
                     </div>
 
                     <div>
-                      <p className="text-[15px] text-[#8B8B99] font-medium leading-tight">
+                      <p className="text-[14px] text-[#8B8B99] font-medium leading-tight">
                         Source
                       </p>
                       <div className="flex gap-3 mt-1">
-                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
+                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[#F6F5FB]">
                           <svg
-                            width="54"
-                            height="54"
+                            width="50"
+                            height="50"
                             viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -801,10 +801,10 @@ const SalesEngagement = () => {
                             </defs>
                           </svg>
                         </button>
-                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
+                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[#F6F5FB]">
                           <svg
-                            width="54"
-                            height="54"
+                            width="50"
+                            height="50"
                             viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -843,10 +843,10 @@ const SalesEngagement = () => {
                             </defs>
                           </svg>
                         </button>
-                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
+                        <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white transition-all duration-200 hover:scale-105 hover:shadow-lg hover:bg-[#F6F5FB]">
                           <svg
-                            width="54"
-                            height="54"
+                            width="50"
+                            height="50"
                             viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
@@ -877,15 +877,15 @@ const SalesEngagement = () => {
               </div>
               {/* Campaign History */}
               <div
-                className="w-full lg:w-3/5"
+                className="w-full lg:w-3/4"
                 style={{ height: 440, top: 438, left: 866 }}
               >
                 <div className="bg-[#f9f9fa] rounded-[40px] p-4 flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3 sm:gap-4">
                       <svg
-                        width="54"
-                        height="54"
+                        width="50"
+                        height="50"
                         viewBox="0 0 54 54"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -903,19 +903,19 @@ const SalesEngagement = () => {
                       </svg>
 
                       <h3
-                        className="text-base md:text-lg lg:text-2xl font-medium text-[#1C0A6B]"
                         style={{
                           fontFamily: '"Wix Madefor Text", sans-serif',
-                          lineHeight: "100%",
-                          letterSpacing: 0,
+                          fontWeight: 500,
+                          color: "#1C0A6B",
                         }}
+                        className="lg:text-md"
                       >
                         Campaign History
                       </h3>
                     </div>
 
                     <div className="flex gap-1">
-                      <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
+                      <button className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
                         <svg
                           width="15"
                           height="15"
@@ -929,7 +929,7 @@ const SalesEngagement = () => {
                           />
                         </svg>
                       </button>
-                      <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
+                      <button className="w-[50px] h-[50px] flex items-center justify-center rounded-full border border-[#CCD7E4] text-[#1C0A6B] bg-white hover:bg-[#F4F6F8]">
                         <svg
                           width="17"
                           height="17"
@@ -968,18 +968,18 @@ const SalesEngagement = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
                     {/* Google Adwords Card */}
                     <div
-                      className="bg-[#F2F0FA] rounded-[40px] p-2 flex flex-col justify-between w-full"
+                      className="bg-[#F2F0FA] rounded-[40px] py-2 px-2 flex flex-col justify-between w-full"
                       style={{ height: 296, top: 536, left: 885, opacity: 1 }}
                     >
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-4">
                           <div
-                            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 md:px-1 rounded-[20px] flex items-center justify-center"
+                            className="w-8 h-8 lg:w-12 lg:h-12 md:px-1 rounded-[20px] flex items-center justify-center"
                             style={{ background: "#E6F4D7" }}
                           >
                             {/* Google Ads SVG (custom) */}
                             <svg
-                              className="w-8 h-7 sm:w-5 sm:h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+                              className="w-3 h-3  md:w-7 md:h-7 lg:w-6 lg:h-6"
                               viewBox="0 0 33 30"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -1000,7 +1000,7 @@ const SalesEngagement = () => {
                           </div>
                           <div>
                             <h4
-                              className="text-lg md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
+                              className="text-lg md:text-lg lg:text-md font-normal text-[#1C0A6B] mb-2"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1010,7 +1010,7 @@ const SalesEngagement = () => {
                               Google Adwords
                             </h4>
                             <p
-                              className="text-xs sm:text-sm lg:text-base font-normal text-[#8B8B99]"
+                              className="text-xs lg:text-sm font-normal text-[#8B8B99]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1024,7 +1024,7 @@ const SalesEngagement = () => {
                             </p>
                           </div>
                         </div>
-                        <button className="w-10 h-10 lg:w-14 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
+                        <button className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
                           <svg
                             className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                             fill="none"
@@ -1054,7 +1054,7 @@ const SalesEngagement = () => {
                               Type
                             </p>
                             <p
-                              className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
+                              className="text-base md:text-sm lg:text-sm font-normal text-[#1C0A6B]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1097,7 +1097,7 @@ const SalesEngagement = () => {
                           </div>
                         </div>
                       </div>
-                      <button className="w-full bg-[#1C0A6B] text-white py-4 pb-2 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
+                      <button className="w-full bg-[#1C0A6B] text-white py-4 mb-4 pb-2 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
                         Send email
                       </button>
                     </div>
@@ -1109,12 +1109,12 @@ const SalesEngagement = () => {
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-4">
                           <div
-                            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 md:px-1 rounded-[20px] flex items-center justify-center"
+                            className="w-5 h-5 sm:w-14 sm:h-14 lg:w-10 lg:h-10 md:px-1 rounded-[20px] flex items-center justify-center"
                             style={{ background: "#1C0A6B" }}
                           >
                             {/* Google Ads SVG (custom) */}
                             <svg
-                              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
+                              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-6 lg:h-6"
                               viewBox="0 0 37 38"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -1127,7 +1127,7 @@ const SalesEngagement = () => {
                           </div>
                           <div>
                             <h4
-                              className="text-lg md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
+                              className="text-lg md:text-lg lg:text-md font-normal text-[#1C0A6B] mb-2"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1137,7 +1137,7 @@ const SalesEngagement = () => {
                               X-twitter Social Listening
                             </h4>
                             <p
-                              className="text-xs sm:text-sm lg:text-base font-normal text-[#8B8B99]"
+                              className="text-xs lg:text-sm font-normal text-[#8B8B99]"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
                                 lineHeight: "100%",
@@ -1151,7 +1151,7 @@ const SalesEngagement = () => {
                             </p>
                           </div>
                         </div>
-                        <button className="w-10 h-10 lg:w-14 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
+                        <button className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
                           <svg
                             className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                             fill="none"
@@ -1224,7 +1224,7 @@ const SalesEngagement = () => {
                           </div>
                         </div>
                       </div>
-                      <button className="w-full bg-[#1C0A6B] text-white py-4 pb-2 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
+                      <button className="w-full bg-[#1C0A6B] text-white py-4 pb-2 mb-4 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
                         Send email
                       </button>
                     </div>
@@ -1240,7 +1240,7 @@ const SalesEngagement = () => {
               {/* Header */}
               <div className="flex items-center justify-between flex-wrap md:mb-3">
                 <div className="flex items-center space-x-3 mb-2 md:mb-0">
-                  <div className="w-[54px] h-[54px] bg-blue-900 rounded-full flex items-center justify-center">
+                  <div className="w-[50px] h-[50px] bg-blue-900 rounded-full flex items-center justify-center">
                     <svg
                       width="54"
                       height="54"
@@ -1260,7 +1260,7 @@ const SalesEngagement = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-medium text-[#1C0A6B] font-['Wix_Madefor_Text']">
+                  <h3 className="text-xl md:text-lg font-medium text-[#1C0A6B] font-['Wix_Madefor_Text']">
                     Einstein Scoring
                   </h3>
                 </div>
