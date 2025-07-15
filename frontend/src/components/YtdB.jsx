@@ -312,7 +312,7 @@ const YourDaysTasks = () => (
                   className="w-8 h-8 rounded-full border-2 border-white object-cover"
                 />
                 <span
-                  className={`text-sm font-medium ${isHighlight ? "text-white" : "text-white"}`}
+                  className={`text-sm font-medium ${isHighlight ? "text-white" : "text-"}`}
                 >
                   {task.status}
                 </span>
