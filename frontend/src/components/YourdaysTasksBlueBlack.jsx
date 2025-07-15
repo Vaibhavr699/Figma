@@ -58,7 +58,7 @@ const YourDaysTasks = () => (
   <section className="md:ml-14 xl:ml-6 ml-6 font-madefor mt-4">
     <div className="mb-4  mt-2 flex flex-wrap items-center gap-2">
       <h2
-        className="col-span-2 row-span-1 text-lg md:text-xl lg:text-2xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
+        className="col-span-2 row-span-1 text-lg md:text-xl text-[#1C0A6B] lg:text-2xl font-bold font-madefor mr-2 whitespace-nowrap sm:col-auto sm:row-auto"
         style={{
           fontFamily: "Wix Madefor Text",
           fontWeight: 500,
@@ -73,7 +73,7 @@ const YourDaysTasks = () => (
         className="col-span-1 row-span-1 text-base md:text-base lg:text-base font-semibold font-manrope underline underline-offset-4 decoration-2 decoration-black flex items-end justify-center items-center w-auto h-auto whitespace-nowrap sm:col-auto sm:row-auto"
         style={{ opacity: 1 }}
       >
-        <span className="text-black">16 Tasks</span>
+        <span className="text-[#1C0A6B]">16 Tasks</span>
       </span>
       <button className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-gray-200 bg-gray- text-gray-500 hover:bg-gray-100 col-span-1 row-span-1 sm:col-auto sm:row-auto">
         <Search className="w-5 h-5" />
@@ -135,7 +135,7 @@ const YourDaysTasks = () => (
               >
                 <path
                   d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z"
-                  fill="#FF8300"
+                  fill="#1C0A6B"
                 />
               </svg>
             ) : (
@@ -252,7 +252,7 @@ const YourDaysTasks = () => (
               </div>
               <div className="flex flex-col">
                 <h3
-                  className={`text-base lg:text-2xl font-bold mb-1 ${isHighlight ? "text-white" : "text-gray-900"}`}
+                  className={`text-base lg:text-2xl font-bold mb-1 ${isHighlight ? "text-white" : "text-[#1C0A6B]"}`}
                 >
                   {task.name}
                 </h3>
@@ -302,7 +302,7 @@ const YourDaysTasks = () => (
               <div
                 className={`flex items-center gap-3 rounded-full border px-2 py-1 lg:px-4 lg:py-2 ${
                   isHighlight
-                    ? "bg-orange-100/30 border-orange-200"
+                    ? "bg-[#1C0A6B] border-orange-200"
                     : "bg-white border-gray-200"
                 }`}
               >
@@ -337,7 +337,7 @@ const YourDaysTasks = () => (
                 <button
                   className={`w-12 h-12 flex items-center justify-center rounded-full border ${
                     i === 0 || i === 1
-                      ? "bg-orange-500 border-orange-300 text-orange-600"
+                      ? "bg-[#1C0A6B] border-gray-100 text-orange-600"
                       : "bg-white border-gray text-orange-600"
                   }`}
                 >

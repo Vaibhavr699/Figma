@@ -5,7 +5,7 @@ import googlemeetlogo from "../assets/gmeet.png";
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#F4F5F7]">
+    <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#F6F1F4]">
       {/* Left: Logo */}
       <div className="w-6 h-6 md:w-12 md:h-12 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
         <span>
@@ -20,7 +20,7 @@ const Navbar = () => {
               fillRule="evenodd"
               clipRule="evenodd"
               d="M23 9.29787C15.4325 9.29787 9.29787 15.4325 9.29787 23C9.29787 30.5675 15.4325 36.7021 23 36.7021C30.5675 36.7021 36.7021 30.5675 36.7021 23C36.7021 18.8764 34.8473 15.5208 32.4617 13.2945C32.0976 12.9547 32.0003 12.4069 32.2584 11.981L36.1818 5.50556C36.4878 5.00055 37.1638 4.86791 37.6194 5.24346C42.7297 9.45543 46 15.8463 46 23C46 35.7025 35.7025 46 23 46C10.2975 46 0 35.7025 0 23C0 10.2975 10.2975 0 23 0C25.418 0 27.7563 0.37469 29.9555 1.07177C30.5194 1.2505 30.7747 1.89192 30.5149 2.42334L27.2993 9.001C27.0792 9.45114 26.5616 9.66072 26.0751 9.54082C25.0894 9.29787 24.3337 9.29787 23 9.29787Z"
-              fill="url(#paint0_linear_172_867)"
+              fill="#1C0A6B"
             />
             <defs>
               <linearGradient
@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="relative flex-1 flex items-center justify-center">
         {/* Black pill */}
         <div
-          className="absolute left-1/2 md:-translate-x-1/2 -translate-x-1/2 flex items-center md:mt-1 bg-[#000000] rounded-full px-2  md:px-6 md:py-1 py-2 h-11 min-w-36  md:min-w-[40px] md:min-h-10  lg:min-w-[800px] lg:min-h-[72px] max-w-[95%] z-10"
+          className="absolute left-1/2 md:-translate-x-1/2 -translate-x-1/2 flex items-center md:mt-1 bg-[#1C0A6B] rounded-full px-2  md:px-6 md:py-1 py-2 h-11 min-w-36  md:min-w-[40px] md:min-h-10  lg:min-w-[800px] lg:min-h-[72px] max-w-[95%] z-10"
           // style={{ height: "38px", top: 0 }}
         >
           <span className="text-white text-xs md:text-base lg:text-md font-semibold">
@@ -101,13 +101,13 @@ const Navbar = () => {
         </div>
         {/* Orange pill */}
         <div
-          className="absolute left-1/2 -translate-x-1/3 hidden lg:flex items-center  lg:mt-0 bg-[#ff8300] rounded-full min-w-[120px] sm:min-w-7 sm:min-h-5 md:min-w-[500px] md:min-h-[70px] lg:min-w-[500px] lg:min-h-[70px] max-w-[80%] h-[42px] sm:h-[48px] z-20 mx-auto"
+          className="absolute left-1/2 -translate-x-1/3 hidden lg:flex items-center  lg:mt-0 bg-[#5CB1E2] rounded-full min-w-[120px] sm:min-w-7 sm:min-h-5 md:min-w-[500px] md:min-h-[70px] lg:min-w-[500px] lg:min-h-[70px] max-w-[80%] h-[42px] sm:h-[48px] z-20 mx-auto"
           style={{ top: -1 }}
         >
           {/* content here */}
 
           {/* Main Inner Pill (wider, but less than orange) */}
-          <div className="hidden md:flex items-center bg-[#eb932e] shadow py-[0.25rem] sm:py-[0.5rem] gap-[0.5rem] sm:gap-[1rem] h-[1.75rem] sm:h-[2.5rem] md:h-[3rem] lg:min-w-[1rem] rounded-full min-w-[1rem] sm:min-w-[5rem] md:min-w-[4.5rem] max-w-[70%] z-30 ml-[0.5rem] sm:ml-[1rem]">
+          <div className="hidden md:flex items-center bg-[#489BD0] shadow py-[0.25rem] sm:py-[0.5rem] gap-[0.5rem] sm:gap-[1rem] h-[1.75rem] sm:h-[2.5rem] md:h-[3rem] lg:min-w-[1rem] rounded-full min-w-[1rem] sm:min-w-[5rem] md:min-w-[4.5rem] max-w-[70%] z-30 ml-[0.5rem] sm:ml-[1rem]">
             {/* Avatars */}
             <div className="flex items-center -space-x-1 sm:-space-x-2">
               <img
@@ -128,7 +128,7 @@ const Navbar = () => {
             </span>
 
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#489BD0]">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
 
@@ -194,7 +194,7 @@ const Navbar = () => {
             </svg>
           </span>
         </button>
-        <div className="w-7 h-7 md:h-10 md:w-10 lg:w-14 lg:h-14 rounded-full bg-yellow-200 flex items-center justify-center">
+        <div className="w-7 h-7 md:h-10 md:w-10 lg:w-14 lg:h-14 rounded-full bg-white flex items-center justify-center">
           <img
             src="https://randomuser.me/api/portraits/men/35.jpg"
             alt="user"

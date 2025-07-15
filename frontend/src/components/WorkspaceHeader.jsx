@@ -6,7 +6,7 @@ const WorkspaceHeader = () => {
   return (
     <section className="flex flex-wrap w-full mb-4 sm:mb-6 md:mb-8 lg:mb-4 items-center justify-left px-1 sm:px-2 md:px-6 xl:px-12 min-h-[60px]">
       {/* Leftmost: Arrow Button */}
-      <button className="hidden md:flex w-6 h-6 md:w-14 md:h-14 mt-6 lg:mt-8 items-center justify-center rounded-full border-2 border-gray-300 bg-transparent mr-0 p-0">
+      <button className="hidden md:flex w-6 h-6 md:w-14 md:h-14 mt-6 lg:mt-1 items-center justify-center rounded-full border-2 border-gray-300 bg-transparent mr-0 p-0">
         <svg
           viewBox="0 0 61 61"
           fill="none"

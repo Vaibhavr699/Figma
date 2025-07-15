@@ -171,7 +171,7 @@ const Navbar = () => {
       </div>
 
       {/* Right: Notification and user */}
-      <div className="flex gap-1 items-center ml-2 xs:ml-4  z-30 pb-2  md:pt-4">
+      <div className="flex gap-1 items-center ml-2 xs:ml-4 z-30 pb-2  md:pt-4">
         <button className="relative w-6 h-6  md:h-10 md:w-10 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
           <span>
             <svg

@@ -128,7 +128,7 @@ const Navbar = () => {
             </span>
 
             {/* Arrow */}
-            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#F1700C]">
+            <div className="w-5 h-5 sm:w-7 sm:h-7 md:right-1 flex items-center justify-center rounded-full border border-gray-400 text-white bg-[#489BD0]">
               <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
             </div>
 

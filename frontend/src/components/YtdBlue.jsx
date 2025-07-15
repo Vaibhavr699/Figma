@@ -262,11 +262,11 @@ const YourDaysTasks = () => (
                       <Calendar
                         className={`w-5 h-5 ${isHighlight ? "text-black" : "text-[#FFFFFF]"}`}
                       />
-                      <span className="text-white">{task.date}</span>
+                      <span className={`w-5 h-5 ${isHighlight ? "text-black" : "text-[#FFFFFF]"}`}>{task.date}</span>
                     </span>
                     <span className="flex items-center gap-1">
                       <Circle
-                        className={`w-2 h-2 ${isHighlight ? "text-white" : "text-[#FF8300]"}`}
+                        className={`w-2 h-2 ${isHighlight ? "" : "text-[#FF8300]"}`}
                         fill={isHighlight ? "white" : "#FF8300"}
                       />
                       <span className="text-white">{task.time}</span>
@@ -276,7 +276,7 @@ const YourDaysTasks = () => (
                 {task.amount && (
                   <div className="flex items-center gap-2">
                     <span
-                      className={`text-base ${isHighlight ? "text-orange-100" : "text-[#B0B7C3]"}`}
+                      className={`text-base ${isHighlight ? "text-black" : "text-[#B0B7C3]"}`}
                     >
                       Amount
                     </span>
