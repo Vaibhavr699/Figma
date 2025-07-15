@@ -285,7 +285,7 @@ const SalesEngagement = () => {
             </div>
           </div>
           {/* Right Side Icons */}
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 lg:gap-4">
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-1 lg:gap-1">
             <button className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
               <svg
                 className="w-4 h-4 sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6"

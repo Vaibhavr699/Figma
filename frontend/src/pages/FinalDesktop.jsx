@@ -168,8 +168,8 @@ const FinalDesktop = () => {
           </div>
 
           {/* Search bar center */}
-          <div className="flex-1 min-w-0 flex justify-center w-full sm:w-auto">
-            <div className="flex items-center bg-white rounded-full px-2 sm:px-4 md:px-5 py-2 w-full max-w-full xs:max-w-[140px] sm:max-w-[180px] md:max-w-md lg:max-w-lg shadow-sm">
+          <div className="flex-1 min-w-0 flex justify-center w-full sm:w-auto mt-1">
+            <div className="flex items-center justify-center bg-white rounded-full px-2 sm:px-4 md:px-5 py-2 w-full max-w-full xs:max-w-[140px] sm:max-w-[180px] md:max-w-md lg:max-w-lg shadow-sm">
               {/* Provided search icon SVG */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-2">
                 <path d="M14.4623 14.4715C15.6893 13.2467 16.4484 11.5534 16.4484 9.6828C16.4484 5.94594 13.419 2.91663 9.68218 2.91663C5.94533 2.91663 2.91602 5.94594 2.91602 9.6828C2.91602 13.4196 5.94533 16.449 9.68218 16.449C11.5484 16.449 13.2382 15.6934 14.4623 14.4715ZM14.4623 14.4715L17.0827 17.0833" stroke="#272727" stroke-width="1.5" stroke-linecap="round"/>
@@ -181,14 +181,14 @@ const FinalDesktop = () => {
           {/* Right side: notification and avatar */}
           <div className="flex items-center space-x-2 sm:space-x-4 min-w-fit">
             {/* Notification bell with white circle background */}
-            <span className="relative flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14">
+            <span className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10">
               {/* Outer white circle SVG */}
-              <svg className="absolute inset-0 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="absolute inset-0 w-8 h-8 sm:w-11 sm:h-11 md:w-10 md:h-10" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="30.5" cy="30.5" r="30.5" fill="white"/>
               </svg>
               {/* Notification bell button, centered */}
-              <button className="relative z-10 p-0 rounded-full shadow-none border-none focus:outline-none flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10">
-                <svg width="20" height="20" className="w-full h-full" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button className="relative z-10 p-0 rounded-full shadow-none border-none focus:outline-none flex items-center justify-center w-6 h-6 md:w-8 md:h-8">
+                <svg width="18" height="18" className="w-full h-full" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.9163 18.9431H4.08342V20.8677H19.9163V18.9431ZM19.1531 9.48483L19.5956 13.3911L21.5081 13.1745L21.0655 9.26818L19.1531 9.48483ZM4.404 13.3911L4.8465 9.48483L2.93412 9.26818L2.49162 13.1745L4.404 13.3911ZM3.05301 16.5254C3.80317 15.6424 4.27282 14.5492 4.404 13.3911L2.49162 13.1745C2.4029 13.9577 2.08575 14.6913 1.58628 15.2791L3.05301 16.5254ZM19.5956 13.3911C19.7269 14.5492 20.1965 15.6424 20.9466 16.5254L22.4134 15.2791C21.9139 14.6913 21.5967 13.9577 21.5081 13.1745L19.5956 13.3911ZM4.08342 18.9431C2.94559 18.9431 2.22183 17.5036 3.05301 16.5254L1.58628 15.2791C-0.234427 17.4222 1.19411 20.8677 4.08342 20.8677V18.9431ZM19.9163 20.8677C22.8055 20.8677 24.2341 17.4222 22.4134 15.2791L20.9466 16.5254C21.7778 17.5036 21.0541 18.9431 19.9163 18.9431V20.8677ZM21.0655 9.26818C20.5328 4.56586 16.6547 0.980011 11.9998 0.980011V2.90463C15.6312 2.90463 18.7256 5.71069 19.1531 9.48483L21.0655 9.26818ZM4.8465 9.48483C5.27404 5.71069 8.36842 2.90463 11.9998 2.90463V0.980011C7.34498 0.980011 3.4668 4.56586 2.93412 9.26818L4.8465 9.48483Z" fill="#2E4C73"/>
                   <path d="M16.7501 22.8092C16.9367 22.3115 16.6844 21.757 16.1867 21.5704C15.689 21.3839 15.1345 21.6361 14.9479 22.1338L16.7501 22.8092ZM9.05166 22.1338C8.86515 21.6361 8.31052 21.3839 7.81285 21.5704C7.31518 21.757 7.06294 22.3115 7.24945 22.8092L9.05166 22.1338ZM14.9479 22.1338C14.5339 23.2387 13.3914 24.0754 11.9998 24.0754V26C14.1624 26 16.0435 24.6945 16.7501 22.8092L14.9479 22.1338ZM11.9998 24.0754C10.6082 24.0754 9.46571 23.2387 9.05166 22.1338L7.24945 22.8092C7.95598 24.6945 9.83716 26 11.9998 26V24.0754Z" fill="#2E4C73"/>
                   <circle cx="19.5" cy="4.5" r="4" fill="#CB122D" stroke="white"/>
@@ -196,9 +196,9 @@ const FinalDesktop = () => {
               </button>
             </span>
             {/* User avatar with white circle background */}
-            <span className="relative flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14">
+            <span className="relative flex items-center justify-center w-8 h-8 md:w-10 md:h-10">
               {/* Outer white circle SVG */}
-              <svg className="absolute inset-0 w-8 h-8 sm:w-11 sm:h-11 md:w-14 md:h-14" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="absolute inset-0 w-8 h-8 sm:w-11 sm:h-11 md:w-10 md:h-10" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="30.5" cy="30.5" r="30.5" fill="white"/>
               </svg>
               {/* User avatar, centered */}
@@ -225,7 +225,7 @@ const FinalDesktop = () => {
                 className={`px-4 py-2 text-sm lg:px-7 lg:py-3 lg:text-base rounded-full font-medium transition-colors focus:outline-none shadow-sm whitespace-nowrap ${
                   item === 'Projects'
                     ? 'bg-[#001B44] text-white'
-                    : 'bg-white text-black hover:bg-gray-100'
+                    : 'bg-white text-black hover:bg-[#d6c1a7]'
                 }`}
               >
                 {item}
@@ -283,15 +283,15 @@ const FinalDesktop = () => {
               <input type="text" placeholder="Search" className="bg-transparent outline-none text-[#2B3674] placeholder-[#8F9BBA] text-sm w-full" />
             </div>
             {/* Pill buttons */}
-            <button className="w-10 h-10 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
+            <button className="w-10 h-10 px-2 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
               {/* Download/Document Icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z" stroke="#002354" strokeWidth="1.5"/><path d="M17 21v-8H7v8" stroke="#002354" strokeWidth="1.5"/><path d="M12 17v-4" stroke="#002354" strokeWidth="1.5"/></svg>
             </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
+            <button className="w-10 h-10 px-2 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
               {/* Grid Icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="5.5" height="5.5" rx="1.4" stroke="#002354" strokeWidth="1.2"/><rect x="14.5" y="4" width="5.5" height="5.5" rx="1.4" stroke="#002354" strokeWidth="1.2"/><rect x="4" y="14.5" width="5.5" height="5.5" rx="1.4" stroke="#002354" strokeWidth="1.2"/><rect x="14.5" y="14.5" width="5.5" height="5.5" rx="1.4" stroke="#002354" strokeWidth="1.2"/></svg>
             </button>
-            <button className="w-10 h-10 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
+            <button className="w-10 h-10 px-2 flex items-center justify-center rounded-[8px] bg-white shadow ml-2">
               {/* Filter/Funnel Icon */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M19.5 4h-15a.5.5 0 00-.4.8l6.6 8.8V20a.5.5 0 00.8.4l2-1.5a.5.5 0 00.2-.4v-6.5l6.6-8.8a.5.5 0 00-.4-.8z" stroke="#002354" strokeWidth="1.5"/></svg>
             </button>
@@ -307,7 +307,7 @@ const FinalDesktop = () => {
               className={`min-w-max px-4 py-2 text-sm sm:px-8 sm:py-3 sm:text-base md:px-10 md:py-3 md:text-base rounded-full font-medium transition-colors focus:outline-none shadow-sm
                 ${activeTab === tab
                   ? 'bg-[#002354] text-white'
-                  : 'bg-white text-black hover:bg-[#F5EDE3]'}
+                  : 'bg-white text-black hover:bg-[#d6c1a7]'}
               `}
             >
               {tab}
