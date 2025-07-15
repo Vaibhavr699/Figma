@@ -241,7 +241,7 @@ const SalesEngagement = () => {
       style={{ fontFamily: '"Wix Madefor Text", sans-serif' }}
     >
       {/* Header */}
-      <header className="bg-white opacity-100 border-b border-gray-200 w-full px-2 sm:px-4 md:px-8 py-2 sm:py-3 flex flex-col gap-2">
+      <header className="bg-white opacity-100 border-b border-gray-200 w-full px-2 sm:px-4 md:px-8 pt-2 flex flex-col gap-2">
         <div className="flex items-center justify-between w-full gap-2">
           {/* Logo */}
           <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[46px] lg:h-[46px]">

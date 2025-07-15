@@ -132,21 +132,21 @@ const WorkspaceHeader = () => {
         ].map((stat, i) => (
           <div
             key={i}
-            className="relative flex flex-col items-center justify-center min-w-[70px] sm:min-w-[80px] md:min-w-[100px] max-w-[120px] w-full md:w-auto"
+            className="relative flex gap-1  justify-center min-w-[70px] sm:min-w-[80px] md:min-w-[100px] max-w-[120px] w-full md:w-auto"
           >
             {/* Count (Number) */}
-            <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-black leading-none">
+            <span className="text-lg md:text-3xl lg:text-5xl font-semibold text-black leading-none">
               {stat.count}
             </span>
 
             {/* Label */}
-            <span className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-500 font-medium mt-1">
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-500 font-medium pt-4">
               {stat.label}
             </span>
 
             {/* Badge (Change arrow) */}
             <span
-              className={`absolute top-0 -right-5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${stat.bg} ${stat.text}`}
+              className={`h-fit w-fit px-1.5 py-0.5 rounded-full text-[12px] font-semibold ${stat.bg} ${stat.text}`}
             >
               {stat.change}
             </span>
