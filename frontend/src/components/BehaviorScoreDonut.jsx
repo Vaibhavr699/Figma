@@ -85,8 +85,8 @@ const ScoreDonut = ({
             color: '#1C0A6B',
             zIndex: 2,
           }}>
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{value}</div>
-            <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{label}</div>
+            <div className="text-lg md:text-xl lg:text-2xl xl:text-xl 2xl:text-3xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{value}</div>
+            <div className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-3xl" style={{ fontWeight: 500, lineHeight: '100%' }}>{label}</div>
           </div>
         </CircularProgressbarWithChildren>
       </div>
