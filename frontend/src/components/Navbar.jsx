@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="w-full flex items-center justify-between px-2 md:px-4 bg-[#F4F5F7]">
       {/* Left: Logo */}
-      <div className="w-6 h-6 md:w-10 md:h-10 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
+      <div className="w-6 h-6 md:w-12 md:h-12 rounded-full flex items-center justify-start md:justify-center pb-2 sm:pb-2 md:pt-4">
         <span>
           <svg
             width="100%"
@@ -172,7 +172,7 @@ const Navbar = () => {
 
       {/* Right: Notification and user */}
       <div className="flex gap-1 items-center ml-2 xs:ml-4  z-30 pb-2  md:pt-4">
-        <button className="relative w-6 h-6  md:h-10 md:w-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
+        <button className="relative w-6 h-6  md:h-10 md:w-10 lg:w-14 lg:h-14 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:bg-gray-100 p-0">
           <span>
             <svg
               width="100%"
@@ -194,11 +194,11 @@ const Navbar = () => {
             </svg>
           </span>
         </button>
-        <div className="w-7 h-7 md:h-10 md:w-10 rounded-full bg-yellow-200 flex items-center justify-center">
+        <div className="w-7 h-7 md:h-10 md:w-10 lg:w-14 lg:h-14 rounded-full bg-yellow-200 flex items-center justify-center">
           <img
             src="https://randomuser.me/api/portraits/men/35.jpg"
             alt="user"
-            className="w-5 h-5 xs:w-8 xs:h-8  rounded-full object-cover"
+            className="w-10 h-10 xs:w-8 xs:h-8  rounded-full object-cover"
           />
         </div>
       </div>

@@ -18,7 +18,8 @@ const ProfileCard = ({
   ];
 
   return (
-    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[220px] sm:h-[270px] md:h-[280px] p-3 sm:p-5 bg-transparent  overflow-hidden rounded-3xl">
+    <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-[220px] sm:h-[270px] md:h-[280px] p-3 sm:p-5 bg-transparent overflow-hidden rounded-3xl transform transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:cursor-pointer">
+
       {/* Card SVG background */}
       <svg
         width="343"
@@ -37,10 +38,11 @@ const ProfileCard = ({
 
       {/* Top-right icon */}
       <div className="absolute top-3 right-1 z-10">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gray hover:bg-white shadow-sm">
-          <ArrowUpRight size={28} className="text-[#2E4C73]" />
-        </div>
-      </div>
+  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gray-100 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-300">
+    <ArrowUpRight size={28} className="text-[#2E4C73]" />
+  </div>
+</div>
+
 
       {/* Avatar */}
       <div className="absolute left-4 sm:left-6 top-4 sm:top-6 z-10 md:top-10 lg:top-6">

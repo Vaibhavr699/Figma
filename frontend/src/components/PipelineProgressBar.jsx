@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const steps = [
-  { label: 'Lead' },
-  { label: 'Working' },
-  { label: 'Qualified' },
-  { label: 'Converted' },
+  { label: "Lead" },
+  { label: "Working" },
+  { label: "Qualified" },
+  { label: "Converted" },
 ];
 
 const CIRCLE_SIZE = 53.2197265625;
@@ -19,140 +19,243 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
   const fillPercent = (currentStep / (steps.length - 1)) * 100;
 
   return (
-    <div className="hidden sm:block" style={{
-      width: '100%',
-      padding: '32px 0',
-      background: '#F2F0FA',
-      fontFamily: '"Wix Madefor Text", Inter, sans-serif',
-    }}>
+    <div
+      className="hidden sm:block"
+      style={{
+        width: "100%",
+        padding: "32px 0",
+        background: "#F2F0FA",
+        fontFamily: '"Wix Madefor Text", Inter, sans-serif',
+      }}
+    >
       {/* Contact & Company Row */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        gap: 24,
-        marginBottom: 24,
-        width: '100%',
-        maxWidth: 1200,
-        marginLeft: 24,
-        marginRight: 'auto',
-      }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-start",
+          gap: 24,
+          marginBottom: 24,
+          width: "100%",
+          maxWidth: 1200,
+          marginLeft: 24,
+          marginRight: "auto",
+        }}
+      >
         {/* Contact */}
-        <div style={{ display: 'flex', alignItems: 'left', gap: 12 }}>
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Miguel Braswell" style={{ width: 48, height: 48, borderRadius: '50%', objectFit: 'cover', boxShadow: '0 2px 8px 0 rgba(44,62,80,0.08)' }} />
+        <div style={{ display: "flex", alignItems: "left", gap: 12 }}>
+          <img
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Miguel Braswell"
+            style={{
+              width: 48,
+              height: 48,
+              borderRadius: "50%",
+              objectFit: "cover",
+              boxShadow: "0 2px 8px 0 rgba(44,62,80,0.08)",
+            }}
+          />
           <div>
-            <div style={{ fontSize: 15, color: '#8B8B99', fontWeight: 500, marginBottom: 2 }}>Contact</div>
-            <div style={{ fontSize: 20, color: '#1C0A6B', fontWeight: 600 }}>Miguel Braswell</div>
+            <div
+              style={{
+                fontSize: 15,
+                color: "#8B8B99",
+                fontWeight: 500,
+                marginBottom: 2,
+              }}
+            >
+              Contact
+            </div>
+            <div style={{ fontSize: 20, color: "#1C0A6B", fontWeight: 600 }}>
+              Miguel Braswell
+            </div>
           </div>
         </div>
         {/* Company */}
-        <div style={{ display: 'flex', alignItems: 'left', gap: 12 }}>
-          <span style={{ width: 48, height: 48, borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 8px 0 rgba(44,62,80,0.08)' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="9" fill="#1C0A6B" fillOpacity="0.08"/>
-              <rect x="3" y="3" width="18" height="18" rx="9" stroke="#1C0A6B" strokeWidth="1.5"/>
-              <path d="M8.5 12L12 15.5L15.5 12" stroke="#1C0A6B" strokeWidth="1.5"/>
-              <rect x="8.5" y="12" width="7" height="4" rx="2" stroke="#1C0A6B" strokeWidth="1.5"/>
-            </svg>
-          </span>
+        <div style={{ display: "flex", alignItems: "left", gap: 12 }}>
+          <svg
+            width="54"
+            height="54"
+            viewBox="0 0 54 54"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="54" height="54" rx="27" fill="white" />
+            <path
+              d="M33.2857 21.8571H29.2857V20.7143C29.2857 20.2596 29.1051 19.8236 28.7836 19.5021C28.4621 19.1806 28.0261 19 27.5714 19H20.7143C20.2596 19 19.8236 19.1806 19.5021 19.5021C19.1806 19.8236 19 20.2596 19 20.7143V34.4286C19 34.5801 19.0602 34.7255 19.1674 34.8326C19.2745 34.9398 19.4199 35 19.5714 35H34.4286C34.5801 35 34.7255 34.9398 34.8326 34.8326C34.9398 34.7255 35 34.5801 35 34.4286V23.5714C35 23.1168 34.8194 22.6807 34.4979 22.3592C34.1764 22.0378 33.7404 21.8571 33.2857 21.8571ZM25.2857 33.8571H23V31.5714H25.2857V33.8571ZM28.1429 33.8571H26.4286V31C26.4286 30.8484 26.3684 30.7031 26.2612 30.5959C26.154 30.4888 26.0087 30.4286 25.8571 30.4286H22.4286C22.277 30.4286 22.1317 30.4888 22.0245 30.5959C21.9173 30.7031 21.8571 30.8484 21.8571 31V33.8571H20.1429V20.7143C20.1429 20.5627 20.2031 20.4174 20.3102 20.3102C20.4174 20.2031 20.5627 20.1429 20.7143 20.1429H27.5714C27.723 20.1429 27.8683 20.2031 27.9755 20.3102C28.0827 20.4174 28.1429 20.5627 28.1429 20.7143V33.8571ZM33.8571 33.8571H29.2857V23H33.2857C33.4373 23 33.5826 23.0602 33.6898 23.1674C33.7969 23.2745 33.8571 23.4199 33.8571 23.5714V33.8571Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M22.9999 21.8572H21.8571C21.7055 21.8572 21.5602 21.9174 21.453 22.0245C21.3458 22.1317 21.2856 22.2771 21.2856 22.4286C21.2856 22.5802 21.3458 22.7255 21.453 22.8327C21.5602 22.9398 21.7055 23 21.8571 23H22.9999C23.1515 23 23.2968 22.9398 23.404 22.8327C23.5112 22.7255 23.5714 22.5802 23.5714 22.4286C23.5714 22.2771 23.5112 22.1317 23.404 22.0245C23.2968 21.9174 23.1515 21.8572 22.9999 21.8572Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M26.4286 21.8572H25.2858C25.1342 21.8572 24.9889 21.9174 24.8817 22.0245C24.7746 22.1317 24.7144 22.2771 24.7144 22.4286C24.7144 22.5802 24.7746 22.7255 24.8817 22.8327C24.9889 22.9398 25.1342 23 25.2858 23H26.4286C26.5802 23 26.7255 22.9398 26.8327 22.8327C26.9399 22.7255 27.0001 22.5802 27.0001 22.4286C27.0001 22.2771 26.9399 22.1317 26.8327 22.0245C26.7255 21.9174 26.5802 21.8572 26.4286 21.8572Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M22.9999 24.7144H21.8571C21.7055 24.7144 21.5602 24.7746 21.453 24.8817C21.3458 24.9889 21.2856 25.1342 21.2856 25.2858C21.2856 25.4373 21.3458 25.5827 21.453 25.6898C21.5602 25.797 21.7055 25.8572 21.8571 25.8572H22.9999C23.1515 25.8572 23.2968 25.797 23.404 25.6898C23.5112 25.5827 23.5714 25.4373 23.5714 25.2858C23.5714 25.1342 23.5112 24.9889 23.404 24.8817C23.2968 24.7746 23.1515 24.7144 22.9999 24.7144Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M26.4286 24.7144H25.2858C25.1342 24.7144 24.9889 24.7746 24.8817 24.8817C24.7746 24.9889 24.7144 25.1342 24.7144 25.2858C24.7144 25.4373 24.7746 25.5827 24.8817 25.6898C24.9889 25.797 25.1342 25.8572 25.2858 25.8572H26.4286C26.5802 25.8572 26.7255 25.797 26.8327 25.6898C26.9399 25.5827 27.0001 25.4373 27.0001 25.2858C27.0001 25.1342 26.9399 24.9889 26.8327 24.8817C26.7255 24.7746 26.5802 24.7144 26.4286 24.7144Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M22.9999 27.5715H21.8571C21.7055 27.5715 21.5602 27.6317 21.453 27.7389C21.3458 27.8461 21.2856 27.9914 21.2856 28.143C21.2856 28.2945 21.3458 28.4399 21.453 28.547C21.5602 28.6542 21.7055 28.7144 21.8571 28.7144H22.9999C23.1515 28.7144 23.2968 28.6542 23.404 28.547C23.5112 28.4399 23.5714 28.2945 23.5714 28.143C23.5714 27.9914 23.5112 27.8461 23.404 27.7389C23.2968 27.6317 23.1515 27.5715 22.9999 27.5715Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M26.4286 27.5715H25.2858C25.1342 27.5715 24.9889 27.6317 24.8817 27.7389C24.7746 27.8461 24.7144 27.9914 24.7144 28.143C24.7144 28.2945 24.7746 28.4399 24.8817 28.547C24.9889 28.6542 25.1342 28.7144 25.2858 28.7144H26.4286C26.5802 28.7144 26.7255 28.6542 26.8327 28.547C26.9399 28.4399 27.0001 28.2945 27.0001 28.143C27.0001 27.9914 26.9399 27.8461 26.8327 27.7389C26.7255 27.6317 26.5802 27.5715 26.4286 27.5715Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M32.1428 24.7144H30.9999C30.8483 24.7144 30.703 24.7746 30.5958 24.8817C30.4887 24.9889 30.4285 25.1342 30.4285 25.2858C30.4285 25.4373 30.4887 25.5827 30.5958 25.6898C30.703 25.797 30.8483 25.8572 30.9999 25.8572H32.1428C32.2943 25.8572 32.4397 25.797 32.5468 25.6898C32.654 25.5827 32.7142 25.4373 32.7142 25.2858C32.7142 25.1342 32.654 24.9889 32.5468 24.8817C32.4397 24.7746 32.2943 24.7144 32.1428 24.7144Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M32.1428 27.5715H30.9999C30.8483 27.5715 30.703 27.6317 30.5958 27.7389C30.4887 27.8461 30.4285 27.9914 30.4285 28.143C30.4285 28.2945 30.4887 28.4399 30.5958 28.547C30.703 28.6542 30.8483 28.7144 30.9999 28.7144H32.1428C32.2943 28.7144 32.4397 28.6542 32.5468 28.547C32.654 28.4399 32.7142 28.2945 32.7142 28.143C32.7142 27.9914 32.654 27.8461 32.5468 27.7389C32.4397 27.6317 32.2943 27.5715 32.1428 27.5715Z"
+              fill="#1C0A6B"
+            />
+            <path
+              d="M32.1428 30.4285H30.9999C30.8483 30.4285 30.703 30.4887 30.5958 30.5958C30.4887 30.703 30.4285 30.8483 30.4285 30.9999C30.4285 31.1514 30.4887 31.2968 30.5958 31.404C30.703 31.5111 30.8483 31.5713 30.9999 31.5713H32.1428C32.2943 31.5713 32.4397 31.5111 32.5468 31.404C32.654 31.2968 32.7142 31.1514 32.7142 30.9999C32.7142 30.8483 32.654 30.703 32.5468 30.5958C32.4397 30.4887 32.2943 30.4285 32.1428 30.4285Z"
+              fill="#1C0A6B"
+            />
+          </svg>
+
           <div>
-            <div style={{ fontSize: 15, color: '#8B8B99', fontWeight: 500, marginBottom: 2 }}>Company</div>
-            <div style={{ fontSize: 20, color: '#1C0A6B', fontWeight: 600 }}>Ominex Canada Ltd</div>
+            <div
+              style={{
+                fontSize: 15,
+                color: "#8B8B99",
+                fontWeight: 500,
+                marginBottom: 2,
+              }}
+            >
+              Company
+            </div>
+            <div style={{ fontSize: 20, color: "#1C0A6B", fontWeight: 600 }}>
+              Ominex Canada Ltd
+            </div>
           </div>
         </div>
       </div>
-      <div style={{
-        position: 'relative',
-        width: '100%',
-        maxWidth: 1000,
-        marginLeft: 50,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-      }}>
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: 1000,
+          marginLeft: 50,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+        }}
+      >
         {/* Progress Bar */}
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          maxWidth: `${BAR_MAX_WIDTH}px`,
-          height: `${CIRCLE_SIZE}px`,
-          margin: '0 auto 32px auto',
-        }}>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            maxWidth: `${BAR_MAX_WIDTH}px`,
+            height: `${CIRCLE_SIZE}px`,
+            margin: "0 auto 32px auto",
+          }}
+        >
           {/* Background Bar */}
-          <div style={{
-            position: 'absolute',
-            left: 0,
-            width: '100%',
-            top: BAR_TOP,
-            height: `${BAR_HEIGHT}px`,
-            background: '#E5E7EB',
-            borderRadius: `${BAR_HEIGHT / 2}px`,
-            zIndex: 1,
-          }} />
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              width: "100%",
+              top: BAR_TOP,
+              height: `${BAR_HEIGHT}px`,
+              background: "#E5E7EB",
+              borderRadius: `${BAR_HEIGHT / 2}px`,
+              zIndex: 1,
+            }}
+          />
           {/* Progress Fill */}
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${fillPercent}%` }}
-            transition={{ duration: 0.7, type: 'spring' }}
+            transition={{ duration: 0.7, type: "spring" }}
             style={{
-              position: 'absolute',
+              position: "absolute",
               left: 0,
               top: BAR_TOP,
               height: `${BAR_HEIGHT}px`,
-              background: 'linear-gradient(90deg, #5CB1E2 0%, #B2E3F6 100%)',
+              background: "linear-gradient(90deg, #5CB1E2 0%, #B2E3F6 100%)",
               borderRadius: `${BAR_HEIGHT / 2}px`,
               zIndex: 2,
             }}
           />
           {/* Step Circles */}
-          <div style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            width: '100%',
-            height: `${CIRCLE_SIZE}px`,
-            zIndex: 3,
-            pointerEvents: 'none',
-          }}>
+          <div
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              width: "100%",
+              height: `${CIRCLE_SIZE}px`,
+              zIndex: 3,
+              pointerEvents: "none",
+            }}
+          >
             {steps.map((step, index) => {
               const isCompleted = index < currentStep;
               const isCurrent = index === currentStep;
               const leftPercent = (index / (steps.length - 1)) * 100;
-              let isQualifiedOrConverted = (index === 2 || index === 3);
+              let isQualifiedOrConverted = index === 2 || index === 3;
               let circleStyle = {
-                position: 'absolute',
+                position: "absolute",
                 left: `calc(${leftPercent}%)`,
                 top: `calc(${BAR_TOP + BAR_HEIGHT / 2 - 32}px)`, // 32 = 64/2, centers 64px circle on bar
-                transform: 'translate(-50%, 0)',
+                transform: "translate(-50%, 0)",
                 width: 64,
                 height: 64,
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 2px 8px 0 rgba(44, 62, 80, 0.08)',
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 2px 8px 0 rgba(44, 62, 80, 0.08)",
                 fontFamily: '"Wix Madefor Text", Inter, sans-serif',
                 fontWeight: 700,
                 fontSize: 18,
-                background: isQualifiedOrConverted ? '#1C0A6B' : '#fff',
-                border: isQualifiedOrConverted ? '4px solid #fff' : '2.5px solid #E5E7EB',
-                color: isQualifiedOrConverted ? '#fff' : '#B0B7C3',
-                transition: 'all 0.2s',
+                background: isQualifiedOrConverted ? "#1C0A6B" : "#fff",
+                border: isQualifiedOrConverted
+                  ? "4px solid #fff"
+                  : "2.5px solid #E5E7EB",
+                color: isQualifiedOrConverted ? "#fff" : "#B0B7C3",
+                transition: "all 0.2s",
               };
               if (isCompleted) {
-                circleStyle.background = '#5CB1E2';
-                circleStyle.color = '#fff';
-                circleStyle.border = 'none';
+                circleStyle.background = "#5CB1E2";
+                circleStyle.color = "#fff";
+                circleStyle.border = "none";
               } else if (isCurrent) {
-                circleStyle.background = '#fff';
-                circleStyle.color = '#5CB1E2';
-                circleStyle.border = '2.5px solid #5CB1E2';
+                circleStyle.background = "#fff";
+                circleStyle.color = "#5CB1E2";
+                circleStyle.border = "2.5px solid #5CB1E2";
               }
               return (
                 <div key={index} style={circleStyle}>
-                  <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="26.8003" cy="26.8042" r="26.6099" fill={isQualifiedOrConverted ? '#1C0A6B' : 'white'} />
-                    <path d="M26.5146 17.0186C21.2754 17.0186 17.0146 21.2794 17.0146 26.5186C17.0146 31.7578 21.2754 36.0186 26.5146 36.0186C31.7539 36.0186 36.0146 31.7578 36.0146 26.5186C36.0146 21.2794 31.7539 17.0186 26.5146 17.0186ZM26.5146 18.2852C31.0693 18.2852 34.7529 21.9639 34.7529 26.5186C34.7529 31.0732 31.0693 34.7568 26.5146 34.7568C21.96 34.7568 18.2813 31.0732 18.2813 26.5186C18.2813 21.9639 21.96 18.2852 26.5146 18.2852ZM26.506 21.4556C26.3387 21.4585 26.1793 21.5276 26.0627 21.6476C25.9462 21.7677 25.8818 21.929 25.8838 22.0964V22.6295C24.8612 22.8213 23.9863 23.4798 23.9863 24.621C23.9863 25.4127 24.3432 26.053 24.8225 26.4258C25.3018 26.7986 25.843 26.9639 26.318 27.1222C26.793 27.2805 27.203 27.4319 27.4362 27.6133C27.6694 27.7947 27.7813 27.9473 27.7813 28.4223C27.7813 29.4778 25.2529 29.4778 25.2529 28.4223C25.2548 28.3379 25.2398 28.254 25.2088 28.1756C25.1778 28.0971 25.1315 28.0256 25.0725 27.9653C25.0135 27.9049 24.943 27.857 24.8653 27.8243C24.7875 27.7916 24.704 27.7747 24.6196 27.7747C24.5352 27.7747 24.4517 27.7916 24.3739 27.8243C24.2962 27.857 24.2257 27.9049 24.1667 27.9653C24.1077 28.0256 24.0614 28.0971 24.0304 28.1756C23.9994 28.254 23.9844 28.3379 23.9863 28.4223C23.9863 29.5626 24.862 30.2223 25.8838 30.415V30.9457C25.8819 31.0301 25.8969 31.1139 25.9279 31.1924C25.9589 31.2709 26.0052 31.3424 26.0642 31.4027C26.1232 31.463 26.1937 31.5109 26.2715 31.5437C26.3492 31.5764 26.4327 31.5932 26.5171 31.5932C26.6015 31.5932 26.685 31.5764 26.7628 31.5437C26.8406 31.5109 26.911 31.463 26.97 31.4027C27.029 31.3424 27.0754 31.2709 27.1063 31.1924C27.1373 31.1139 27.1523 31.0301 27.1505 30.9457V30.415C28.1725 30.2224 29.0492 29.5627 29.0492 28.4223C29.0492 27.6306 28.6911 26.9903 28.2118 26.6175C27.7325 26.2447 27.1913 26.0782 26.7163 25.9199C26.2413 25.7615 25.8312 25.6114 25.598 25.43C25.3649 25.2486 25.2529 25.096 25.2529 24.621C25.2529 23.5655 27.7813 23.5655 27.7813 24.621C27.7813 24.7892 27.8481 24.9504 27.967 25.0693C28.0859 25.1882 28.2471 25.255 28.4153 25.255C28.5834 25.255 28.7446 25.1882 28.8635 25.0693C28.9824 24.9504 29.0492 24.7892 29.0492 24.621C29.0492 23.4815 28.1722 22.8237 27.1505 22.6307V22.0964C27.1515 22.0116 27.1354 21.9275 27.1034 21.8491C27.0713 21.7707 27.0238 21.6995 26.9637 21.6397C26.9036 21.58 26.8321 21.5329 26.7535 21.5013C26.6749 21.4696 26.5907 21.4541 26.506 21.4556Z" fill={isQualifiedOrConverted ? 'white' : '#1C0A6B'} />
+                  <svg
+                    width="54"
+                    height="54"
+                    viewBox="0 0 54 54"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="26.8003"
+                      cy="26.8042"
+                      r="26.6099"
+                      fill={isQualifiedOrConverted ? "#1C0A6B" : "white"}
+                    />
+                    <path
+                      d="M26.5146 17.0186C21.2754 17.0186 17.0146 21.2794 17.0146 26.5186C17.0146 31.7578 21.2754 36.0186 26.5146 36.0186C31.7539 36.0186 36.0146 31.7578 36.0146 26.5186C36.0146 21.2794 31.7539 17.0186 26.5146 17.0186ZM26.5146 18.2852C31.0693 18.2852 34.7529 21.9639 34.7529 26.5186C34.7529 31.0732 31.0693 34.7568 26.5146 34.7568C21.96 34.7568 18.2813 31.0732 18.2813 26.5186C18.2813 21.9639 21.96 18.2852 26.5146 18.2852ZM26.506 21.4556C26.3387 21.4585 26.1793 21.5276 26.0627 21.6476C25.9462 21.7677 25.8818 21.929 25.8838 22.0964V22.6295C24.8612 22.8213 23.9863 23.4798 23.9863 24.621C23.9863 25.4127 24.3432 26.053 24.8225 26.4258C25.3018 26.7986 25.843 26.9639 26.318 27.1222C26.793 27.2805 27.203 27.4319 27.4362 27.6133C27.6694 27.7947 27.7813 27.9473 27.7813 28.4223C27.7813 29.4778 25.2529 29.4778 25.2529 28.4223C25.2548 28.3379 25.2398 28.254 25.2088 28.1756C25.1778 28.0971 25.1315 28.0256 25.0725 27.9653C25.0135 27.9049 24.943 27.857 24.8653 27.8243C24.7875 27.7916 24.704 27.7747 24.6196 27.7747C24.5352 27.7747 24.4517 27.7916 24.3739 27.8243C24.2962 27.857 24.2257 27.9049 24.1667 27.9653C24.1077 28.0256 24.0614 28.0971 24.0304 28.1756C23.9994 28.254 23.9844 28.3379 23.9863 28.4223C23.9863 29.5626 24.862 30.2223 25.8838 30.415V30.9457C25.8819 31.0301 25.8969 31.1139 25.9279 31.1924C25.9589 31.2709 26.0052 31.3424 26.0642 31.4027C26.1232 31.463 26.1937 31.5109 26.2715 31.5437C26.3492 31.5764 26.4327 31.5932 26.5171 31.5932C26.6015 31.5932 26.685 31.5764 26.7628 31.5437C26.8406 31.5109 26.911 31.463 26.97 31.4027C27.029 31.3424 27.0754 31.2709 27.1063 31.1924C27.1373 31.1139 27.1523 31.0301 27.1505 30.9457V30.415C28.1725 30.2224 29.0492 29.5627 29.0492 28.4223C29.0492 27.6306 28.6911 26.9903 28.2118 26.6175C27.7325 26.2447 27.1913 26.0782 26.7163 25.9199C26.2413 25.7615 25.8312 25.6114 25.598 25.43C25.3649 25.2486 25.2529 25.096 25.2529 24.621C25.2529 23.5655 27.7813 23.5655 27.7813 24.621C27.7813 24.7892 27.8481 24.9504 27.967 25.0693C28.0859 25.1882 28.2471 25.255 28.4153 25.255C28.5834 25.255 28.7446 25.1882 28.8635 25.0693C28.9824 24.9504 29.0492 24.7892 29.0492 24.621C29.0492 23.4815 28.1722 22.8237 27.1505 22.6307V22.0964C27.1515 22.0116 27.1354 21.9275 27.1034 21.8491C27.0713 21.7707 27.0238 21.6995 26.9637 21.6397C26.9036 21.58 26.8321 21.5329 26.7535 21.5013C26.6749 21.4696 26.5907 21.4541 26.506 21.4556Z"
+                      fill={isQualifiedOrConverted ? "white" : "#1C0A6B"}
+                    />
                   </svg>
                 </div>
               );
@@ -160,31 +263,33 @@ const PipelineProgressBar = ({ currentStep = 1 }) => {
           </div>
         </div>
         {/* Step Labels - absolutely positioned below each circle */}
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          height: '32px',
-          marginTop: '0',
-          marginRight: '4',
-          zIndex: 4,
-        }}>
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "32px",
+            marginTop: "0",
+            marginRight: "4",
+            zIndex: 4,
+          }}
+        >
           {steps.map((step, index) => {
             const leftPercent = (index / (steps.length - 1)) * 100;
             return (
               <span
                 key={index}
                 style={{
-                  position: 'absolute',
+                  position: "absolute",
                   left: `calc(${leftPercent}%)`,
                   top: 0,
-                  transform: 'translate(-50%, 0)',
-                  color: '#1C0A6B',
+                  transform: "translate(-50%, 0)",
+                  color: "#1C0A6B",
                   fontWeight: 500,
                   fontSize: 15,
                   fontFamily: '"Wix Madefor Text", Inter, sans-serif',
-                  textAlign: 'center',
-                  whiteSpace: 'nowrap',
-                  width: 'max-content',
+                  textAlign: "center",
+                  whiteSpace: "nowrap",
+                  width: "max-content",
                 }}
               >
                 {step.label}

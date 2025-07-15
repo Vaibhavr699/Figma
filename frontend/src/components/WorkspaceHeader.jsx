@@ -13,7 +13,7 @@ const WorkspaceHeader = () => {
           xmlns="http://www.w3.org/2000/svg"
           className="w-8 h-8 lg:w-10 lg:h-10"
         >
-          <circle  fill="white" />
+          <circle fill="white" />
           <path
             d="M41 31.75C41.4142 31.75 41.75 31.4142 41.75 31C41.75 30.5858 41.4142 30.25 41 30.25V31.75ZM23.4403 30.4697C23.1474 30.7626 23.1474 31.2374 23.4403 31.5303L28.2133 36.3033C28.5061 36.5962 28.981 36.5962 29.2739 36.3033C29.5668 36.0104 29.5668 35.5355 29.2739 35.2426L25.0313 31L29.2739 26.7574C29.5668 26.4645 29.5668 25.9896 29.2739 25.6967C28.981 25.4038 28.5061 25.4038 28.2133 25.6967L23.4403 30.4697ZM41 31V30.25L23.9706 30.25V31V31.75L41 31.75V31Z"
             fill="#6E829E"
@@ -58,34 +58,55 @@ const WorkspaceHeader = () => {
             </svg>
           </span>
         </h1>
-        <button
-          className="
-    flex items-center gap-2 sm:gap-3 md:gap-4 
-    bg-black text-white 
-    py-1 px-2 sm:px-4 md:px-5 lg:px-6 
-    rounded-full 
-    text-xs sm:text-sm md:text-base 
-    font-semibold 
-    ml-1 sm:ml-auto md:ml-4 lg:ml-6 
-    shadow font-manrope 
-    whitespace-nowrap
-  "
-        >
-          {/* Icon */}
-          <span className="w-6 h-6 xs:w-7 xs:h-7 sm:px-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full bg-[#232323] flex items-center justify-center">
-            <span className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-300 font-bold">
-              +
-            </span>
-          </span>
+        <div className="ml-1 sm:ml-auto md:ml-4 lg:ml-6">
+          <svg
+            width="166"
+            height="64"
+            viewBox="0 0 166 64"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="cursor-pointer"
+          >
+            <rect width="166" height="64" rx="32" fill="black" />
 
-          {/* Text */}
-          <span className="text-xs xs:text-sm sm:text-sm md:text-base lg:text-lg font-semibold text-white">
-            New Task
-          </span>
-        </button>
+            {/* Plus Icon */}
+            <circle
+              cx="32.5"
+              cy="31.5"
+              r="24.5"
+              fill="#D9D9D9"
+              fillOpacity="0.18"
+            />
+            <rect x="32" y="22" width="2" height="19" fill="#ADB9C8" />
+            <rect
+              x="42.5"
+              y="30.5"
+              width="2"
+              height="19"
+              transform="rotate(90 42.5 30.5)"
+              fill="#ADB9C8"
+            />
+
+            {/* NEW TASK Text Path */}
+            <g transform="translate(67, 26)">
+              <svg
+                width="67"
+                height="12"
+                viewBox="0 0 67 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.985 11H0.485V0.274999H2.12L7.97 9.44H7.46V0.274999H8.96V11H7.325L1.475 1.835H1.985V11ZM17.3554 8.81L18.2404 9.755C17.8504 10.255 17.3854 10.63 16.8454 10.88C16.3154 11.12 15.7354 11.24 15.1054 11.24C14.3254 11.24 13.6404 11.07 13.0504 10.73C12.4704 10.39 12.0154 9.92 11.6854 9.32C11.3554 8.72 11.1904 8.04 11.1904 7.28C11.1904 6.52 11.3504 5.84 11.6704 5.24C12.0004 4.64 12.4404 4.17 12.9904 3.83C13.5504 3.48 14.1804 3.305 14.8804 3.305C15.5604 3.305 16.1604 3.475 16.6804 3.815C17.2004 4.145 17.6054 4.605 17.8954 5.195C18.1954 5.785 18.3454 6.46 18.3454 7.22V7.31H16.8604V7.16C16.8604 6.36 16.6804 5.725 16.3204 5.255C15.9704 4.785 15.4854 4.55 14.8654 4.55C14.4454 4.55 14.0754 4.66 13.7554 4.88C13.4354 5.1 13.1854 5.415 13.0054 5.825C12.8254 6.235 12.7354 6.71 12.7354 7.25C12.7354 7.8 12.8304 8.28 13.0204 8.69C13.2204 9.09 13.5004 9.41 13.8604 9.65C14.2304 9.88 14.6704 9.995 15.1804 9.995C15.6304 9.995 16.0354 9.895 16.3954 9.695C16.7554 9.495 17.0754 9.2 17.3554 8.81ZM18.3454 7.76H12.2554V6.68H18.1204L18.3454 7.22V7.76ZM28.0691 11H26.5091L24.6941 4.865H25.0841L23.2991 11H21.7241L19.5341 3.545H21.0341L22.7741 10.205H22.3241L24.2441 3.545H25.5941L27.4991 10.205H27.0641L28.8191 3.545H30.2891L28.0691 11ZM39.4813 11H37.9363V1.475H39.4813V11ZM42.7213 1.625H34.6963V0.274999H42.7213V1.625ZM49.1932 11H47.8282V9.53L47.7832 9.185V6.395C47.7832 5.815 47.6082 5.36 47.2582 5.03C46.9082 4.69 46.4282 4.52 45.8182 4.52C45.0182 4.52 44.3182 4.85 43.7182 5.51L42.8482 4.58C43.7182 3.73 44.7482 3.305 45.9382 3.305C46.5982 3.305 47.1682 3.43 47.6482 3.68C48.1382 3.93 48.5182 4.285 48.7882 4.745C49.0582 5.195 49.1932 5.73 49.1932 6.35V11ZM45.3082 11.24C44.7782 11.24 44.3082 11.14 43.8982 10.94C43.4982 10.73 43.1832 10.445 42.9532 10.085C42.7232 9.725 42.6082 9.315 42.6082 8.855C42.6082 8.085 42.9032 7.485 43.4932 7.055C44.0932 6.615 44.8982 6.395 45.9082 6.395H47.9182V7.46H46.0432C45.4432 7.46 44.9732 7.58 44.6332 7.82C44.3032 8.05 44.1382 8.375 44.1382 8.795C44.1382 9.175 44.2682 9.485 44.5282 9.725C44.7982 9.955 45.1582 10.07 45.6082 10.07C46.0382 10.07 46.4232 9.975 46.7632 9.785C47.1032 9.595 47.3782 9.335 47.5882 9.005C47.7982 8.675 47.9182 8.295 47.9482 7.865L48.4132 8.12C48.4132 8.73 48.2782 9.27 48.0082 9.74C47.7482 10.21 47.3832 10.58 46.9132 10.85C46.4532 11.11 45.9182 11.24 45.3082 11.24ZM50.6449 9.875L51.4849 8.9C51.8049 9.25 52.1699 9.53 52.5799 9.74C52.9999 9.95 53.4699 10.055 53.9899 10.055C54.4799 10.055 54.8749 9.95 55.1749 9.74C55.4849 9.52 55.6399 9.24 55.6399 8.9C55.6399 8.61 55.5099 8.38 55.2499 8.21C54.9899 8.03 54.5349 7.895 53.8849 7.805C52.8349 7.645 52.0849 7.395 51.6349 7.055C51.1949 6.705 50.9749 6.23 50.9749 5.63C50.9749 5.16 51.0999 4.755 51.3499 4.415C51.5999 4.065 51.9449 3.795 52.3849 3.605C52.8349 3.405 53.3499 3.305 53.9299 3.305C54.5699 3.305 55.1499 3.425 55.6699 3.665C56.1899 3.895 56.6449 4.23 57.0349 4.67L56.1649 5.645C55.8849 5.285 55.5599 5.005 55.1899 4.805C54.8199 4.595 54.4049 4.49 53.9449 4.49C53.5049 4.49 53.1449 4.59 52.8649 4.79C52.5849 4.98 52.4449 5.23 52.4449 5.54C52.4449 5.71 52.4949 5.855 52.5949 5.975C52.6949 6.095 52.8649 6.195 53.1049 6.275C53.3449 6.345 53.6799 6.415 54.1099 6.485C55.2099 6.655 55.9849 6.925 56.4349 7.295C56.8949 7.655 57.1249 8.175 57.1249 8.855C57.1249 9.325 56.9899 9.74 56.7199 10.1C56.4599 10.46 56.0899 10.74 55.6099 10.94C55.1399 11.14 54.5949 11.24 53.9749 11.24C53.2649 11.24 52.6299 11.12 52.0699 10.88C51.5199 10.64 51.0449 10.305 50.6449 9.875ZM60.4692 11H58.9692V0.2H60.4692V11ZM66.0642 11H64.0542L60.0792 7.13H60.2292L63.7692 3.545H65.6442L61.8642 7.28V6.995L66.0642 11Z"
+                  fill="#ADB9C8"
+                />
+              </svg>
+            </g>
+          </svg>
+        </div>
       </div>
       {/* Right: Stats (hidden on small screens) */}
-      <div className="hidden md:flex flex-wrap justify-center items-center gap-3 lg:gap-6 xl:gap-8 ml-auto px-2 pb-4 min-w-0">
+      <div className="hidden md:flex flex-wrap justify-center items-end gap-6 xl:gap-8 ml-auto px-2 pb-4 min-w-0">
         {[
           {
             count: 34,
@@ -96,14 +117,14 @@ const WorkspaceHeader = () => {
           },
           {
             count: 20,
-            label: "Won",
+            label: "won",
             change: "↓2",
             bg: "bg-red-200",
             text: "text-red-700",
           },
           {
             count: 3,
-            label: "Lost",
+            label: "lost",
             change: "↓1",
             bg: "bg-red-200",
             text: "text-red-700",
@@ -111,18 +132,23 @@ const WorkspaceHeader = () => {
         ].map((stat, i) => (
           <div
             key={i}
-            className="flex flex-col items-center justify-center min-w-[70px] sm:min-w-[80px] md:min-w-[100px] max-w-[120px] w-full md:w-auto"
+            className="relative flex flex-col items-center justify-center min-w-[70px] sm:min-w-[80px] md:min-w-[100px] max-w-[120px] w-full md:w-auto"
           >
+            {/* Count (Number) */}
+            <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-black leading-none">
+              {stat.count}
+            </span>
+
+            {/* Label */}
+            <span className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-500 font-medium mt-1">
+              {stat.label}
+            </span>
+
+            {/* Badge (Change arrow) */}
             <span
-              className={`px-3 py-1 rounded-full text-xs font-semibold ${stat.bg} ${stat.text} mb-2`}
+              className={`absolute top-0 -right-5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${stat.bg} ${stat.text}`}
             >
               {stat.change}
-            </span>
-            <span className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold text-black leading-none truncate">
-              {stat.count}
-              <span className="block text-xs sm:text-sm md:text-base lg:text-lg text-gray-400 font-semibold mt-1">
-                {stat.label}
-              </span>
             </span>
           </div>
         ))}

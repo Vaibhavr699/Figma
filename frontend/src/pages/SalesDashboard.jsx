@@ -118,34 +118,75 @@ const SalesEngagement = () => {
             </p>
           </div>
         </div>
-        <button
-          className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#FFFFFF] bg-transparent"
-          style={{ color: isActive ? "#FFFFFF" : "#1C0A6B" }}
+        <svg
+          width="42"
+          height="42"
+          viewBox="0 0 50 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <Mail className="w-5 h-5" />
-        </button>
+          <rect
+            x="0.65"
+            y="0.65"
+            width="48.7"
+            height="48.7"
+            rx="24.35"
+            stroke={isActive ? "#FFFFFF" : "#C6D1E5"}
+            strokeWidth="1.3"
+          />
+          <path
+            d="M29.4121 22.1841C29.4529 22.1508 29.5142 22.156 29.5498 22.1997C29.5826 22.2403 29.5775 22.3012 29.5352 22.3364L25.999 25.2104C25.6409 25.4946 25.2153 25.6353 24.792 25.6353C24.4227 25.6352 24.0536 25.5289 23.7295 25.314L23.5938 25.2153L20.0234 22.3364C19.982 22.3029 19.975 22.2408 20.0088 22.1987C20.0441 22.1576 20.1052 22.1526 20.1455 22.1841V22.1851L23.7158 25.063L23.7197 25.0649C24.351 25.565 25.2401 25.5644 25.873 25.062L25.877 25.0581L29.4121 22.1851V22.1841Z"
+            fill={isActive ? "#FFFFFF" : "#1C0A6B"}
+            stroke={isActive ? "#FFFFFF" : "#1C0A6B"}
+          />
+          <path
+            d="M20.8594 17.4995H28.6816C31.0222 17.4995 32.8359 19.4024 32.8359 22.0347V27.5063C32.8359 28.7733 32.4166 29.9033 31.6719 30.73L31.5186 30.8911C30.7683 31.6382 29.7977 32.0356 28.6943 32.0356H20.8447C19.7436 32.0356 18.7736 31.6393 18.0225 30.8911C17.1825 30.0532 16.7061 28.8576 16.7061 27.5063V22.0347L16.7109 21.7905C16.8194 19.2857 18.592 17.4997 20.8594 17.4995ZM20.8594 17.6948C18.5318 17.695 16.9014 19.584 16.9014 22.0347V27.5063C16.9014 28.7691 17.3363 29.93 18.1602 30.7515C18.8765 31.4669 19.8124 31.8403 20.8467 31.8403H28.8887L28.8926 31.8354C29.849 31.7908 30.7114 31.4211 31.3818 30.7515L31.3809 30.7505C32.2057 29.9289 32.6406 28.7687 32.6406 27.5063V22.0347C32.6406 19.5838 31.0094 17.6948 28.6816 17.6948H20.8594Z"
+            fill={isActive ? "#FFFFFF" : "#1C0A6B"}
+            stroke={isActive ? "#FFFFFF" : "#1C0A6B"}
+          />
+        </svg>
       </div>
       <div className="flex items-center justify-between px-6 pb-6 mt-auto">
         <div className="flex items-center gap-2">
           <span
-            className="bg-[#6C7AE0] text-white text-sm font-medium rounded-full px-4 py-2"
-            style={{ background: isActive ? "#6C7AE0" : "#E6E8F6" }}
+            className="text-sm font-medium rounded-full px-4 py-2"
+            style={{
+              background: isActive ? "#6C7AE0" : "#E6E8F6",
+              color: isActive ? "#ffffff" : "#000000",
+            }}
           >
             12 Hours Overdue
           </span>
+
           <span
-            className="bg-[#6CC6E0] text-white text-sm font-bold rounded-full w-9 h-9 flex items-center justify-center"
-            style={{ background: isActive ? "#6CC6E0" : "#E6E8F6" }}
+            className="text-sm font-bold rounded-full w-9 h-9 flex items-center justify-center"
+            style={{
+              background: isActive ? "#6CC6E0" : "#E84E34",
+              color: isActive ? "#ffffff" : "#ffffff",
+            }}
           >
             69
           </span>
         </div>
-        <button
-          className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-[#FFFFFF] bg-transparent"
-          style={{ color: isActive ? "#FFFFFF" : "#1C0A6B" }}
+        <svg
+          width="44"
+          height="44"
+          viewBox="0 0 54 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <ExternalLink className="w-5 h-5" />
-        </button>
+          <circle
+            cx="27"
+            cy="27"
+            r="25.65"
+            stroke={isActive ? "#FFFFFF" : "#D5D1E8"}
+            strokeWidth="1.3"
+          />
+          <path
+            d="M22.2412 31.5014C21.9483 31.7943 21.9483 32.2692 22.2412 32.5621C22.534 32.855 23.0089 32.855 23.3018 32.5621L22.2412 31.5014ZM32.7842 22.769C32.7842 22.3548 32.4485 22.019 32.0342 22.019L25.2842 22.019C24.87 22.019 24.5342 22.3548 24.5342 22.769C24.5342 23.1832 24.87 23.519 25.2842 23.519L31.2842 23.519L31.2843 29.519C31.2843 29.9332 31.62 30.269 32.0343 30.269C32.4485 30.269 32.7843 29.9332 32.7843 29.519L32.7842 22.769ZM22.7715 32.0317L23.3018 32.5621L32.5646 23.2993L32.0342 22.769L31.5039 22.2386L22.2412 31.5014L22.7715 32.0317Z"
+            fill={isActive ? "#FFFFFF" : "#1C0A6B"}
+          />
+        </svg>
       </div>
     </div>
   );
@@ -366,7 +407,7 @@ const SalesEngagement = () => {
           style={{ top: 60 }}
         >
           {/* Header row with icons */}
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-6 mt-6">
             <h2 className="font-bold text-[#1C0A6B] text-lg">Work Queue</h2>
             <div className="flex items-center gap-1">
               <button className="w-[54px] h-[54px] flex items-center justify-center rounded-full border border-[#D3DAE2] text-[#22008C] bg-white hover:bg-[#F4F6F8] transition">
@@ -378,19 +419,18 @@ const SalesEngagement = () => {
             </div>
           </div>
           {/* Tabs and Dropdown */}
-          <div className="flex flex-col gap-1 h-[6.25rem] opacity-100">
-
-            <div className="flex flex-row gap-2 justify-between w-full">
+          <div className="flex flex-col gap-1 h-[8rem] opacity-100">
+            <div className="flex flex-row gap-1 justify-between w-4 h-12">
               {["Cadences", "My Feed", "My List"].map((tab, idx) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`h-[36px] min-w-[90px] px-4 rounded-full font-semibold text-sm border-2 transition-colors focus:outline-none ${
+                  className={`h-[48px] min-w-[110px] px-2 rounded-full font-semibold text-base border-2 transition-colors focus:outline-none ${
                     activeTab === tab
                       ? "bg-[#1C0A6B] text-white border-[#FFFFFF] shadow-sm"
                       : "bg-transparent text-[#1C0A6B] border-[#FFFFFF]"
                   }`}
-                  style={{ marginRight: idx < 2 ? "4px" : 0 }}
+                  style={{ marginRight: idx < 2 ? "8px" : 0 }}
                 >
                   {tab}
                 </button>
@@ -424,7 +464,7 @@ const SalesEngagement = () => {
       {/* Main Content: Sidebar below, then Lead Information & Campaign History */}
       <div className="flex flex-col lg:flex-row px-2 sm:px-4 md:px-6 bg-[#F2F0FA] gap-4 lg:gap-0">
         {/* Sidebar (Contact List) */}
-        <div className="bg-[#F2F0FA] w-full lg:w-[240px] xl:w-[300px] 2xl:w-[350px] flex-shrink-0 mt-[-24px]">
+        <div className="bg-[#F2F0FA] w-full lg:w-[240px] xl:w-[300px] 2xl:w-[350px] flex-shrink-0 mt-[-8px]">
           {/* Contact List */}
           <div className="p-2 sm:p-4">
             {contacts.map((contact) => (
@@ -687,48 +727,47 @@ const SalesEngagement = () => {
                   </div>
                   {/* Source */}
                   <div className="flex items-center gap-4">
-                    <div className="w-[54px] h-[54px] rounded-full text- flex items-center justify-center bg-[#F6F4FB]">
+                    <div className="w-[54px] h-[54px] rounded-full flex items-center justify-center bg-[#F6F4FB]">
                       <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
+                        width="54"
+                        height="54"
+                        viewBox="0 0 54 54"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <rect
-                          x="3"
-                          y="3"
-                          width="18"
-                          height="18"
-                          rx="9"
-                          fill="#1C0A6B"
-                          fillOpacity="0.08"
-                        />
-                        <rect
-                          x="3"
-                          y="3"
-                          width="18"
-                          height="18"
-                          rx="9"
-                          stroke="#1C0A6B"
-                          strokeWidth="1.5"
-                        />
-                        <path
-                          d="M8.5 12L12 15.5L15.5 12"
-                          stroke="#1C0A6B"
-                          strokeWidth="1.5"
-                        />
-                        <rect
-                          x="8.5"
-                          y="12"
-                          width="7"
-                          height="4"
-                          rx="2"
-                          stroke="#1C0A6B"
-                          strokeWidth="1.5"
-                        />
+                        <rect width="54" height="54" rx="27" fill="#F7F5FD" />
+                        <mask
+                          id="mask0_450_2507"
+                          style={{ maskType: "luminance" }}
+                          maskUnits="userSpaceOnUse"
+                          x="17"
+                          y="17"
+                          width="20"
+                          height="20"
+                        >
+                          <path d="M17 17H37V37H17V17Z" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_450_2507)">
+                          <path
+                            d="M27.6288 24.7865C27.9503 24.9696 28.2518 25.1996 28.5261 25.4739C30.1742 27.1219 30.2193 29.7489 28.1459 31.8222L25.3379 34.6303C23.2645 36.7037 20.6376 36.6585 18.9895 35.0105C17.3415 33.3624 17.2963 30.7355 19.3697 28.6621L21.4141 26.6094"
+                            stroke="#1C0A6B"
+                            strokeWidth="1.4"
+                            strokeMiterlimit="10"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M26.3713 29.2134C26.0497 29.0303 25.7483 28.8003 25.4739 28.526C23.8258 26.8779 23.7807 24.251 25.8541 22.1776L28.6621 19.3696C30.7355 17.2962 33.3624 17.3413 35.0105 18.9894C36.6585 20.6375 36.7037 23.2644 34.6303 25.3377L32.586 27.3905"
+                            stroke="#1C0A6B"
+                            strokeWidth="1.4"
+                            strokeMiterlimit="10"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </g>
                       </svg>
                     </div>
+
                     <div>
                       <p className="text-[15px] text-[#8B8B99] font-medium leading-tight">
                         Source
@@ -736,46 +775,106 @@ const SalesEngagement = () => {
                       <div className="flex gap-3 mt-1">
                         <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
                           <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <circle cx="12" cy="12" r="12" fill="#00AFF0" />
-                            <path
-                              d="M16.5 15.5c-.3.2-.7.3-1.1.3-.5 0-.9-.1-1.2-.3-.3-.2-.5-.5-.5-.8 0-.2.1-.4.3-.5.2-.1.5-.2.8-.2.2 0 .4 0 .6.1.2.1.3.2.3.4 0 .1-.1.2-.2.2-.1 0-.2-.1-.3-.1-.1 0-.2 0-.3.1-.1.1-.1.2-.1.3 0 .2.2.4.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5.3.1.7.1 1.1-.1.3-.2.5-.5.5-.8 0-.2-.1-.4-.3-.5-.2-.1-.5-.2-.8-.2-.2 0-.4 0-.6.1-.2.1-.3.2-.3.4 0 .1.1.2.2.2.1 0 .2-.1.3-.1.1 0 .2 0 .3.1.1.1.1.2.1.3 0 .2-.2.4-.5.5z"
-                              fill="#fff"
+                            <rect
+                              x="0.65"
+                              y="0.65"
+                              width="52.7"
+                              height="52.7"
+                              rx="26.35"
+                              stroke="#D5D1E8"
+                              stroke-width="1.3"
                             />
+                            <path
+                              d="M37.349 29.3181C38.9404 22.1789 32.6762 15.6826 25.3285 16.9176C21.3161 14.4476 16 17.239 16 22.0098C16 23.0756 16.2709 24.1244 16.8296 25.038C15.3397 32.211 21.6716 38.5889 29.0193 37.2693C34.2338 40.01 39.9562 34.5287 37.349 29.3181ZM30.3568 33.6321C28.4268 34.4272 25.2439 34.4272 23.3477 33.4122C20.605 31.9572 20.131 28.6583 22.5012 28.6583C24.2958 28.6583 23.7032 30.7392 25.5317 31.5681C26.3613 31.9572 28.1389 31.9742 29.1548 31.2975C30.1706 30.6208 30.0521 29.538 29.5103 29.0305C28.0543 27.6771 23.8387 28.2016 21.9256 25.85C20.9944 24.615 21.0113 22.9064 21.9594 21.7052C23.7371 19.3875 28.9855 19.2522 31.2372 20.9778C33.3196 22.6019 32.744 24.7166 31.0679 24.7166C29.0532 24.7166 30.1028 22.0774 26.8522 22.0774C24.482 22.0774 23.5509 23.7523 25.2269 24.5812C27.4617 25.7316 33.2011 25.3425 33.2011 29.7411C33.218 31.5681 32.1006 32.9385 30.3568 33.6321Z"
+                              fill="url(#paint0_linear_450_2520)"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_450_2520"
+                                x1="17.7675"
+                                y1="17.7716"
+                                x2="36.1895"
+                                y2="36.2072"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stop-color="#29B6F6" />
+                                <stop offset="1" stop-color="#0277BD" />
+                              </linearGradient>
+                            </defs>
                           </svg>
                         </button>
                         <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
                           <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <circle cx="12" cy="12" r="12" fill="#29A9EA" />
-                            <path
-                              d="M18.5 8.5l-7 2.5c-.3.1-.3.5 0 .6l1.7.5 1.2 3.7c.1.3.5.3.6 0l1.2-2.1 1.7 1.2c.2.1.5 0 .6-.2l1.2-4.2c.1-.3-.2-.5-.5-.4z"
-                              fill="#fff"
+                            <rect
+                              x="0.65"
+                              y="0.65"
+                              width="52.7"
+                              height="52.7"
+                              rx="26.35"
+                              stroke="#D5D1E8"
+                              stroke-width="1.3"
                             />
+                            <path
+                              d="M27 39C33.6274 39 39 33.6274 39 27C39 20.3726 33.6274 15 27 15C20.3726 15 15 20.3726 15 27C15 33.6274 20.3726 39 27 39Z"
+                              fill="url(#paint0_linear_450_2523)"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M20.4318 26.8735C23.93 25.3493 26.2628 24.3445 27.4299 23.8591C30.7624 22.473 31.4549 22.2322 31.9062 22.2242C32.0055 22.2225 32.2275 22.2471 32.3712 22.3638C32.5845 22.5368 32.5857 22.9125 32.562 23.1611C32.3814 25.0586 31.6 29.6633 31.2025 31.7885C31.0343 32.6877 30.703 32.9893 30.3824 33.0188C29.6856 33.0829 29.1564 32.5582 28.4814 32.1158C27.4253 31.4235 26.8286 30.9925 25.8034 30.3169C24.6187 29.5362 25.3867 29.1071 26.0619 28.4058C26.2386 28.2223 29.309 25.4295 29.3684 25.1762C29.3759 25.1445 29.3828 25.0263 29.3126 24.964C29.2424 24.9017 29.1389 24.9229 29.0641 24.9399C28.9582 24.964 27.271 26.0792 24.0025 28.2855C23.5236 28.6143 23.0898 28.7746 22.7011 28.7662C22.2727 28.7569 21.4485 28.5239 20.8358 28.3248C20.0843 28.0805 19.487 27.9513 19.539 27.5365C19.5661 27.3203 19.8637 27.0993 20.4318 26.8735Z"
+                              fill="white"
+                            />
+                            <defs>
+                              <linearGradient
+                                id="paint0_linear_450_2523"
+                                x1="27"
+                                y1="15"
+                                x2="27"
+                                y2="38.8125"
+                                gradientUnits="userSpaceOnUse"
+                              >
+                                <stop stop-color="#2AABEE" />
+                                <stop offset="1" stop-color="#229ED9" />
+                              </linearGradient>
+                            </defs>
                           </svg>
                         </button>
                         <button className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#B6D6F6] bg-white">
                           <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
-                            <circle cx="12" cy="12" r="12" fill="#0077B5" />
+                            <rect
+                              x="0.65"
+                              y="0.65"
+                              width="52.7"
+                              height="52.7"
+                              rx="26.35"
+                              stroke="#D5D1E8"
+                              stroke-width="1.3"
+                            />
                             <path
-                              d="M9.5 10.5h1v4h-1v-4zm.5-1.2c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5zm2.5 1.2h1v.6c.1-.2.4-.6 1.1-.6.8 0 1.4.5 1.4 1.6v2.4h-1v-2.1c0-.5-.2-.8-.7-.8-.4 0-.7.3-.7.8v2.1h-1v-4z"
-                              fill="#fff"
+                              d="M26.902 38.804C33.4753 38.804 38.804 33.4753 38.804 26.902C38.804 20.3287 33.4753 15 26.902 15C20.3287 15 15 20.3287 15 26.902C15 33.4753 20.3287 38.804 26.902 38.804Z"
+                              fill="#007AB9"
+                            />
+                            <path
+                              d="M34.0134 27.8598V32.7668H31.1685V28.1887C31.1685 27.0392 30.7577 26.2542 29.7277 26.2542C28.9416 26.2542 28.4746 26.7827 28.2684 27.2944C28.1935 27.4773 28.1742 27.7313 28.1742 27.9878V32.7665H25.3291C25.3291 32.7665 25.3673 25.0128 25.3291 24.2102H28.1744V25.4227C28.1687 25.4322 28.1606 25.4416 28.1555 25.4507H28.1744V25.4227C28.5525 24.8409 29.2267 24.0093 30.7384 24.0093C32.6101 24.0093 34.0134 25.2322 34.0134 27.8598ZM22.3528 20.0857C21.3796 20.0857 20.7429 20.7245 20.7429 21.5638C20.7429 22.3853 21.3612 23.0426 22.3155 23.0426H22.3339C23.3262 23.0426 23.9432 22.3853 23.9432 21.5638C23.9243 20.7245 23.3262 20.0857 22.3528 20.0857ZM20.912 32.7668H23.7561V24.2102H20.912V32.7668Z"
+                              fill="#F1F2F2"
                             />
                           </svg>
                         </button>
@@ -792,7 +891,7 @@ const SalesEngagement = () => {
                 <div className="bg-[#f9f9fa] rounded-[40px] p-4 flex flex-col justify-between">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3 sm:gap-4">
-                    <svg
+                      <svg
                         width="54"
                         height="54"
                         viewBox="0 0 54 54"
@@ -927,7 +1026,9 @@ const SalesEngagement = () => {
                               }}
                             >
                               Status:{" "}
-                              <span className="text-[#1C0A6B] text-sm">Connected</span>
+                              <span className="text-[#1C0A6B] text-sm">
+                                Connected
+                              </span>
                             </p>
                           </div>
                         </div>
@@ -974,7 +1075,7 @@ const SalesEngagement = () => {
                         </div>
                         <div className="flex items-center gap-1">
                           <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
-                          <svg
+                            <svg
                               className="w-3 h-3 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                               fill="none"
                               stroke="currentColor"
@@ -1004,22 +1105,22 @@ const SalesEngagement = () => {
                           </div>
                         </div>
                       </div>
-                      <button className="w-full bg-[#1C0A6B] text-white py-4 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
+                      <button className="w-full bg-[#1C0A6B] text-white py-4 pb-2 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
                         Send email
                       </button>
                     </div>
                     {/* X-twitter Card */}
                     <div
-                      className="hidden md:flex bg-[#F6F4FB] rounded-[40px] p-2 flex-col justify-between w-full"
+                      className="bg-[#F2F0FA] rounded-[40px] p-2 flex flex-col justify-between w-full"
                       style={{ height: 296, top: 536, left: 885, opacity: 1 }}
                     >
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-4">
                           <div
-                            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-[20px] flex items-center justify-center"
+                            className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 md:px-1 rounded-[20px] flex items-center justify-center"
                             style={{ background: "#1C0A6B" }}
                           >
-                            {/* X logo SVG (custom) */}
+                            {/* Google Ads SVG (custom) */}
                             <svg
                               className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10"
                               viewBox="0 0 37 38"
@@ -1033,7 +1134,7 @@ const SalesEngagement = () => {
                             </svg>
                           </div>
                           <div>
-                          <h4
+                            <h4
                               className="text-lg md:text-lg lg:text-xl font-normal text-[#1C0A6B] mb-2"
                               style={{
                                 fontFamily: '"Wix Madefor Text", sans-serif',
@@ -1052,13 +1153,15 @@ const SalesEngagement = () => {
                               }}
                             >
                               Status:{" "}
-                              <span className="text-[#1C0A6B] text-sm">Engaged</span>
+                              <span className="text-[#1C0A6B] text-sm">
+                                Engaged
+                              </span>
                             </p>
                           </div>
                         </div>
                         <button className="w-10 h-10 lg:w-14 lg:h-12 flex items-center justify-center rounded-full border-2 border-[#CCD7E4]">
                           <svg
-                            className="w-4 h-4 lg:w-6 lg:h-6 text-[#1C0A6B]"
+                            className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                             fill="none"
                             stroke="currentColor"
                             strokeWidth="2"
@@ -1070,7 +1173,7 @@ const SalesEngagement = () => {
                       </div>
                       <div className="flex items-center gap-8 mb-8">
                         <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
                             <svg
                               className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                               fill="none"
@@ -1093,12 +1196,12 @@ const SalesEngagement = () => {
                                 letterSpacing: 0,
                               }}
                             >
-                              Web Marketing
+                              Social Media
                             </p>
                           </div>
                         </div>
                         <div className="flex items-center gap-1">
-                          <div className="w-10 h-10 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-full bg-white flex items-center justify-center">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-12 lg:h-12 rounded-full bg-white flex items-center justify-center">
                             <svg
                               className="w-3 h-3 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#1C0A6B]"
                               fill="none"
@@ -1110,11 +1213,12 @@ const SalesEngagement = () => {
                               <path d="M16 2v4M8 2v4M3 10h18" />
                             </svg>
                           </div>
-                          <div>
-                            <p className="text-sm  lg:text-md text-[#8B8B99]">
-                              Start Date
-                            </p>
-                            <p
+                          <div className="">
+                            <div>
+                              <p className="text-base md:text-sm lg:text-md text-[#8B8B99]">
+                                Start Date
+                              </p>
+                              <p
                                 className="text-base md:text-sm lg:text-md font-normal text-[#1C0A6B]"
                                 style={{
                                   fontFamily: '"Wix Madefor Text", sans-serif',
@@ -1122,12 +1226,13 @@ const SalesEngagement = () => {
                                   letterSpacing: 0,
                                 }}
                               >
-                                18.02.2025
+                                06.03.2025
                               </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <button className="w-full bg-[#1C0A6B] text-white py-4 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
+                      <button className="w-full bg-[#1C0A6B] text-white py-4 pb-2 rounded-[20px] text-lg sm:text-sm md:text-md lg:text-lg font-bold">
                         Send email
                       </button>
                     </div>
