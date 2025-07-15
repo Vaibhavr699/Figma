@@ -32,7 +32,7 @@ const ProfileCard = ({
 
       {/* Top-right icon */}
       <div className="absolute top-3 right-1 z-10">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-gray-100 hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-300">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-#0C0C0C hover:bg-white hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-300">
           <ArrowUpRight size={28} className="text-[#2E4C73]" />
         </div>
       </div>

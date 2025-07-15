@@ -118,7 +118,7 @@ const YourDaysTasks = () => (
           <div
             key={i}
             className={`w-[472px] max-w-full rounded-3xl p-0 flex flex-col relative overflow-hidden transition-all duration-300 transform hover:scale-[1.01] hover:shadow-lg ${
-              isHighlight ? "text-white" : "bg-gray-50 text-gray-900"
+              isHighlight ? "text-white" : "bg-black text-gray-900"
             }`}
             style={{ minHeight: 260 }}
           >
@@ -150,7 +150,7 @@ const YourDaysTasks = () => (
               >
                 <path
                   d="M0 44C0 19.6995 19.6995 0 44 0H277C300.126 0 320.864 12 320.864 40.5094C320.864 54 331.528 71.7995 355 74H418C442.301 74 462 93.6995 462 118V310C462 334.301 442.301 354 418 354H44C19.6995 354 0 334.301 0 310V44Z"
-                  fill="white"
+                  fill="black"
                 />
               </svg>
             )}
@@ -164,7 +164,7 @@ const YourDaysTasks = () => (
                 />
                 <div className="flex flex-col">
                   <span
-                    className={`text-base md:text-lg font-semibold leading-tight ${isHighlight ? "text-white" : "text-gray-900"}`}
+                    className={`text-base md:text-lg font-semibold leading-tight ${isHighlight ? "text-white" : "text-white"}`}
                     style={{
                       fontFamily: "Wix Madefor Text",
                       fontWeight: 500,
@@ -185,12 +185,12 @@ const YourDaysTasks = () => (
               </div>
               <div className="flex top-0 right-0 xl:gap-4">
                 <button
-                  className={`w-11 h-11 flex items-center justify-center rounded-full border ${isHighlight ? "border-[#D3DAE2] bg-gray-50 text-[#2E4C73]" : "border-gray-200 bg-white text-gray-500"} shadow-sm`}
+                  className={`w-11 h-11 flex items-center justify-center rounded-full border ${isHighlight ? "border-[#D3DAE2] bg-#0C0C0C text-[#black]" : "border-gray-200 bg-#0C0C0C text-white"} shadow-sm`}
                 >
                   <Bell className="w-5 h-5" />
                 </button>
                 <button
-                  className={`w-11 h-11 flex items-center justify-center rounded-full border transition-all duration-200 ${isHighlight ? "border-[#D3DAE2] bg-gray-50 text-[#2E4C73]" : "border-gray-200 bg-white text-gray-500"} shadow-sm hover:bg-[#F3F6FA] hover:shadow-lg hover:scale-105`}
+                  className={`w-11 h-11 flex items-center justify-center rounded-full border transition-all duration-200 ${isHighlight ? "border-[#D3DAE2] bg-#0C0C0C text-[#black]" : "border-gray-200 bg-#0C0C0C text-white"} shadow-sm hover:bg-[#F3F6FA] hover:shadow-lg hover:scale-105`}
                 >
                   <ArrowUpRight className="w-5 h-5" />
                 </button>
@@ -209,7 +209,7 @@ const YourDaysTasks = () => (
                   />
                 ) : (
                   <span
-                    className={`w-14 h-14 ${isHighlight ? "text-white" : "text-gray-400"}`}
+                    className={`w-14 h-14 ${isHighlight ? "text-white" : "text-white"}`}
                   >
                     <svg
                       width="54"
@@ -252,7 +252,7 @@ const YourDaysTasks = () => (
               </div>
               <div className="flex flex-col">
                 <h3
-                  className={`text-base lg:text-2xl font-bold mb-1 ${isHighlight ? "text-white" : "text-gray-900"}`}
+                  className={`text-base lg:text-2xl font-bold mb-1 ${isHighlight ? "text-white" : "text-white"}`}
                 >
                   {task.name}
                 </h3>
@@ -260,16 +260,16 @@ const YourDaysTasks = () => (
                   <div className="flex items-center gap-2 text-base font-medium">
                     <span className="flex items-center gap-1">
                       <Calendar
-                        className={`w-5 h-5 ${isHighlight ? "text-white" : "text-[#FF8300]"}`}
+                        className={`w-5 h-5 ${isHighlight ? "text-white" : "text-[#ffffff]"}`}
                       />
-                      <span>{task.date}</span>
+                      <span className="text-white">{task.date}</span>
                     </span>
                     <span className="flex items-center gap-1">
                       <Circle
                         className={`w-2 h-2 ${isHighlight ? "text-white" : "text-[#FF8300]"}`}
                         fill={isHighlight ? "white" : "#FF8300"}
                       />
-                      <span>{task.time}</span>
+                      <span className="text-white">{task.time}</span>
                     </span>
                   </div>
                 )}
@@ -281,7 +281,7 @@ const YourDaysTasks = () => (
                       Amount
                     </span>
                     <span
-                      className={`text-lg font-semibold ${isHighlight ? "text-white" : "text-gray-900"}`}
+                      className={`text-lg font-semibold ${isHighlight ? "text-white" : "text-white"}`}
                     >
                       {task.amount}
                     </span>
@@ -292,7 +292,7 @@ const YourDaysTasks = () => (
             {/* Status Label */}
             <div className="px-4 pt-2 relative z-10">
               <span
-                className={`text-[12px] font-normal ${isHighlight ? "text-white" : "text-[#444343]"} transition-colors duration-200 hover:text-[#2E4C73] hover:underline cursor-pointer`}
+                className={`text-[12px] font-normal ${isHighlight ? "text-white" : "text-[#ffffff]"} transition-colors duration-200 hover:text-[#2E4C73] hover:underline cursor-pointer`}
               >
                 Status
               </span>
@@ -303,7 +303,7 @@ const YourDaysTasks = () => (
                 className={`flex items-center gap-3 rounded-full border px-2 py-1 lg:px-4 lg:py-2 ${
                   isHighlight
                     ? "bg-orange-100/30 border-orange-200"
-                    : "bg-white border-gray-200"
+                    : "bg-#222B36 border-gray-200"
                 }`}
               >
                 <img
@@ -312,7 +312,7 @@ const YourDaysTasks = () => (
                   className="w-8 h-8 rounded-full border-2 border-white object-cover"
                 />
                 <span
-                  className={`text-sm font-medium ${isHighlight ? "text-white" : "text-gray-900"}`}
+                  className={`text-sm font-medium ${isHighlight ? "text-white" : "text-white"}`}
                 >
                   {task.status}
                 </span>
